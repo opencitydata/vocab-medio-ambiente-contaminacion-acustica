@@ -16,11 +16,11 @@
         <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
         <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
         <ns:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/4.0/</ns:license>
-        <dc:contributor xml:lang="es">Mariano Fernández López</dc:contributor>
+        <dc:contributor xml:lang="es">Mariano Fernández López (Ontology Engineering Group)</dc:contributor>
         <dc:contributor xml:lang="es">María Poveda Villalón (Ontology Engineering Group)</dc:contributor>
         <dc:contributor xml:lang="es">Oscar Corcho García (Ontology Engineering Group)</dc:contributor>
-        <dc:creator xml:lang="es">Paola Espinoza Arias (Ontology Engineering Group)</dc:creator>
-        <dc:description xml:lang="es">Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con propiedades para representar los datos de la contaminación acústica. También se extiende la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning para representar la posición en el espacio a través de la longitud, latitud y altitud</dc:description>
+        <dc:creator xml:lang="es">Paola Espinoza Arias (Ontology Engineering Group y y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)</dc:creator>
+        <dc:description xml:lang="es">Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con propiedades para representar los datos de la contaminación acústica. También se extiende la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posición en el espacio a través de la longitud, latitud y altitud</dc:description>
         <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="es">Contaminación Acústica</dc:title>
     </owl:Ontology>

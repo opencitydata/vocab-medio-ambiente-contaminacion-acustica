@@ -10,11 +10,11 @@
                                                                                       owl:imports <http://purl.oclc.org/NET/ssnx/ssn> ,
                                                                                                   <http://www.w3.org/2006/time> ;
                                                                                       <http://creativecommons.org/ns#license> "http://creativecommons.org/licenses/by/4.0/"^^xsd:string ;
-                                                                                      <http://purl.org/dc/elements/1.1/contributor> "Mariano Fernández López"@es ,
+                                                                                      <http://purl.org/dc/elements/1.1/contributor> "Mariano Fernández López (Ontology Engineering Group)"@es ,
                                                                                                                                     "María Poveda Villalón (Ontology Engineering Group)"@es ,
                                                                                                                                     "Oscar Corcho García (Ontology Engineering Group)"@es ;
-                                                                                      <http://purl.org/dc/elements/1.1/creator> "Paola Espinoza Arias (Ontology Engineering Group)"@es ;
-                                                                                      <http://purl.org/dc/elements/1.1/description> "Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con propiedades para representar los datos de la contaminación acústica. También se extiende la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning para representar la posición en el espacio a través de la longitud, latitud y altitud"@es ;
+                                                                                      <http://purl.org/dc/elements/1.1/creator> "Paola Espinoza Arias (Ontology Engineering Group y y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)"@es ;
+                                                                                      <http://purl.org/dc/elements/1.1/description> "Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con propiedades para representar los datos de la contaminación acústica. También se extiende la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posición en el espacio a través de la longitud, latitud y altitud"@es ;
                                                                                       <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)"^^xsd:string ;
                                                                                       <http://purl.org/dc/elements/1.1/title> "Contaminación Acústica"@es .
 
