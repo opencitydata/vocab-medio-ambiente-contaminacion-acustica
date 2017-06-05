@@ -1,3 +1,113 @@
 <h2 id="desc" class="list">Contaminación Acústica: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+</span>
+<p>La Figura 1 muestra las clases y propiedades de la ontología de Contaminación Acústica<br></p>
+<center><img src="resources/images/ContaminacionAcustica.png"><figcaption>Figura1. - Ontología de Contaminación Acústica.</figcaption>
+</center>
+<p style="text-align: justify;">Como se puede apreciar en
+la figura
+anterior esta ontología ha extendido ontologías que ya existían
+previamente, tal es el caso de la W3C Semantic Sensor Network Ontology
+(SSN) con propiedades específicas para representar los datos de la
+contaminación acústica, la OWL Ontology of Time (OWL-Time)&nbsp;
+para representar el tiempo y la WGS84 Geo Positioning Ontology (WGS84_POS)
+para representar la posición en el espacio a través de la longitud,
+latitud y altitud.</p>
+<p style="text-align: justify;">Así mismo en la
+Figura 1 se puede apreciar que se ha organizado la ontología en cuatro
+módulos que representan los subdominios que están relacionados con las
+mediciones de contaminación acústica. El módulo Sensor
+permite modelar el sensor de ruido (noise:NoiseSensor) que es
+el encargado de recopilar las mediciones de ruido en el ambiente. El
+modulo Measurement permite modelar las propiedades que son objeto de
+las mediciones del sensor. El módulo Time permite representar los
+intervalos e instantes de tiempo en los que se han realizado las
+mediciones. El módulo Location permite representar el posicionamiento
+geográfico.</p>
+<p style="text-align: justify;">La Figura 2 muestra las
+instancias que han sido incluidas en
+la ontología para representar los tipos
+de ponderaciones, clases de sensores, niveles de ruido y la unidad de
+medida en la que se registran las mediciones (Decibelio).</p>
+<p></p>
+<center><img
+ src="resources/images/ContaminacionAcustica-Instancias.png">
+<figcaption>Figura 2. - Instancias de la ontología de Contaminación
+Acústica.</figcaption>
+</center>
+<h3>Ejemplo<span class="backlink"> back to <a
+ href="#toc">ToC</a></span></h3>
+<p style="text-align: justify;">La Figura 3 muestra un ejemplo de cómo poblar la ontología. En
+este escenario se representa un sensor que recopila las mediciones del nivel medio de ruido durante un mes.</p>
+<p style="text-align: justify;">El escenario corresponde al sensor <span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01</span>
+que ha medido el nivel de ruido día (Ld) durante el mes de abril del 2017. La clase
+a la que pertenece el sensor y que determina sus características técnicas ha sido representada a través de la propiedad
+<span style="font-family: Courier New,Courier,monospace;">noise:belongsToSensorClass</span>
+que enlaza al sensor con la instancia <span style="font-family: Courier New,Courier,monospace;">noise:ClassI</span>.
+La última fecha en que el sensor fue calibrado se representa a través del valor de la propiedad datatype <span
+ style="font-family: Courier New,Courier,monospace;">noise:lastCalibrationDate</span> y la
+localización geográfica en la que está ubicado se representa a tráves de la instancia <span
+ style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01Location</span>
+y los valores de las coordenadas geográficas indicados en las propiedades <span style="font-family: Courier New,Courier,monospace;">wgs84_pos:long</span>,
+<span style="font-family: Courier New,Courier,monospace;">wgs84_pos:lat</span>
+y <span style="font-family: Courier New,Courier,monospace;">wgs84_pos:alt</span>
+(longitud, latitud y altitud respectivamente).</p>
+<p style="text-align: justify;">Para indicar el intervalo de tiempo (abril del 2017) en que el sensor realizó la medición; se utiliza la instancia
+<span style="font-family: Courier New,Courier,monospace;">ex:Interval201704</span>, este instante tiene un
+inicio y un fin que se representan con las instancias de instantes de tiempo <span style="font-family: Courier New,Courier,monospace;">ex:Instant20140401</span>
+y <span style="font-family: Courier New,Courier,monospace;">ex:Instant20170430</span>
+y sus valores son determinados mediante la propiedad datatype time:inXSDDateTime siendo
+<span style="font-family: Courier New,Courier,monospace;">"2017-04-01T00:00:00+01:00"
+^^xsd:dateTime</span> y
+<span style="font-family: Courier New,Courier,monospace;">"2017-04-30T23:59:59+01:00"
+^^xsd:dateTime</span> respectivamente.</p>
+<p style="text-align: justify;">La observación realizada se representa con la instancia
+<span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01Observation_LdInterval201404</span>
+y se relaciona con la
+instancia de la propiedad observada <span
+ style="font-family: Courier New,Courier,monospace;">noise:Ld</span> a
+través de
+<span style="font-family: Courier New,Courier,monospace;">ssn:observedProperty</span>.
+Esta observación a su vez se realiza para una
+determinada característica de interés que en este caso se representa
+mediante la instancia <span
+ style="font-family: Courier New,Courier,monospace;">ex:FeatureOfInterestPaseoDeRecoletos</span>,
+que corresponde a la localización de Paseo de Recoletos, y las coordenadas
+geográficas de su ubicación indicadas mediante los valores de
+&nbsp;<span style="font-family: Courier New,Courier,monospace;">wgs84_pos:long</span>,
+<span style="font-family: Courier New,Courier,monospace;">wgs84_pos:lat</span>
+y <span style="font-family: Courier New,Courier,monospace;">wgs84_pos:alt</span>
+(longitud, latitud y altitud respectivamente).</p>
+<p style="text-align: justify;">La observación realizada se relaciona mediante la propiedad
+<span style="font-family: Courier New,Courier,monospace;">ssn:observationResult</span>
+con la instancia <span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01SensorOutput_Observation_LdInterval201404</span>
+que corresponde a la salida observada por el sensor. La mencionada
+salida del sensor se relaciona mediante la propiedad <span
+ style="font-family: Courier New,Courier,monospace;">ssn:hasValue</span>
+con la instancia de salida de la observación
+<span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01SensorObservationValue_Observation_LdInterval201404</span>
+y permite establecer el valor de la medición mediante la propiedad
+datatype rdf:value que este ejemplo tiene el valor <span
+ style="font-family: Courier New,Courier,monospace;">"67.3"^^xsd:decimal</span>.</p>
+<p style="text-align: justify;">La ponderación con la que la que el sensor realizó la observación se
+representa mediante la propiedad <span style="font-family: Courier New,Courier,monospace;">noise:isWeightingWith
+</span>que enlaza el valor de la observación con la instancia <span
+ style="font-family: Courier New,Courier,monospace;">noise:PonderacionA</span>
+que corresponde a una instancia de<span
+ style="font-family: Courier New,Courier,monospace;">
+noise:Weighting</span>. Finalmente para
+representar la unidad de medida del valor de la observación se utiliza
+la propiedad <span
+ style="font-family: Courier New,Courier,monospace;">noise:hasUnitOfMeasure</span>
+que enlaza la instancia
+<span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01SensorObservationValue_Observation_LdInterval201404</span>
+con una instancia de <span style="font-family: Courier New,Courier,monospace;">om:UnitOfMeasure</span>
+que para el ámbito de la contaminación acústica es el Decibelio que se ha representado mediante la instancia <span
+ style="font-family: Courier New,Courier,monospace;">dbpedia:Decibel</span>.</p>
+<center><img src="resources/images/Ejemplo.png"><figcaption>Figura
+3. - Ejemplo de la ontología.<br>
+<br>
+</figcaption>
+<div style="text-align: justify;"><figcaption></figcaption>El código en formato Turttle se puede observar en <a
+ href="resources/examples/Ejemplo1.owl" target="_blank">ejemplo</a>.<br>
+

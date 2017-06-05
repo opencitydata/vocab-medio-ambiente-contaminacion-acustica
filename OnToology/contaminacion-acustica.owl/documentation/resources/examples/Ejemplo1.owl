@@ -1,0 +1,111 @@
+@prefix : <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica/ejemplo1#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix noise: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@base <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica/ejemplo1> .
+
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica/ejemplo1> rdf:type owl:Ontology ;
+owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica/ejemplo1> ;
+owl:imports <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> ;
+rdfs:comment "Ejemplo de uso de vocabulario de Contaminación Acústica"@es .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
+wgs84_pos:alt rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+wgs84_pos:lat rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+wgs84_pos:long rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+:FeatureOfInterestPaseoDeRecoletos rdf:type owl:NamedIndividual ,
+	ssn:FeatureOfInterest ,
+    wgs84_pos:SpatialThing ;
+    rdfs:label "Localización de Paseo de Recoletos"@es ;
+    wgs84_pos:alt "648.0"^^xsd:float ;
+    wgs84_pos:lat "40.423332"^^xsd:float ;
+    wgs84_pos:long "-3.6908333"^^xsd:float .
+
+
+:Instant20170401 rdf:type owl:NamedIndividual ,
+    time:Instant ;
+    time:inXSDDateTime "2017-04-01T00:00:00+01:00"^^xsd:dateTime ;
+    rdfs:comment "Instante de tiempo que corresponde al inicio de abril del 2017"@es ;
+    rdfs:label "Instante 2017-04-01"@es .
+
+
+:Instant20170430 rdf:type owl:NamedIndividual ,
+	time:Instant ;
+    time:inXSDDateTime "2017-04-30T23:59:59+01:00"^^xsd:dateTime ;
+    rdfs:comment "Instante de tiempo que corresponde al fin de abril del 2017"@es ;
+    rdfs:label "Instante 2017-04-31"@es .
+
+
+:Interval201704 rdf:type owl:NamedIndividual ,
+	time:Interval ;
+    time:hasBeginning :Instant20170401 ;
+    time:hasEnd :Instant20170430 ;
+    rdfs:label "Intervalo de tiempo que corresponde al mes de abril del 2017."@es .
+
+
+:NoiseSensor01 rdf:type owl:NamedIndividual ,
+	noise:NoiseSensor ;
+    ssn:observes :FeatureOfInterestPaseoDeRecoletos ;
+    noise:belongsToSensorClass noise:ClaseI ;
+    noise:lastCalibrationDate "2007-05-14T14:00:00+01:00"^^xsd:dateTime ;
+    rdfs:label "Sensor de ruido NoiseSensor01"@es ;
+    wgs84_pos:location :NoiseSensor01Location .
+
+
+:NoiseSensor01Location rdf:type owl:NamedIndividual ,
+    wgs84_pos:SpatialThing ;
+	rdfs:label "Ubicación del sensor NoiseSensor01"@es ;
+    wgs84_pos:alt "648.0"^^xsd:float ;
+    wgs84_pos:lat "40.423332"^^xsd:float ;
+    wgs84_pos:long "-3.6908333"^^xsd:float .
+
+
+:NoiseSensor01ObservationValue_ObservationLdInterval201704 rdf:type owl:NamedIndividual ,
+    ssn:ObservationValue ;
+    noise:hasUnitOfMeasure <http://dbpedia.org/resource/Decibel> ;
+    noise:isWeightingWith noise:PonderacionA ;
+    rdf:value 67.3 ;
+    rdfs:comment "Valor de la observación del nivel Ld realizada por el sensor NoiseSensor01 durante el mes de abril de 2017"@es .
+
+
+:NoiseSensor01Observation_LdInterval201704 rdf:type owl:NamedIndividual ,
+    ssn:Observation ;
+    ssn:featureOfInterest :FeatureOfInterestPaseoDeRecoletos ;
+    ssn:observationResult :NoiseSensor01SensorOutput_ObservationLdInterval201704 ;
+    ssn:observationSamplingTime :Interval201704 ;
+    ssn:observedBy :NoiseSensor01 ;
+    ssn:observedProperty noise:Ld ;
+    rdfs:comment "Observación del nivel Ld realizada por el sensor NoiseSensor01 durante el mes de abril de 2017"@es .
+
+:NoiseSensor01SensorOutput_ObservationLdInterval201704 rdf:type owl:NamedIndividual ,
+    ssn:SensorOutput ;
+    ssn:hasValue :NoiseSensor01ObservationValue_ObservationLdInterval201704 ;
+    rdfs:comment "Salida del sensor NoiseSensor01 tras la observación del nivel Ld realizada durante el mes de abril de 2017"@es .
