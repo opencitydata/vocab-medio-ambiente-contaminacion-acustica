@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "wgs84_pos:SpatialThing" "wgs84_pos:Point" "noise:Weighting" "noise:PercentilNoiseLevel" "noise:NoiseSensor" "noise:NoiseLevel" "noise:AverageNoiseLevel" "time:DateTimeInterval" "time:DurationDescription" "time:January" "time:ProperInterval" "time:Interval" "time:TemporalEntity" "time:Year" "time:DateTimeDescription" "time:Instant" "ssn:Accuracy" "ssn:DetectionLimit" "ssn:Frequency" "ssn:Condition" "DUL:Region" "DUL:Situation" "DUL:PhysicalObject" "ssn:SensorOutput" "ssn:Precision" "ssn:Resolution" "DUL:Quality" "ssn:FeatureOfInterest" "ssn:Sensor" "DUL:InformationObject" "ssn:OperatingProperty" "DUL:Event" "ssn:OperatingPowerRange" "DUL:Method" "ssn:MaintenanceSchedule" "ssn:Sensing" "ssn:Latency" "ssn:SurvivalRange" "ssn:SensingDevice" "DUL:DesignedArtifact" "ssn:Sensitivity" "ssn:Stimulus" "DUL:Process" "ssn:MeasurementRange" "ssn:System" "ssn:SystemLifetime" "ssn:Property" "ssn:MeasurementProperty" "-4ebfd174:15c783fa746:-7fcf" "ssn:Process" "ssn:Deployment" "ssn:MeasurementCapability" "ssn:BatteryLifetime" "ssn:Drift" "ssn:DeploymentRelatedProcess" "ssn:SensorInput" "ssn:ResponseTime" "ssn:ObservationValue" "ssn:SensorDataSheet" "ssn:Observation" "ssn:Selectivity" "ssn:SurvivalProperty" "ssn:Device" "ssn:OperatingRange" "ssn:Platform" ; /*classes style*/
+node [shape = rectangle, color="black"]; "wgs84_pos:SpatialThing" "wgs84_pos:Point" "noise:Weighting" "noise:PercentilNoiseLevel" "noise:NoiseSensor" "noise:NoiseLevel" "noise:AverageNoiseLevel" "time:DateTimeInterval" "time:DurationDescription" "time:January" "time:ProperInterval" "time:Interval" "time:TemporalEntity" "time:Year" "time:DateTimeDescription" "time:Instant" "ssn:Accuracy" "ssn:DetectionLimit" "ssn:Frequency" "ssn:Condition" "DUL:Region" "DUL:Situation" "DUL:PhysicalObject" "ssn:SensorOutput" "ssn:Precision" "ssn:Resolution" "DUL:Quality" "ssn:FeatureOfInterest" "ssn:Sensor" "DUL:InformationObject" "ssn:OperatingProperty" "DUL:Event" "ssn:OperatingPowerRange" "DUL:Method" "ssn:MaintenanceSchedule" "ssn:Sensing" "ssn:Latency" "-61a074b2:15c78c254bf:-7fcf" "ssn:SurvivalRange" "ssn:SensingDevice" "DUL:DesignedArtifact" "ssn:Sensitivity" "ssn:Stimulus" "DUL:Process" "ssn:MeasurementRange" "ssn:System" "ssn:SystemLifetime" "ssn:Property" "ssn:MeasurementProperty" "ssn:Process" "ssn:Deployment" "ssn:MeasurementCapability" "ssn:BatteryLifetime" "ssn:Drift" "ssn:DeploymentRelatedProcess" "ssn:SensorInput" "ssn:ResponseTime" "ssn:ObservationValue" "ssn:SensorDataSheet" "ssn:Observation" "ssn:Selectivity" "ssn:SurvivalProperty" "ssn:Device" "ssn:OperatingRange" "ssn:Platform" ; /*classes style*/
 	"noise:AverageNoiseLevel" -> "noise:NoiseLevel" [ label = "rdfs:subClassOf" ];
 	"ssn:Deployment" -> "ssn:DeploymentRelatedProcess" [ label = "rdfs:subClassOf" ];
 	"ssn:SensingDevice" -> "ssn:Sensor" [ label = "rdfs:subClassOf" ];
@@ -9,8 +9,8 @@ node [shape = rectangle, color="black"]; "wgs84_pos:SpatialThing" "wgs84_pos:Poi
 	"ssn:DeploymentRelatedProcess" -> "DUL:Process" [ label = "rdfs:subClassOf" ];
 	"ssn:Accuracy" -> "ssn:MeasurementProperty" [ label = "rdfs:subClassOf" ];
 	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"ssn:FeatureOfInterest" -> "-61a074b2:15c78c254bf:-7fcf" [ label = "rdfs:subClassOf" ];
 	"ssn:FeatureOfInterest" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
-	"ssn:FeatureOfInterest" -> "-4ebfd174:15c783fa746:-7fcf" [ label = "rdfs:subClassOf" ];
 	"ssn:Latency" -> "ssn:MeasurementProperty" [ label = "rdfs:subClassOf" ];
 	"ssn:Process" -> "DUL:Method" [ label = "rdfs:subClassOf" ];
 	"noise:Weighting" -> "DUL:Method" [ label = "rdfs:subClassOf" ];
