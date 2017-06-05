@@ -13,7 +13,7 @@
                                                                                       <http://purl.org/dc/elements/1.1/contributor> "Mariano Fernández López (Ontology Engineering Group)"@es ,
                                                                                                                                     "María Poveda Villalón (Ontology Engineering Group)"@es ,
                                                                                                                                     "Oscar Corcho García (Ontology Engineering Group)"@es ;
-                                                                                      <http://purl.org/dc/elements/1.1/creator> "Paola Espinoza Arias (Ontology Engineering Group y y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)"@es ;
+                                                                                      <http://purl.org/dc/elements/1.1/creator> "Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)"@es ;
                                                                                       <http://purl.org/dc/elements/1.1/description> "Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con propiedades para representar los datos de la contaminación acústica. También se extiende la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posición en el espacio a través de la longitud, latitud y altitud"@es ;
                                                                                       <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)"^^xsd:string ;
                                                                                       <http://purl.org/dc/elements/1.1/title> "Contaminación Acústica"@es .
@@ -64,23 +64,28 @@ rdf:value rdf:type owl:AnnotationProperty .
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass
 :belongsToSensorClass rdf:type owl:ObjectProperty ;
                       rdfs:domain :NoiseSensor ;
-                      rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> .
+                      rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                      rdfs:comment "El sensor de ruido puede pertenecer o no a una clase."@es ;
+                      rdfs:label "belongs to sensor class"@en ,
+                                 "pertenece a una clase de sensor"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure
 :hasUnitOfMeasure rdf:type owl:ObjectProperty ;
                   rdfs:domain <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> ;
                   rdfs:range <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> ;
-                  rdfs:label "has unit of measure"@en .
+                  rdfs:comment "Relación entre el valor medido por el sensor y  la unidad de medida en la que este valor es expresado."@es ;
+                  rdfs:label "has unit of measure"@en ,
+                             "tiene unidad de medida"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#isWeightingWith
 :isWeightingWith rdf:type owl:ObjectProperty ;
                  rdfs:domain <http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> ;
                  rdfs:range :Weighting ;
-                 rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial. Puede ser sin poderación (Z), ponderación A o C"@es ;
+                 rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial. Puede ser sin poderación (Z), ponderación A o C."@es ;
                  rdfs:label "es ponderado con"@es ,
-                            "is weightin with"@en .
+                            "is weighting with"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
@@ -89,7 +94,7 @@ rdf:value rdf:type owl:AnnotationProperty .
                                               rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
 above the local reference ellipsoid)."""^^xsd:string ;
                                               rdfs:label "altitud"@es ,
-                                                         "altitude"^^xsd:string .
+                                                         "altitude"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
@@ -97,7 +102,7 @@ above the local reference ellipsoid)."""^^xsd:string ;
                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
                                               rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)."^^xsd:string ;
                                               rdfs:label "latitud"@es ,
-                                                         "latitude"^^xsd:string .
+                                                         "latitude"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
@@ -110,7 +115,7 @@ above the local reference ellipsoid)."""^^xsd:string ;
                                                rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
                                                rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)."^^xsd:string ;
                                                rdfs:label "longitud"@es ,
-                                                          "longitude"^^xsd:string .
+                                                          "longitude"@en .
 
 
 #################################################################
@@ -149,7 +154,7 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor
 :NoiseSensor rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> ;
-             rdfs:comment "Mide el nivel de ruido"@es ;
+             rdfs:comment "Dispositivo que mide el nivel de ruido."@es ;
              rdfs:label "Noise Sensor"@en ,
                         "Sensor de Ruido"@es .
 
@@ -157,7 +162,7 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel
 :PercentilNoiseLevel rdf:type owl:Class ;
                      rdfs:subClassOf :NoiseLevel ;
-                     rdfs:comment "Nivel de presión sonora ponderado en frecuencia y ponderado en el tiempo superado el N% de tiempo del intervalo considerado"@es ;
+                     rdfs:comment "Nivel de presión sonora ponderado en frecuencia y ponderado en el tiempo superado el N% de tiempo del intervalo considerado."@es ;
                      rdfs:label "Nivel de Ruido en Percentiles"@es ,
                                 "Percentil Noise Level"@en ;
                      rdfs:seeAlso "AENOR: UNE-ISO 1996-1"@es .
@@ -166,7 +171,7 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting
 :Weighting rdf:type owl:Class ;
            rdfs:subClassOf <http://www.loa-cnr.it/ontologies/DUL.owl#Method> ;
-           rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial. Puede ser sin poderación (Z), ponderación A o C"@es ;
+           rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial. Puede ser sin poderación (Z), ponderación A o C."@es ;
            rdfs:label "Ponderación"@es ,
                       "Weighting"@en .
 
@@ -201,8 +206,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure
 <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> rdf:type owl:Class ;
-                                                            rdfs:comment "A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called \"metre\". (definition taken from om ontology)"@en ,
-                                                                         "Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convención y / o por ley. Se utiliza como estándar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple múltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada \"metro\". (definición tomada de la ontología om)"@es ;
+                                                            rdfs:comment "A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called \"metre\". (definition taken from om ontology)."@en ,
+                                                                         "Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convención y / o por ley. Se utiliza como estándar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple múltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada \"metro\". (definición tomada de la ontología om)."@es ;
                                                             rdfs:isDefinedBy "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:string ;
                                                             rdfs:label "Unidad de Medida"@es ,
                                                                        "Unit of Measure"@en .
@@ -237,35 +242,40 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 :L01 rdf:type owl:NamedIndividual ,
               :PercentilNoiseLevel ;
      rdfs:comment "Nivel de ruido que se sobrepasa durante el 1% del tiempo de observación."@es ;
-     rdfs:label "Nivel de ruido sobre el 1%"@es .
+     rdfs:label "Nivel de ruido sobre el 1%"@es ,
+                "Noise level exceeded for 1%"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10
 :L10 rdf:type owl:NamedIndividual ,
               :PercentilNoiseLevel ;
      rdfs:comment "Nivel de ruido que se sobrepasa durante el 10% del tiempo de observación"@es ;
-     rdfs:label "Nivel de ruido sobre el 10%"@es .
+     rdfs:label "Nivel de ruido sobre el 10%"@es ,
+                "Noise level exceeded for 10%"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50
 :L50 rdf:type owl:NamedIndividual ,
               :PercentilNoiseLevel ;
      rdfs:comment "Nivel de ruido que se sobrepasa durante el 50% del tiempo de observación"@es ;
-     rdfs:label "Nivel de ruido sobre el 50%"@es .
+     rdfs:label "Nivel de ruido sobre el 50%"@es ,
+                "Noise level exceeded for 50%"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90
 :L90 rdf:type owl:NamedIndividual ,
               :PercentilNoiseLevel ;
      rdfs:comment "Nivel de ruido que se sobrepasa durante el 90% del tiempo de observación"@es ;
-     rdfs:label "Nivel de ruido sobre el 90%"@es .
+     rdfs:label "Nivel de ruido sobre el 90%"@es ,
+                "Noise level exceeded for 90%"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99
 :L99 rdf:type owl:NamedIndividual ,
               :PercentilNoiseLevel ;
      rdfs:comment "Nivel de ruido que se sobrepasa durante el 99% del tiempo de observación"@es ;
-     rdfs:label "Nivel de ruido sobre el 99%"@es .
+     rdfs:label "Nivel de ruido sobre el 99%"@es ,
+                "Noise level exceeded for 99%"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld
@@ -439,7 +449,7 @@ basic geo vocab
  Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
  an accuracy appropriate for the size of the object and uses such as mapping .
  """^^xsd:string ;
-                                                   rdfs:label "location"^^xsd:string .
+                                                   rdfs:label "location"@en .
 
 
 ###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
