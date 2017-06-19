@@ -34,10 +34,28 @@
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#value
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/2003/01/geo/wgs84_pos#alt
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 altitude of a SpatialThing (decimal meters \nabove the local reference ellipsoid)." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#label> "altitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 latitude of a SpatialThing (decimal degrees)." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/based_near> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 longitude of a SpatialThing (decimal degrees)." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 # 
 # http://xmlns.com/foaf/0.1/based_near
 <http://xmlns.com/foaf/0.1/based_near> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -63,6 +81,14 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to sensor class"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece a una clase de sensor"@es .
 # 
+# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#comment> "El nivel de ruido tiene una fuente emisora que lo provoca"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#label> "has acoustic emisor"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#label> "tiene emisor ac\u00FAstico"@es .
+# 
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> .
@@ -79,47 +105,25 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#isWeightingWith> <http://www.w3.org/2000/01/rdf-schema#label> "es ponderado con"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#isWeightingWith> <http://www.w3.org/2000/01/rdf-schema#label> "is weighting with"@en .
 # 
-# http://www.w3.org/2003/01/geo/wgs84_pos#alt
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 altitude of a SpatialThing (decimal meters \nabove the local reference ellipsoid)." .
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#label> "altitud"@es .
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#label> "altitude"@en .
+# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "\u00DAltima fecha de calibraci\u00F3n del sensor.  La calibraci\u00F3n es un proceso peri\u00F3dico realizado a los sensores ac\u00FAsticos para verificar su correcto funcionamiento en sus distintos modos de trabajo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#label> "last calibration date"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#label> "\u00FAltima fecha de calibraci\u00F3n del sensor."@es .
 # 
-# http://www.w3.org/2003/01/geo/wgs84_pos#lat
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 latitude of a SpatialThing (decimal degrees)." .
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitud"@es .
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitude"@en .
+# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Intervalo de tiempo al que se refiere la evaluaci\u00F3n del ruido. El intervalo de tiempo de referencia se puede especificar en normas nacionales o internacionales o por las autoridades locales para englobar las actividades humanas t\u00EDpicas y las variaciones en el funcionamiento de las fuentes de ruido. Los intervalos de tiempo de referencia pueden ser por ejemplo: una parte del d\u00EDa, un d\u00EDa entero o una semana completa. Algunos pa\u00EDses pueden definir incluso intervalos de referencia m\u00E1s largos."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval> <http://www.w3.org/2000/01/rdf-schema#label> "intervalo de referencia"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval> <http://www.w3.org/2000/01/rdf-schema#label> "reference interval"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO 1996-1: 2005"@es .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> .
-# 
-# http://www.w3.org/2003/01/geo/wgs84_pos#long
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 longitude of a SpatialThing (decimal degrees)." .
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitud"@es .
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude"@en .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Data properties
-# #
-# #################################################################
-# 
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "\u00DAltima fecha de calibraci\u00F3n del sensor.  La calibraci\u00F3n es un proceso peri\u00F3dico realizado a los sensores ac\u00FAsticos para verificar su correcto funcionamiento en sus distintos modos de trabajo."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#label> "last calibration date"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate> <http://www.w3.org/2000/01/rdf-schema#label> "\u00FAltima fecha de calibraci\u00F3n"@es .
 # 
 # 
 # 
@@ -216,73 +220,6 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseII> <http://www.w3.org/2000/01/rdf-schema#label> "Clase II"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseII> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Norma IEC 61672-1:2013"@es .
 # 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de ruido que se sobrepasa durante el 1% del tiempo de observaci\u00F3n."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de ruido sobre el 1%"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01> <http://www.w3.org/2000/01/rdf-schema#label> "Noise level exceeded for 1%"@en .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de ruido que se sobrepasa durante el 10% del tiempo de observaci\u00F3n"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de ruido sobre el 10%"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10> <http://www.w3.org/2000/01/rdf-schema#label> "Noise level exceeded for 10%"@en .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de ruido que se sobrepasa durante el 50% del tiempo de observaci\u00F3n"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de ruido sobre el 50%"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50> <http://www.w3.org/2000/01/rdf-schema#label> "Noise level exceeded for 50%"@en .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de ruido que se sobrepasa durante el 90% del tiempo de observaci\u00F3n"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de ruido sobre el 90%"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90> <http://www.w3.org/2000/01/rdf-schema#label> "Noise level exceeded for 90%"@en .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de ruido que se sobrepasa durante el 99% del tiempo de observaci\u00F3n"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de ruido sobre el 99%"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99> <http://www.w3.org/2000/01/rdf-schema#label> "Noise level exceeded for 99%"@en .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de ruido d\u00EDa que se define como el valor medio del sonido medido en el periodo diurno (7-19 horas)"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld> <http://www.w3.org/2000/01/rdf-schema#label> "Day noise level"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de ruido d\u00EDa"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO 1996-2: 1987"@es .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden> <http://www.w3.org/2000/01/rdf-schema#comment> "Valor medio del sonido medido dentro de un per\u00EDodo de 24 horas, en el que se incluyen los valores obtenidos en Ld, Le, Ln."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden> <http://www.w3.org/2000/01/rdf-schema#label> "Day-evening-night noise level"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de ruido d\u00EDa-tarde-noche"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO 1996-2: 1987"@es .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le> <http://www.w3.org/2000/01/rdf-schema#comment> "Valor medio del  sonido medido en el periodo vespertino (19 - 23 horas)"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le> <http://www.w3.org/2000/01/rdf-schema#label> "Evening noise level"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de ruido vespertino"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO 1996-2: 1987"@es .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln> <http://www.w3.org/2000/01/rdf-schema#comment> "Valor medio del sonido medido en el periodo nocturno (23 - 7 horas)"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln> <http://www.w3.org/2000/01/rdf-schema#label> "Night noise level"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de ruido de noche"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "ISO 1996-2: 1987"@es .
-# 
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting> .
@@ -307,6 +244,22 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ> <http://www.w3.org/2000/01/rdf-schema#label> "Ponderaci\u00F3n Z"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Norma IEC 61672:2003"@es .
 # 
+# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
 # 
 # 
 # #################################################################
@@ -326,6 +279,6 @@
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> <http://www.w3.org/2000/01/rdf-schema#label> "lat/long" .
 # 
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between something and the point, \n or other geometrical thing in space, where it is.  For example, the realtionship between\n a radio tower and a Point with a given lat and long.\n Or a relationship between a park and its outline as a closed arc of points, or a road and\n its location as a arc (a sequence of points).\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\n an accuracy appropriate for the size of the object and uses such as mapping .\n " .
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location" .
 # 
 # Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

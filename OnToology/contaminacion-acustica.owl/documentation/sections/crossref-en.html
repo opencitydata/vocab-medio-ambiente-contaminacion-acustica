@@ -1,5 +1,5 @@
 <h2  id="crossreference" class="list">Cross reference for Contaminación Acústica classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-Esta sección provee detalles para cada clase y propiedad definida por la ontología de Contaminación Acústica.
+This section provides details for each class and property defined by Contaminación Acústica.
 <div id="classes">
    <h3 id="classes" class="list">Classes</h3>
    <ul class="hlist">
@@ -52,18 +52,6 @@ Esta sección provee detalles para cada clase y propiedad definida por la ontolo
                title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#Ld"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld">Day noise level</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Lden"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden">Day-evening-night noise level</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Le"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le">Evening noise level</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Ln"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln">Night noise level</a>
-            <sup class="type-ni" title="named individual">ni</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="NoiseLevel">
@@ -89,6 +77,14 @@ Esta sección provee detalles para cada clase y propiedad definida por la ontolo
                title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasAcousticEmisor"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor">has acoustic emisor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#referenceInterval"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval">reference interval</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="NoiseSensor">
@@ -112,7 +108,7 @@ Esta sección provee detalles para cada clase y propiedad definida por la ontolo
                title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass">belongs to sensor class</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#lastCalibrationDate"
                title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate">last calibration date</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -132,20 +128,6 @@ Esta sección provee detalles para cada clase y propiedad definida por la ontolo
             <a href="#NoiseLevel"
                title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#L01"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01">Noise level exceeded for 1%</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#L10"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10">Noise level exceeded for 10%</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#L50"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50">Noise level exceeded for 50%</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#L90"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90">Noise level exceeded for 90%</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#L99"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99">Noise level exceeded for 99%</a>
-            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -195,14 +177,11 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#alt" title="http://www.w3.org/2003/01/geo/wgs84_pos#alt">altitude</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#lat" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#long" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</a>
-            <sup class="type-op" title="object property">op</sup>
+            <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#alt">altitude</span>, <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</span>, <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</span>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
+            <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</span>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -272,11 +251,12 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#alt" title="http://www.w3.org/2003/01/geo/wgs84_pos#alt">altitude</a>
-      </li>
-      <li>
          <a href="#belongsToSensorClass"
             title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass">belongs to sensor class</a>
+      </li>
+      <li>
+         <a href="#hasAcousticEmisor"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor">has acoustic emisor</a>
       </li>
       <li>
          <a href="#hasUnitOfMeasure"
@@ -287,39 +267,14 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#isWeightingWith">is weighting with</a>
       </li>
       <li>
-         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#lat" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</a>
+         <a href="#lastCalibrationDate"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate">last calibration date</a>
       </li>
       <li>
-         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-            <span>location</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#long" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</a>
+         <a href="#referenceInterval"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval">reference interval</a>
       </li>
    </ul>
-   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
-      <h3>altitude<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#alt</p>
-      <div class="comment">
-         <span class="markdown">The WGS84 altitude of a SpatialThing (decimal meters 
-above the local reference ellipsoid).</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="belongsToSensorClass">
       <h3>belongs to sensor class<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -336,6 +291,32 @@ above the local reference ellipsoid).</span>
             <dd>
                <a href="#NoiseSensor"
                   title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor">Noise Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAcousticEmisor">
+      <h3>has acoustic emisor<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor</p>
+      <div class="comment">
+         <span class="markdown">El nivel de ruido tiene una fuente emisora que lo provoca</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NoiseLevel"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -397,79 +378,9 @@ above the local reference ellipsoid).</span>
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
-      <h3>latitude<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#lat</p>
-      <div class="comment">
-         <span class="markdown">The WGS84 latitude of a SpatialThing (decimal degrees).</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-      <h3>location<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#location</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice">sensing device</span>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location">annotation property</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#long">
-      <h3>longitude<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#long</p>
-      <div class="comment">
-         <span class="markdown">The WGS84 longitude of a SpatialThing (decimal degrees).</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-</div><div id="dataproperties">
-   <h3 id="dataproperties" class="list">Data Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#lastCalibrationDate"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate">last calibration date</a>
-      </li>
-   </ul>
    <div class="entity" id="lastCalibrationDate">
-      <h3>last calibration date<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+      <h3>last calibration date<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
@@ -487,7 +398,32 @@ above the local reference ellipsoid).</span>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <span class="dotted" title="http://www.w3.org/2006/time#Instant">instant</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="referenceInterval">
+      <h3>reference interval<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval</p>
+      <div class="comment">
+         <span class="markdown">Intervalo de tiempo al que se refiere la evaluación del ruido. El intervalo de tiempo de referencia se puede especificar en normas nacionales o internacionales o por las autoridades locales para englobar las actividades humanas típicas y las variaciones en el funcionamiento de las fuentes de ruido. Los intervalos de tiempo de referencia pueden ser por ejemplo: una parte del día, un día entero o una semana completa. Algunos países pueden definir incluso intervalos de referencia más largos.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NoiseLevel"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</span>
             </dd>
          </dl>
       </div>
@@ -495,6 +431,12 @@ above the local reference ellipsoid).</span>
 </div><div id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
+      <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion"
+            title="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion">
+            <span>aglomeracion</span>
+         </a>
+      </li>
       <li>
          <a href="#ClaseI"
             title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseI">Clase I</a>
@@ -504,45 +446,27 @@ above the local reference ellipsoid).</span>
             title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseII">Clase II</a>
       </li>
       <li>
-         <a href="#Ld"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld">Day noise level</a>
-      </li>
-      <li>
-         <a href="#Lden"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden">Day-evening-night noise level</a>
-      </li>
-      <li>
          <a href="#http://dbpedia.org/resource/Decibel" title="http://dbpedia.org/resource/Decibel">
             <span>decibel</span>
          </a>
       </li>
       <li>
-         <a href="#Le"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le">Evening noise level</a>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto"
+            title="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto">
+            <span>gran aeropuerto</span>
+         </a>
       </li>
       <li>
-         <a href="#Ln"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln">Night noise level</a>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario"
+            title="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario">
+            <span>gran eje ferroviario</span>
+         </a>
       </li>
       <li>
-         <a href="#L01"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01">Noise level exceeded for 1%</a>
-      </li>
-      <li>
-         <a href="#L10"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10">Noise level exceeded for 10%</a>
-      </li>
-      <li>
-         <a href="#L50"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50">Noise level exceeded for 50%</a>
-      </li>
-      <li>
-         <a href="#L90"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90">Noise level exceeded for 90%</a>
-      </li>
-      <li>
-         <a href="#L99"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99">Noise level exceeded for 99%</a>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario"
+            title="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario">
+            <span>gran eje viario</span>
+         </a>
       </li>
       <li>
          <a href="#PonderacionA"
@@ -557,6 +481,21 @@ above the local reference ellipsoid).</span>
             title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ">Ponderación Z</a>
       </li>
    </ul>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion">
+      <h3>aglomeracion<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="ClaseI">
       <h3>Clase I<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -593,44 +532,6 @@ above the local reference ellipsoid).</span>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Ld">
-      <h3>Day noise level<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld</p>
-      <div class="comment">
-         <span class="markdown">Nivel de ruido día que se define como el valor medio del sonido medido en el periodo diurno (7-19 horas)</span>
-      </div>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#AverageNoiseLevel"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel">Average Noise Level</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Lden">
-      <h3>Day-evening-night noise level<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden</p>
-      <div class="comment">
-         <span class="markdown">Valor medio del sonido medido dentro de un período de 24 horas, en el que se incluyen los valores obtenidos en Ld, Le, Ln.</span>
-      </div>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#AverageNoiseLevel"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel">Average Noise Level</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://dbpedia.org/resource/Decibel">
       <h3>decibel<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -647,135 +548,47 @@ above the local reference ellipsoid).</span>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Le">
-      <h3>Evening noise level<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto">
+      <h3>gran aeropuerto<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le</p>
-      <div class="comment">
-         <span class="markdown">Valor medio del  sonido medido en el periodo vespertino (19 - 23 horas)</span>
-      </div>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#AverageNoiseLevel"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel">Average Noise Level</a>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Ln">
-      <h3>Night noise level<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario">
+      <h3>gran eje ferroviario<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln</p>
-      <div class="comment">
-         <span class="markdown">Valor medio del sonido medido en el periodo nocturno (23 - 7 horas)</span>
-      </div>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#AverageNoiseLevel"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel">Average Noise Level</a>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="L01">
-      <h3>Noise level exceeded for 1%<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario">
+      <h3>gran eje viario<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01</p>
-      <div class="comment">
-         <span class="markdown">Nivel de ruido que se sobrepasa durante el 1% del tiempo de observación.</span>
-      </div>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#PercentilNoiseLevel"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="L10">
-      <h3>Noise level exceeded for 10%<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10</p>
-      <div class="comment">
-         <span class="markdown">Nivel de ruido que se sobrepasa durante el 10% del tiempo de observación</span>
-      </div>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#PercentilNoiseLevel"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="L50">
-      <h3>Noise level exceeded for 50%<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50</p>
-      <div class="comment">
-         <span class="markdown">Nivel de ruido que se sobrepasa durante el 50% del tiempo de observación</span>
-      </div>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#PercentilNoiseLevel"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="L90">
-      <h3>Noise level exceeded for 90%<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90</p>
-      <div class="comment">
-         <span class="markdown">Nivel de ruido que se sobrepasa durante el 90% del tiempo de observación</span>
-      </div>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#PercentilNoiseLevel"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="L99">
-      <h3>Noise level exceeded for 99%<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99</p>
-      <div class="comment">
-         <span class="markdown">Nivel de ruido que se sobrepasa durante el 99% del tiempo de observación</span>
-      </div>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#PercentilNoiseLevel"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
