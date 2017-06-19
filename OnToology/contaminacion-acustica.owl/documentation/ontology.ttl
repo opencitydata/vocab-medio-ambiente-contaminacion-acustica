@@ -43,10 +43,32 @@
 rdf:value rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:AnnotationProperty ;
+                                              rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
+above the local reference ellipsoid)."""^^xsd:string ;
+                                              rdfs:label "altitude"^^xsd:string ;
+                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:AnnotationProperty ;
+                                              rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)."^^xsd:string ;
+                                              rdfs:label "latitude"^^xsd:string ;
+                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:AnnotationProperty ;
                                                    rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> ;
                                                    rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:AnnotationProperty ;
+                                               rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)."^^xsd:string ;
+                                               rdfs:label "longitude"^^xsd:string ;
+                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
 ###  http://xmlns.com/foaf/0.1/based_near
@@ -71,6 +93,15 @@ rdf:value rdf:type owl:AnnotationProperty .
                                  "pertenece a una clase de sensor"@es .
 
 
+###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor
+:hasAcousticEmisor rdf:type owl:ObjectProperty ;
+                   rdfs:domain :NoiseLevel ;
+                   rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   rdfs:comment "El nivel de ruido tiene una fuente emisora que lo provoca"@es ;
+                   rdfs:label "has acoustic emisor"@en ,
+                              "tiene emisor acústico"@es .
+
+
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure
 :hasUnitOfMeasure rdf:type owl:ObjectProperty ;
                   rdfs:domain <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> ;
@@ -89,47 +120,27 @@ rdf:value rdf:type owl:AnnotationProperty .
                             "is weighting with"@en .
 
 
-###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:ObjectProperty ;
-                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-                                              rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
-above the local reference ellipsoid)."""^^xsd:string ;
-                                              rdfs:label "altitud"@es ,
-                                                         "altitude"@en .
+###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate
+:lastCalibrationDate rdf:type owl:ObjectProperty ;
+                     rdfs:domain :NoiseSensor ;
+                     rdfs:range <http://www.w3.org/2006/time#Instant> ;
+                     rdfs:comment "Última fecha de calibración del sensor.  La calibración es un proceso periódico realizado a los sensores acústicos para verificar su correcto funcionamiento en sus distintos modos de trabajo."@es ;
+                     rdfs:label "last calibration date"@en ,
+                                "última fecha de calibración del sensor."@es .
 
 
-###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:ObjectProperty ;
-                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-                                              rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)."^^xsd:string ;
-                                              rdfs:label "latitud"@es ,
-                                                         "latitude"@en .
+###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval
+:referenceInterval rdf:type owl:ObjectProperty ;
+                   rdfs:domain :NoiseLevel ;
+                   rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
+                   rdfs:comment "Intervalo de tiempo al que se refiere la evaluación del ruido. El intervalo de tiempo de referencia se puede especificar en normas nacionales o internacionales o por las autoridades locales para englobar las actividades humanas típicas y las variaciones en el funcionamiento de las fuentes de ruido. Los intervalos de tiempo de referencia pueden ser por ejemplo: una parte del día, un día entero o una semana completa. Algunos países pueden definir incluso intervalos de referencia más largos."@es ;
+                   rdfs:label "intervalo de referencia"@es ,
+                              "reference interval"@en ;
+                   rdfs:seeAlso "ISO 1996-1: 2005"@es .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty ;
-                                                   rdfs:domain <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> .
-
-
-###  http://www.w3.org/2003/01/geo/wgs84_pos#long
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:ObjectProperty ;
-                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-                                               rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)."^^xsd:string ;
-                                               rdfs:label "longitud"@es ,
-                                                          "longitude"@en .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate
-:lastCalibrationDate rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :NoiseSensor ;
-                     rdfs:range xsd:dateTime ;
-                     rdfs:comment "Última fecha de calibración del sensor.  La calibración es un proceso periódico realizado a los sensores acústicos para verificar su correcto funcionamiento en sus distintos modos de trabajo."@es ;
-                     rdfs:label "last calibration date"@en ,
-                                "última fecha de calibración"@es .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -239,82 +250,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          rdfs:seeAlso "Norma IEC 61672-1:2013"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01
-:L01 rdf:type owl:NamedIndividual ,
-              :PercentilNoiseLevel ;
-     rdfs:comment "Nivel de ruido que se sobrepasa durante el 1% del tiempo de observación."@es ;
-     rdfs:label "Nivel de ruido sobre el 1%"@es ,
-                "Noise level exceeded for 1%"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10
-:L10 rdf:type owl:NamedIndividual ,
-              :PercentilNoiseLevel ;
-     rdfs:comment "Nivel de ruido que se sobrepasa durante el 10% del tiempo de observación"@es ;
-     rdfs:label "Nivel de ruido sobre el 10%"@es ,
-                "Noise level exceeded for 10%"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50
-:L50 rdf:type owl:NamedIndividual ,
-              :PercentilNoiseLevel ;
-     rdfs:comment "Nivel de ruido que se sobrepasa durante el 50% del tiempo de observación"@es ;
-     rdfs:label "Nivel de ruido sobre el 50%"@es ,
-                "Noise level exceeded for 50%"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90
-:L90 rdf:type owl:NamedIndividual ,
-              :PercentilNoiseLevel ;
-     rdfs:comment "Nivel de ruido que se sobrepasa durante el 90% del tiempo de observación"@es ;
-     rdfs:label "Nivel de ruido sobre el 90%"@es ,
-                "Noise level exceeded for 90%"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99
-:L99 rdf:type owl:NamedIndividual ,
-              :PercentilNoiseLevel ;
-     rdfs:comment "Nivel de ruido que se sobrepasa durante el 99% del tiempo de observación"@es ;
-     rdfs:label "Nivel de ruido sobre el 99%"@es ,
-                "Noise level exceeded for 99%"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld
-:Ld rdf:type owl:NamedIndividual ,
-             :AverageNoiseLevel ;
-    rdfs:comment "Nivel de ruido día que se define como el valor medio del sonido medido en el periodo diurno (7-19 horas)"@es ;
-    rdfs:label "Day noise level"@en ,
-               "Nivel de ruido día"@es ;
-    rdfs:seeAlso "ISO 1996-2: 1987"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden
-:Lden rdf:type owl:NamedIndividual ,
-               :AverageNoiseLevel ;
-      rdfs:comment "Valor medio del sonido medido dentro de un período de 24 horas, en el que se incluyen los valores obtenidos en Ld, Le, Ln."@es ;
-      rdfs:label "Day-evening-night noise level"@en ,
-                 "Nivel de ruido día-tarde-noche"@es ;
-      rdfs:seeAlso "ISO 1996-2: 1987"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le
-:Le rdf:type owl:NamedIndividual ,
-             :AverageNoiseLevel ;
-    rdfs:comment "Valor medio del  sonido medido en el periodo vespertino (19 - 23 horas)"@es ;
-    rdfs:label "Evening noise level"@en ,
-               "Nivel de ruido vespertino"@es ;
-    rdfs:seeAlso "ISO 1996-2: 1987"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln
-:Ln rdf:type owl:NamedIndividual ,
-             :AverageNoiseLevel ;
-    rdfs:comment "Valor medio del sonido medido en el periodo nocturno (23 - 7 horas)"@es ;
-    rdfs:label "Night noise level"@en ,
-               "Nivel de ruido de noche"@es ;
-    rdfs:seeAlso "ISO 1996-2: 1987"@es .
-
-
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA
 :PonderacionA rdf:type owl:NamedIndividual ,
                        :Weighting ,
@@ -340,6 +275,26 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
               rdfs:comment "Representa el hecho de no aplicar ningún tipo de ponderación frecuencial a las ondas sonoras captadas por el sensor de ruido. Se captan tal y como son."@es ;
               rdfs:label "Ponderación Z"@es ;
               rdfs:seeAlso "Norma IEC 61672:2003"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion> rdf:type owl:NamedIndividual ,
+                                                                                                                           <http://www.w3.org/2004/02/skos/core#Concept> .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto> rdf:type owl:NamedIndividual ,
+                                                                                                                              <http://www.w3.org/2004/02/skos/core#Concept> .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario> rdf:type owl:NamedIndividual ,
+                                                                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario> rdf:type owl:NamedIndividual ,
+                                                                                                                              <http://www.w3.org/2004/02/skos/core#Concept> .
 
 
 #################################################################
@@ -450,7 +405,7 @@ basic geo vocab
  Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
  an accuracy appropriate for the size of the object and uses such as mapping .
  """^^xsd:string ;
-                                                   rdfs:label "location"@en .
+                                                   rdfs:label "location"^^xsd:string .
 
 
 ###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
