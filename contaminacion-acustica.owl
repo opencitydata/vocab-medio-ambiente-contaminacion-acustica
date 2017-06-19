@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#"
      xml:base="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:noise="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -22,9 +23,9 @@
         <dc:contributor xml:lang="es">Mariano Fernández López (Ontology Engineering Group)</dc:contributor>
         <dc:creator xml:lang="es">Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)</dc:creator>
         <dc:contributor xml:lang="es">Oscar Corcho García (Ontology Engineering Group)</dc:contributor>
-        <dc:contributor xml:lang="es">Raúl García Castro (Ontology Engineering Group)</dc:contributor>
         <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <ns:license>http://creativecommons.org/licenses/by/4.0/</ns:license>
+        <dc:contributor xml:lang="es">Raúl García Castro (Ontology Engineering Group)</dc:contributor>
     </owl:Ontology>
     
 
@@ -70,11 +71,42 @@
     
 
 
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+        <rdfs:comment>The WGS84 altitude of a SpatialThing (decimal meters 
+above the local reference ellipsoid).</rdfs:comment>
+        <rdfs:label>altitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:comment>The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
+        <rdfs:label>latitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
         <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/based_near"/>
         <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:comment>The WGS84 longitude of a SpatialThing (decimal degrees).</rdfs:comment>
+        <rdfs:label>longitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     </owl:AnnotationProperty>
     
 
@@ -117,6 +149,18 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="es">El nivel de ruido tiene una fuente emisora que lo provoca</rdfs:comment>
+        <rdfs:label xml:lang="en">has acoustic emisor</rdfs:label>
+        <rdfs:label xml:lang="es">tiene emisor acústico</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure -->
 
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure">
@@ -141,68 +185,34 @@
     
 
 
-    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
-        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:comment>The WGS84 altitude of a SpatialThing (decimal meters 
-above the local reference ellipsoid).</rdfs:comment>
-        <rdfs:label xml:lang="es">altitud</rdfs:label>
-        <rdfs:label xml:lang="en">altitude</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:comment xml:lang="es">Última fecha de calibración del sensor.  La calibración es un proceso periódico realizado a los sensores acústicos para verificar su correcto funcionamiento en sus distintos modos de trabajo.</rdfs:comment>
+        <rdfs:label xml:lang="en">last calibration date</rdfs:label>
+        <rdfs:label xml:lang="es">última fecha de calibración del sensor.</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
-        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:comment>The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
-        <rdfs:label xml:lang="es">latitud</rdfs:label>
-        <rdfs:label xml:lang="en">latitude</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment xml:lang="es">Intervalo de tiempo al que se refiere la evaluación del ruido. El intervalo de tiempo de referencia se puede especificar en normas nacionales o internacionales o por las autoridades locales para englobar las actividades humanas típicas y las variaciones en el funcionamiento de las fuentes de ruido. Los intervalos de tiempo de referencia pueden ser por ejemplo: una parte del día, un día entero o una semana completa. Algunos países pueden definir incluso intervalos de referencia más largos.</rdfs:comment>
+        <rdfs:label xml:lang="es">intervalo de referencia</rdfs:label>
+        <rdfs:label xml:lang="en">reference interval</rdfs:label>
+        <rdfs:seeAlso xml:lang="es">ISO 1996-1: 2005</rdfs:seeAlso>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
-        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:comment>The WGS84 longitude of a SpatialThing (decimal degrees).</rdfs:comment>
-        <rdfs:label xml:lang="es">longitud</rdfs:label>
-        <rdfs:label xml:lang="en">longitude</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate -->
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="es">Última fecha de calibración del sensor.  La calibración es un proceso periódico realizado a los sensores acústicos para verificar su correcto funcionamiento en sus distintos modos de trabajo.</rdfs:comment>
-        <rdfs:label xml:lang="en">last calibration date</rdfs:label>
-        <rdfs:label xml:lang="es">última fecha de calibración</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
     
 
 
@@ -362,109 +372,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01 -->
-
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L01">
-        <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel"/>
-        <rdfs:comment xml:lang="es">Nivel de ruido que se sobrepasa durante el 1% del tiempo de observación.</rdfs:comment>
-        <rdfs:label xml:lang="es">Nivel de ruido sobre el 1%</rdfs:label>
-        <rdfs:label xml:lang="en">Noise level exceeded for 1%</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10 -->
-
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L10">
-        <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel"/>
-        <rdfs:comment xml:lang="es">Nivel de ruido que se sobrepasa durante el 10% del tiempo de observación</rdfs:comment>
-        <rdfs:label xml:lang="es">Nivel de ruido sobre el 10%</rdfs:label>
-        <rdfs:label xml:lang="en">Noise level exceeded for 10%</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50 -->
-
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L50">
-        <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel"/>
-        <rdfs:comment xml:lang="es">Nivel de ruido que se sobrepasa durante el 50% del tiempo de observación</rdfs:comment>
-        <rdfs:label xml:lang="es">Nivel de ruido sobre el 50%</rdfs:label>
-        <rdfs:label xml:lang="en">Noise level exceeded for 50%</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90 -->
-
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L90">
-        <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel"/>
-        <rdfs:comment xml:lang="es">Nivel de ruido que se sobrepasa durante el 90% del tiempo de observación</rdfs:comment>
-        <rdfs:label xml:lang="es">Nivel de ruido sobre el 90%</rdfs:label>
-        <rdfs:label xml:lang="en">Noise level exceeded for 90%</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99 -->
-
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#L99">
-        <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel"/>
-        <rdfs:comment xml:lang="es">Nivel de ruido que se sobrepasa durante el 99% del tiempo de observación</rdfs:comment>
-        <rdfs:label xml:lang="es">Nivel de ruido sobre el 99%</rdfs:label>
-        <rdfs:label xml:lang="en">Noise level exceeded for 99%</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld -->
-
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ld">
-        <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel"/>
-        <rdfs:comment xml:lang="es">Nivel de ruido día que se define como el valor medio del sonido medido en el periodo diurno (7-19 horas)</rdfs:comment>
-        <rdfs:label xml:lang="en">Day noise level</rdfs:label>
-        <rdfs:label xml:lang="es">Nivel de ruido día</rdfs:label>
-        <rdfs:seeAlso xml:lang="es">ISO 1996-2: 1987</rdfs:seeAlso>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden -->
-
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Lden">
-        <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel"/>
-        <rdfs:comment xml:lang="es">Valor medio del sonido medido dentro de un período de 24 horas, en el que se incluyen los valores obtenidos en Ld, Le, Ln.</rdfs:comment>
-        <rdfs:label xml:lang="en">Day-evening-night noise level</rdfs:label>
-        <rdfs:label xml:lang="es">Nivel de ruido día-tarde-noche</rdfs:label>
-        <rdfs:seeAlso xml:lang="es">ISO 1996-2: 1987</rdfs:seeAlso>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le -->
-
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Le">
-        <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel"/>
-        <rdfs:comment xml:lang="es">Valor medio del  sonido medido en el periodo vespertino (19 - 23 horas)</rdfs:comment>
-        <rdfs:label xml:lang="en">Evening noise level</rdfs:label>
-        <rdfs:label xml:lang="es">Nivel de ruido vespertino</rdfs:label>
-        <rdfs:seeAlso xml:lang="es">ISO 1996-2: 1987</rdfs:seeAlso>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln -->
-
-    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Ln">
-        <rdf:type rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel"/>
-        <rdfs:comment xml:lang="es">Valor medio del sonido medido en el periodo nocturno (23 - 7 horas)</rdfs:comment>
-        <rdfs:label xml:lang="en">Night noise level</rdfs:label>
-        <rdfs:label xml:lang="es">Nivel de ruido de noche</rdfs:label>
-        <rdfs:seeAlso xml:lang="es">ISO 1996-2: 1987</rdfs:seeAlso>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA -->
 
     <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA">
@@ -497,6 +404,38 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:comment xml:lang="es">Representa el hecho de no aplicar ningún tipo de ponderación frecuencial a las ondas sonoras captadas por el sensor de ruido. Se captan tal y como son.</rdfs:comment>
         <rdfs:label xml:lang="es">Ponderación Z</rdfs:label>
         <rdfs:seeAlso xml:lang="es">Norma IEC 61672:2003</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     </owl:NamedIndividual>
     
 
@@ -606,6 +545,7 @@ basic geo vocab
         <rdfs:label>lat/long</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+        <rdfs:label>location</rdfs:label>
         <rdfs:comment>The relation between something and the point, 
  or other geometrical thing in space, where it is.  For example, the realtionship between
  a radio tower and a Point with a given lat and long.
@@ -614,7 +554,6 @@ basic geo vocab
  Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
  an accuracy appropriate for the size of the object and uses such as mapping .
  </rdfs:comment>
-        <rdfs:label xml:lang="en">location</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
