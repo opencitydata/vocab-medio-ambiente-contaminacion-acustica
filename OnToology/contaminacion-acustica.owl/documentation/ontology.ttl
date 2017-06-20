@@ -158,7 +158,7 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel
 :NoiseLevel rdf:type owl:Class ;
             rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#Property> ;
-            rdfs:comment "Nivel de ruido que ha sido medido por el sensor. Se mide en Decibelios (dB)"@es ;
+            rdfs:comment "Nivel de ruido que ha sido medido por el sensor. Es una magnitud física para describir la contaminación acústica, que tiene relación con los efectos producidos por ésta. Se mide en Decibelios (dB)"@es ;
             rdfs:label "Nivel de Ruido"@es ,
                        "Noise Level"@en .
 
@@ -183,7 +183,7 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting
 :Weighting rdf:type owl:Class ;
            rdfs:subClassOf <http://www.loa-cnr.it/ontologies/DUL.owl#Method> ;
-           rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial. Puede ser sin poderación (Z), ponderación A o C."@es ;
+           rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial que se utiliza para una correcta interpretación y medición de  los  niveles  de  sonoridad  de  un  determinado  sonido  en  comparación  con  la naturaleza  no  lineal  del  oído  humano  para  las  distintas  frecuencias  del  espectro audible. Puede ser sin poderación (Z), ponderación A o C."@es ;
            rdfs:label "Ponderación"@es ,
                       "Weighting"@en .
 

@@ -144,7 +144,7 @@
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de ruido que ha sido medido por el sensor. Se mide en Decibelios (dB)"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de ruido que ha sido medido por el sensor. Es una magnitud f\u00EDsica para describir la contaminaci\u00F3n ac\u00FAstica, que tiene relaci\u00F3n con los efectos producidos por \u00E9sta. Se mide en Decibelios (dB)"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de Ruido"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Level"@en .
 # 
@@ -166,7 +166,7 @@
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.loa-cnr.it/ontologies/DUL.owl#Method> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting> <http://www.w3.org/2000/01/rdf-schema#comment> "La medida que realiza el Sensor de Ruido tiene una ponderaci\u00F3n frecuencial. Puede ser sin poderaci\u00F3n (Z), ponderaci\u00F3n A o C."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting> <http://www.w3.org/2000/01/rdf-schema#comment> "La medida que realiza el Sensor de Ruido tiene una ponderaci\u00F3n frecuencial que se utiliza para una correcta interpretaci\u00F3n y medici\u00F3n de  los  niveles  de  sonoridad  de  un  determinado  sonido  en  comparaci\u00F3n  con  la naturaleza  no  lineal  del  o\u00EDdo  humano  para  las  distintas  frecuencias  del  espectro audible. Puede ser sin poderaci\u00F3n (Z), ponderaci\u00F3n A o C."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting> <http://www.w3.org/2000/01/rdf-schema#label> "Ponderaci\u00F3n"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting> <http://www.w3.org/2000/01/rdf-schema#label> "Weighting"@en .
 # 
