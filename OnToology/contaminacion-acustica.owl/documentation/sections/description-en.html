@@ -4,17 +4,8 @@
 <p>La Figura 1 muestra las clases y propiedades de la ontología de Contaminación Acústica<br></p>
 <center><img src="resources/images/ContaminacionAcustica.png"><figcaption>Figura1. - Ontología de Contaminación Acústica.</figcaption>
 </center>
-<p style="text-align: justify;">Como se puede apreciar en
-la figura
-anterior esta ontología ha extendido y reutilizado ontologías que ya existían
-previamente, tal es el caso de la W3C Semantic Sensor Network Ontology
-(SSN) con clases y propiedades específicas para representar los datos de la
-contaminación acústica, la OWL Ontology of Time (OWL-Time)
-para representar el tiempo y la WGS84 Geo Positioning Ontology (WGS84_POS)
-para representar la posición en el espacio a través de la longitud,
-latitud y altitud.</p>
-<p style="text-align: justify;">Así mismo en la
-Figura 1 se puede apreciar que se ha organizado la ontología en cuatro
+<p style="text-align: justify;">En la
+Figura 1 se puede apreciar el diagrama de la ontología que se ha organizado en cuatro
 módulos que representan los subdominios que están relacionados con las
 mediciones de contaminación acústica. El módulo Sensor
 permite modelar el sensor de ruido (<span style="font-family: Courier New,Courier,monospace;">noise:NoiseSensor</span>) que es
@@ -55,7 +46,7 @@ y <span style="font-family: Courier New,Courier,monospace;">wgs84_pos:alt</span>
 <span style="font-family: Courier New,Courier,monospace;">noise:belongsToSensorClass</span> que enlaza al sensor con la instancia <span style="font-family: Courier New,Courier,monospace;">noise:ClassI</span>.</p>
 
 <center><img src="resources/images/EjemploSensor.png"><figcaption>Figura
-3. - Ejemplo de instanciación de un Sensor.<br></figcaption>
+3. - Ejemplo de instanciación de un Sensor.<br><br></figcaption>
 </center>
 
 <p style="text-align: justify;">En la Figura 4 se puede visualizar la instanciación del nivel medio de ruido <span style="font-family: Courier New,Courier,monospace;">ex:LdESP</span>. En contexto
@@ -73,8 +64,8 @@ y <span style="font-family: Courier New,Courier,monospace;">ex:DateTimeEndLd</sp
 <span style="font-family: Courier New,Courier,monospace;">time:hour</span> se especifican los valores concretos 
 <span style="font-family: Courier New,Courier,monospace;">"07"^^xsd:nonNegativeInteger</span> 
 y <span style="font-family: Courier New,Courier,monospace;">"19"^^xsd:nonNegativeInteger</span>
-para el inicio y fin respectivamente. Finalmente para representar que el nivel de ruido ha sido generado por un tipo de emisor específico se emplea la propiedad
-<span style="font-family: Courier New,Courier,monospace;">noise:hasAcousticEmisor</span> enlazada una instancia concreta de emisor acústico en este caso 
+para el inicio y fin respectivamente. Finalmente para representar que el nivel de ruido que ha sido generado por un tipo de emisor específico se emplea la propiedad
+<span style="font-family: Courier New,Courier,monospace;">noise:hasAcousticEmisor</span> enlazada a una instancia concreta de emisor acústico en este caso 
 <span style="font-family: Courier New,Courier,monospace;">noise:aglomeracion</span>.
 <center>
 <img src="resources/images/EjemploNivelRuidoLd.png"><figcaption>Figura
@@ -102,14 +93,14 @@ y <span style="font-family: Courier New,Courier,monospace;">wgs84_pos:alt</span>
  </p>
  <p style="text-align: justify;">Para indicar el intervalo de tiempo (abril del 2017) en que el sensor realizó la observación se utiliza la instancia
 <span style="font-family: Courier New,Courier,monospace;">ex:Interval201704</span>, este intervalo tiene un
-inicio y un fin que se representan con las instancias de instantes de tiempo <span style="font-family: Courier New,Courier,monospace;">ex:Instant20140401</span>
+inicio y un fin que se representan con las instancias de instantes de tiempo <span style="font-family: Courier New,Courier,monospace;">ex:Instant20170401</span>
 y <span style="font-family: Courier New,Courier,monospace;">ex:Instant20170430</span>
 y sus valores son determinados mediante la propiedad datatype 
 <span style="font-family: Courier New,Courier,monospace;">time:inXSDDateTimeStamp</span> 
 siendo <span style="font-family: Courier New,Courier,monospace;">"2017-04-01T00:00:00+01:00"^^xsd:dateTimeStamp</span> el instante de inicio del intervalo y
 <span style="font-family: Courier New,Courier,monospace;">"2017-04-30T23:59:59+01:00"^^xsd:dateTimeStamp</span> el final.</p>
-<p style="text-align: justify;">La salida del sensor representada mediante la instacia 
-<span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01SensorOutput_Observation_LdInterval201404</span>
+<p style="text-align: justify;">La salida del sensor representada mediante la instancia 
+<span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01SensorOutput_Observation_LdInterval201704</span>
 se enlaza con el sensor <span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01</span> mediante la propiedad 
 <span style="font-family: Courier New,Courier,monospace;">ssn:observedBy</span>, adicionalmente la observación se relaciona con la salida del sensor mediante la propiedad
 <span style="font-family: Courier New,Courier,monospace;">ssn:observatioResult</span>; esta última relación permite unir a la observación 
@@ -117,7 +108,7 @@ se enlaza con el sensor <span style="font-family: Courier New,Courier,monospace;
 el valor asociado con la propiedad observada. La mencionada salida del sensor se relaciona mediante la propiedad <span
  style="font-family: Courier New,Courier,monospace;">ssn:hasValue</span>
 con la instancia de salida de la observación
-<span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01SensorObservationValue_Observation_LdInterval201404</span>
+<span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01SensorObservationValue_Observation_LdInterval201704</span>
 y por medio de la propiedad <span style="font-family: Courier New,Courier,monospace;">rdf:value </span> 
 se representa el valor de la observación que para este ejemplo es 
 <span style="font-family: Courier New,Courier,monospace;">"67.3"^^xsd:decimal</span>.</p>
@@ -125,7 +116,8 @@ se representa el valor de la observación que para este ejemplo es
 representa mediante la propiedad <span style="font-family: Courier New,Courier,monospace;">noise:isWeightingWith</span>
 que enlaza el valor de la observación con <span style="font-family: Courier New,Courier,monospace;">noise:PonderacionA</span>
 que corresponde a una instancia de <span style="font-family: Courier New,Courier,monospace;">noise:Weighting</span>. 
-Finalmente para representar la unidad de medida del valor de la observación se enlaza <span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01SensorObservationValue_Observation_LdInterval201404</span>
+Finalmente para representar la unidad de medida del valor de la observación se enlaza 
+<span style="font-family: Courier New,Courier,monospace;">ex:NoiseSensor01SensorObservationValue_Observation_LdInterval201704</span>
 mediante la propiedad <span style="font-family: Courier New,Courier,monospace;">noise:hasUnitOfMeasure</span>
 con <span style="font-family: Courier New,Courier,monospace;">om:UnitOfMeasure</span>
 que para el ámbito de la contaminación acústica es el Decibelio que se ha representado mediante la instancia <span
