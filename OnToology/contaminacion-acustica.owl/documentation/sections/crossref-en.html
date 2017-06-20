@@ -43,7 +43,7 @@ This section provides details for each class and property defined by Contaminaci
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel</p>
       <div class="comment">
-         <span class="markdown">Nivel medio de ruido que ha sido medido por el sensor.</span>
+         <span class="markdown">Nivel medio de presión sonora que ha sido medido por el sensor.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -62,7 +62,7 @@ This section provides details for each class and property defined by Contaminaci
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel</p>
       <div class="comment">
-         <span class="markdown">Nivel de ruido que ha sido medido por el sensor. Es una magnitud física para describir la contaminación acústica, que tiene relación con los efectos producidos por ésta. Se mide en Decibelios (dB)</span>
+         <span class="markdown">Nivel de presión sonora que ha sido medido por el sensor. Es una magnitud física para describir la contaminación acústica, que tiene relación con los efectos producidos por ésta. Se mide en Decibelios (dB)</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -95,7 +95,7 @@ This section provides details for each class and property defined by Contaminaci
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor</p>
       <div class="comment">
-         <span class="markdown">Dispositivo que mide el nivel de ruido.</span>
+         <span class="markdown">Dispositivo que mide el nivel de ruido. Detecta los cambios en la presión del aire, en determinado lugar y en un momento dado, y los  convierte en pulso eléctricos. Estos pulsos eléctricos tienen una frecuencia, que es la de las ondas acústicas. El rango de frecuencia que percibe el ser humano es de 20 Hz a 20 kHz</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -194,7 +194,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</p>
       <div class="comment">
-         <span class="markdown">A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called "metre". (definition taken from om ontology).</span>
+         <span class="markdown">Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convención y / o por ley. Se utiliza como estándar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple múltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada "metro". (definición tomada de la ontología om).</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -283,7 +283,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass</p>
       <div class="comment">
-         <span class="markdown">El sensor de ruido puede pertenecer o no a una clase.</span>
+         <span class="markdown">El sensor de ruido puede pertenecer o no a una clase. La clase define las caracterísiticas técnicas del sensor que establecen los límites de aceptación y el rango de temperaturas de funcionamiento.</span>
       </div>
       <div class="description">
          <dl>
@@ -309,7 +309,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor</p>
       <div class="comment">
-         <span class="markdown">El nivel de ruido tiene una fuente emisora que lo provoca</span>
+         <span class="markdown">El nivel de ruido tiene un emisor acústico que lo provoca</span>
       </div>
       <div class="description">
          <dl>

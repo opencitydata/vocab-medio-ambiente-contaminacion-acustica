@@ -77,7 +77,7 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#comment> "El sensor de ruido puede pertenecer o no a una clase."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#comment> "El sensor de ruido puede pertenecer o no a una clase. La clase define las caracter\u00EDsiticas t\u00E9cnicas del sensor que establecen los l\u00EDmites de aceptaci\u00F3n y el rango de temperaturas de funcionamiento."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to sensor class"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece a una clase de sensor"@es .
 # 
@@ -85,7 +85,7 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#comment> "El nivel de ruido tiene una fuente emisora que lo provoca"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#comment> "El nivel de ruido tiene un emisor ac\u00FAstico que lo provoca"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#label> "has acoustic emisor"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#label> "tiene emisor ac\u00FAstico"@es .
 # 
@@ -137,21 +137,21 @@
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel medio de ruido que ha sido medido por el sensor."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel medio de presi\u00F3n sonora que ha sido medido por el sensor."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Average Noise Level"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel Medio de Ruido"@es .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de ruido que ha sido medido por el sensor. Es una magnitud f\u00EDsica para describir la contaminaci\u00F3n ac\u00FAstica, que tiene relaci\u00F3n con los efectos producidos por \u00E9sta. Se mide en Decibelios (dB)"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de presi\u00F3n sonora que ha sido medido por el sensor. Es una magnitud f\u00EDsica para describir la contaminaci\u00F3n ac\u00FAstica, que tiene relaci\u00F3n con los efectos producidos por \u00E9sta. Se mide en Decibelios (dB)"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de Ruido"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Level"@en .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo que mide el nivel de ruido."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo que mide el nivel de ruido. Detecta los cambios en la presi\u00F3n del aire, en determinado lugar y en un momento dado, y los  convierte en pulso el\u00E9ctricos. Estos pulsos el\u00E9ctricos tienen una frecuencia, que es la de las ondas ac\u00FAsticas. El rango de frecuencia que percibe el ser humano es de 20 Hz a 20 kHz"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Sensor"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor de Ruido"@es .
 # 
@@ -187,7 +187,6 @@
 # 
 # http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure
 <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called \"metre\". (definition taken from om ontology)."@en .
 <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> <http://www.w3.org/2000/01/rdf-schema#comment> "Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convenci\u00F3n y / o por ley. Se utiliza como est\u00E1ndar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple m\u00FAltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada \"metro\". (definici\u00F3n tomada de la ontolog\u00EDa om)."@es .
 <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.wurvoc.org/vocabularies/om-1.8/" .
 <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> <http://www.w3.org/2000/01/rdf-schema#label> "Unidad de Medida"@es .
