@@ -142,7 +142,7 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="es">El sensor de ruido puede pertenecer o no a una clase.</rdfs:comment>
+        <rdfs:comment xml:lang="es">El sensor de ruido puede pertenecer o no a una clase. La clase define las caracterísiticas técnicas del sensor que establecen los límites de aceptación y el rango de temperaturas de funcionamiento.</rdfs:comment>
         <rdfs:label xml:lang="en">belongs to sensor class</rdfs:label>
         <rdfs:label xml:lang="es">pertenece a una clase de sensor</rdfs:label>
     </owl:ObjectProperty>
@@ -154,7 +154,7 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="es">El nivel de ruido tiene una fuente emisora que lo provoca</rdfs:comment>
+        <rdfs:comment xml:lang="es">El nivel de ruido tiene un emisor acústico que lo provoca</rdfs:comment>
         <rdfs:label xml:lang="en">has acoustic emisor</rdfs:label>
         <rdfs:label xml:lang="es">tiene emisor acústico</rdfs:label>
     </owl:ObjectProperty>
@@ -231,7 +231,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel"/>
-        <rdfs:comment xml:lang="es">Nivel medio de ruido que ha sido medido por el sensor.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Nivel medio de presión sonora que ha sido medido por el sensor.</rdfs:comment>
         <rdfs:label xml:lang="en">Average Noise Level</rdfs:label>
         <rdfs:label xml:lang="es">Nivel Medio de Ruido</rdfs:label>
     </owl:Class>
@@ -242,7 +242,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
-        <rdfs:comment xml:lang="es">Nivel de ruido que ha sido medido por el sensor. Es una magnitud física para describir la contaminación acústica, que tiene relación con los efectos producidos por ésta. Se mide en Decibelios (dB)</rdfs:comment>
+        <rdfs:comment xml:lang="es">Nivel de presión sonora que ha sido medido por el sensor. Es una magnitud física para describir la contaminación acústica, que tiene relación con los efectos producidos por ésta. Se mide en Decibelios (dB)</rdfs:comment>
         <rdfs:label xml:lang="es">Nivel de Ruido</rdfs:label>
         <rdfs:label xml:lang="en">Noise Level</rdfs:label>
     </owl:Class>
@@ -253,7 +253,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor">
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
-        <rdfs:comment xml:lang="es">Dispositivo que mide el nivel de ruido.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Dispositivo que mide el nivel de ruido. Detecta los cambios en la presión del aire, en determinado lugar y en un momento dado, y los  convierte en pulso eléctricos. Estos pulsos eléctricos tienen una frecuencia, que es la de las ondas acústicas. El rango de frecuencia que percibe el ser humano es de 20 Hz a 20 kHz</rdfs:comment>
         <rdfs:label xml:lang="en">Noise Sensor</rdfs:label>
         <rdfs:label xml:lang="es">Sensor de Ruido</rdfs:label>
     </owl:Class>
@@ -322,7 +322,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <!-- http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure -->
 
     <owl:Class rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure">
-        <rdfs:comment xml:lang="en">A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called &quot;metre&quot;. (definition taken from om ontology).</rdfs:comment>
         <rdfs:comment xml:lang="es">Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convención y / o por ley. Se utiliza como estándar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple múltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada &quot;metro&quot;. (definición tomada de la ontología om).</rdfs:comment>
         <rdfs:isDefinedBy>http://www.wurvoc.org/vocabularies/om-1.8/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="es">Unidad de Medida</rdfs:label>
