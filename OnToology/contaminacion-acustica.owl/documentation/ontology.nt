@@ -1,5 +1,6 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://www.w3.org/2002/07/owl#imports> <http://purl.oclc.org/NET/ssnx/ssn> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://www.w3.org/2002/07/owl#imports> <http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://creativecommons.org/ns#license> "http://creativecommons.org/licenses/by/4.0/" .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://purl.org/dc/elements/1.1/contributor> "Mariano Fern\u00E1ndez L\u00F3pez (Ontology Engineering Group)"@es .
@@ -85,7 +86,7 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#comment> "El nivel de ruido tiene un emisor ac\u00FAstico que lo provoca"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#comment> "El nivel de ruido tiene un emisor ac\u00FAstico que lo provoca."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#label> "has acoustic emisor"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#label> "tiene emisor ac\u00FAstico"@es .
 # 
@@ -144,14 +145,14 @@
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#Property> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de presi\u00F3n sonora que ha sido medido por el sensor. Es una magnitud f\u00EDsica para describir la contaminaci\u00F3n ac\u00FAstica, que tiene relaci\u00F3n con los efectos producidos por \u00E9sta. Se mide en Decibelios (dB)"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de presi\u00F3n sonora que ha sido medido por el sensor. Es una magnitud f\u00EDsica para describir la contaminaci\u00F3n ac\u00FAstica, que tiene relaci\u00F3n con los efectos producidos por \u00E9sta. Se mide en Decibelios (dB)."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de Ruido"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Level"@en .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo que mide el nivel de ruido. Detecta los cambios en la presi\u00F3n del aire, en determinado lugar y en un momento dado, y los  convierte en pulso el\u00E9ctricos. Estos pulsos el\u00E9ctricos tienen una frecuencia, que es la de las ondas ac\u00FAsticas. El rango de frecuencia que percibe el ser humano es de 20 Hz a 20 kHz"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo que mide el nivel de ruido. Detecta los cambios en la presi\u00F3n del aire, en determinado lugar y en un momento dado, y los  convierte en pulso el\u00E9ctricos. Estos pulsos el\u00E9ctricos tienen una frecuencia, que es la de las ondas ac\u00FAsticas. El rango de frecuencia que percibe el ser humano es de 20 Hz a 20 kHz."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Sensor"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor de Ruido"@es .
 # 
@@ -242,22 +243,6 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa el hecho de no aplicar ning\u00FAn tipo de ponderaci\u00F3n frecuencial a las ondas sonoras captadas por el sensor de ruido. Se captan tal y como son."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ> <http://www.w3.org/2000/01/rdf-schema#label> "Ponderaci\u00F3n Z"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Norma IEC 61672:2003"@es .
-# 
-# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion
-<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-# 
-# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto
-<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-aeropuerto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-# 
-# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario
-<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-ferroviario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-# 
-# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario
-<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/gran-eje-viario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 # 
 # 
 # 
