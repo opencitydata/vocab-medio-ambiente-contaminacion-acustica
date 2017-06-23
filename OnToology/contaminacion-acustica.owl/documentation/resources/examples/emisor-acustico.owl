@@ -8,7 +8,10 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <Ontology/>
+    <Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica">
+        <rdfs:comment xml:lang="es">Tesauro que recoge los tipos de emisores acústicos según se define en la Ley 37/2003 de 17 de noviembre, del Ruido.</rdfs:comment>
+        <terms:created xml:lang="es">Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)</terms:created>
+    </Ontology>
     
 
 
@@ -91,8 +94,7 @@
 
     <NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <rdfs:comment xml:lang="es">Tesauro que recoge los tipos de emisores acústicos según se define en la Ley 37/2003 de 17 de noviembre, del Ruido. 
-Un emisor acústico es cualquier actividad, infraestructura, equipo, maquinaria o comportamiento que genere contaminación acústica.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un emisor acústico es cualquier actividad, infraestructura, equipo, maquinaria o comportamiento que genere contaminación acústica.</rdfs:comment>
         <rdfs:label xml:lang="es">Tipos de emisores acústicos</rdfs:label>
         <rdfs:seeAlso xml:lang="es">Ley 37/2003 de 17 de noviembre, del Ruido.</rdfs:seeAlso>
         <skos:hasTopConcept rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion"/>
