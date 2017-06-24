@@ -127,6 +127,7 @@ rdfs:label "Intervalo de referencia LdESP"@es ,
 ex:LdESP rdf:type owl:NamedIndividual ,
 noise:AverageNoiseLevel ;
 noise:hasAcousticEmisor <http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion> ;
+noise:referenceInterval ex:IntervalLd ;
 rdfs:comment "Nivel de ruido día que se define como el valor medio del sonido medido en el periodo diurno dentro del intervalo de referencia de 7-19 horas según la normativa española"@es ;
 rdfs:label "Nivel de ruido día"@es ;
 rdfs:seeAlso "ISO 1996-2: 1987"@en .
@@ -137,6 +138,7 @@ ex:NoiseSensor01 rdf:type owl:NamedIndividual ,
 noise:NoiseSensor ;
 ssn:observes ex:FeatureOfInterestPaseoDeRecoletos ;
 noise:belongsToSensorClass noise:ClaseI ;
+noise:lastCalibrationDate ex:InstantCalibration20170330 ;
 rdfs:label "NoiseSensor01"@es ;
 wgs84_pos:location ex:NoiseSensor01Location .
 

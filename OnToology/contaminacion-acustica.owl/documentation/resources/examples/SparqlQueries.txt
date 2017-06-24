@@ -1,0 +1,191 @@
+EJEMPLOS DE CONSULTAS SPARQL PARA VOCABULARIO DE CONTAMINACIÓN ACÚSTICA
+ 
+ 
+PC1: ¿Cuál es el nivel de ruido medido en determinado momento y localización?
+ 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX noise: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#>
+PREFIX ssn:<http://purl.oclc.org/NET/ssnx/ssn#>
+PREFIX time:<http://www.w3.org/2006/time#>
+PREFIX wgs84_pos:<http://www.w3.org/2003/01/geo/wgs84_pos#>
+SELECT  (?location AS ?Localización)  (?noiseLevel AS ?NivelRuido)  (?valor AS ?Valor)
+	WHERE {?foi wgs84_pos:alt ?alt .
+	?foi wgs84_pos:lat ?lat .
+	?foi wgs84_pos:long ?long .		
+	?foi rdfs:label ?location .
+	?obs ssn:featureOfInterest ?foi .	
+	?obs ssn:observationSamplingTime ?instant .
+	?instant time:hasBeginning ?initTime .
+	?initTime time:inXSDDateTimeStamp ?init .
+	?instant time:hasEnd ?endTime .
+	?endTime time:inXSDDateTimeStamp ?end .
+            ?obs ssn:observedProperty ?property .
+	?property rdfs:label ?noiseLevel .                       
+	?obs ssn:observationResult ?result .
+	?result ssn:hasValue ?output .
+	?output rdf:value ?valor .    
+	FILTER(?alt="648.00"^^xsd:decimal && ?lat="40.423332"^^xsd:decimal && ?long="-3.6908333"^^xsd:decimal && ?init="2017-04-01T00:00:00+01:00"^^xsd:dateTimeStamp && ?end="2017-04-30T23:59:59+01:00"^^xsd:dateTimeStamp && ?noiseLevel="Nivel de ruido día"@es)                         
+   	}
+ 
+ 
+ 
+PC2: ¿Cuál es la ubicación de una estación de medición concreta?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wgs84_pos:<http://www.w3.org/2003/01/geo/wgs84_pos#>
+SELECT (?NoiseSensor AS ?Sensor) (?alt AS ?Altitud) (?lat AS ?Latitud) (?long AS ?Longitud)
+	WHERE {?NoiseSensor rdfs:label "NoiseSensor01"@es .
+?NoiseSensor wgs84_pos:location ?Localizacion .
+	?Localizacion wgs84_pos:alt ?alt .
+	?Localizacion wgs84_pos:lat ?lat .
+	?Localizacion wgs84_pos:long ?long
+	}
+ 
+ 
+ 
+ 
+PC3:¿En qué intervalo del día se ha detectado el nivel de ruido?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX noise: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#>
+PREFIX ssn:<http://purl.oclc.org/NET/ssnx/ssn#>
+PREFIX time:<http://www.w3.org/2006/time#>
+SELECT  (?noiseLevel AS ?NivelRuido) (?init AS ?InicioIntervalo) (?end AS ?FinIntervalo)
+	WHERE {?noiseLevel rdfs:label "Nivel de ruido día"@es .
+	?noiseLevel noise:referenceInterval ?interval .
+	 ?interval time:hasBeginning ?initTime .
+	?initTime time:inDateTime ?dateTimeInit .
+	?dateTimeInit time:hour ?init .
+	 ?interval time:hasEnd ?endTime .
+	?endTime time:inDateTime ?dateTimeEnd .
+	?dateTimeEnd time:hour ?end .
+   	}
+ 
+PC4: ¿Cuál fue la última fecha de calibración del sensor?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX time:<http://www.w3.org/2006/time#>
+PREFIX noise: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#>
+SELECT (?NoiseSensor AS ?Sensor) (?LastCalibrationDate AS ?UltimaFechaDeCalibracion)
+	WHERE {?NoiseSensor rdfs:label "NoiseSensor01"@es .
+	?NoiseSensor noise:lastCalibrationDate ?instant .
+	?instant time:inXSDDateTimeStamp ?LastCalibrationDate .
+}
+ 
+ 
+ 
+PC5: ¿Cuál es la clase del sensor acústico? El sensor XXX puede ser de Clase 1, 2 o sin clase.
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX noise: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#>
+SELECT (?SensorName AS ?Sensor)  (?SensorClass AS ?Clase) (?Description AS ?Descripción)
+	WHERE { ?NoiseSensor  rdfs:label ?SensorName .
+	?NoiseSensor noise:belongsToSensorClass ?SensorClass .
+	?SensorClass rdfs:comment ?Description .
+}
+ 
+ 
+ 
+ 
+ 
+PC6: ¿Qué es un sensor de clase 1?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (?SensorClass AS ?Sensor) (?Description AS ?Descripción)
+	WHERE {?SensorClass rdfs:label "Clase I"@es .
+	?SensorClass rdfs:comment ?Description .
+	}
+ 
+ 
+PC7: ¿Qué es un sensor de clase 2?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>	
+SELECT (?SensorClass AS ?Sensor) (?Description AS ?Descripción)
+	WHERE {?SensorClass rdfs:label "Clase II"@es .
+	?SensorClass rdfs:comment ?Description .
+	}
+ 
+ 
+PC8: ¿Cuál es la ponderación acústica de las medidas del sensor? Ponderación A, C o sin ponderación. 
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX noise: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#>
+PREFIX ssn:<http://purl.oclc.org/NET/ssnx/ssn#>
+SELECT (?NoiseSensor AS ?Sensor)  (?Weighting AS ?Ponderación)
+	WHERE {?NoiseSensor rdfs:label "NoiseSensor01"@es .
+	?obs ssn:observedBy ?NoiseSensor .
+	?obs ssn:observationResult ?result .
+	?result ssn:hasValue ?value .
+	?value noise:isWeightingWith ?Weighting .
+}
+ 
+PC9: ¿Qué es la ponderación acústica A?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (?Weighing AS ?Ponderación)  (?Description  AS ?Descripción)
+	WHERE {?Weighing rdfs:label "Ponderación A"@es .
+	?Weighing rdfs:comment ?Description .
+  }
+ 
+PC10: ¿Qué es la ponderación acústica C?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (?Weighing AS ?Ponderación)  (?Description  AS ?Descripción)
+	WHERE {?Weighing rdfs:label "Ponderación C"@es .
+	?Weighing rdfs:comment ?Description .
+  }
+ 
+ 
+ 
+PC11: ¿Qué es la ponderación Z (o sin ponderación)?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (?Weighing AS ?Ponderación)  (?Description  AS ?Descripción)
+	WHERE {?Weighing rdfs:label "Ponderación Z"@es .
+	?Weighing rdfs:comment ?Description .
+  }
+ 
+ 
+PC12: ¿Cual es el nivel de ruido asociado a una fuente concreta?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX noise: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#>
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+SELECT  (?noiseLevelName AS ?NivelRuido ) (?emisorName AS ?Emisor)
+	WHERE { ?noiseLevel noise:hasAcousticEmisor ?emisor .
+	?noiseLevel rdfs:label ?noiseLevelName .
+	?emisor  skos:prefLabel ?emisorName .
+	FILTER(?emisorName="Aglomeración"@es )                            	
+  }
+ 
+ 
+ 
+PC13: ¿Cuales son las fuentes de ruido concretas que podrían ser especificadas?
+ 
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+SELECT ?emisorName
+	WHERE { ?emisor skos:hasTopConcept ?emisorType .
+	?emisorType skos:prefLabel ?emisorName
+	
+  }
+ 
+ 
+PC14: ¿Cuál es el intervalo de referencia de cada medida realizada por el sensor de ruido o mapa de ruido?
+ 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX noise: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#>
+PREFIX ssn:<http://purl.oclc.org/NET/ssnx/ssn#>
+PREFIX time:<http://www.w3.org/2006/time#>
+SELECT  (?noiseLevel AS ?NivelRuido) (?init AS ?InicioIntervalo) (?end AS ?FinIntervalo)
+	WHERE {?noiseLevel noise:referenceInterval ?interval .
+	 ?interval time:hasBeginning ?initTime .
+	?initTime time:inDateTime ?dateTimeInit .
+	?dateTimeInit time:hour ?init .
+	 ?interval time:hasEnd ?endTime .
+	?endTime time:inDateTime ?dateTimeEnd .
+	?dateTimeEnd time:hour ?end .
+   	}
