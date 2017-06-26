@@ -1,5 +1,5 @@
 <h2  id="crossreference" class="list">Cross reference for Contaminación Acústica classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-Esta sección provee detalles para cada clase, propiedad e individuo definido por la ontología.
+This section provides details for each class and property defined by Contaminación Acústica.
 <div id="classes">
    <h3 id="classes" class="list">Classes</h3>
    <ul class="hlist">
@@ -128,6 +128,12 @@ Esta sección provee detalles para cada clase, propiedad e individuo definido po
             <a href="#NoiseLevel"
                title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.co-ode.org/ontologies/ont.owl#timePercentage"
+               title="http://www.co-ode.org/ontologies/ont.owl#timePercentage">Time percentage</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -424,6 +430,39 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.co-ode.org/ontologies/ont.owl#timePercentage"
+            title="http://www.co-ode.org/ontologies/ont.owl#timePercentage">Time percentage</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#timePercentage">
+      <h3>Time percentage<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#timePercentage</p>
+      <div class="comment">
+         <span class="markdown">Porcentaje de tiempo (N%) del intervalo de tiempo de referencia en el que se excede el nivel de ruido</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PercentilNoiseLevel"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
             </dd>
          </dl>
       </div>
