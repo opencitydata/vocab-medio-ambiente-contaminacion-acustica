@@ -16,9 +16,11 @@
                                                                                                                                     "Oscar Corcho García (Ontology Engineering Group)"@es ,
                                                                                                                                     "Raúl García Castro (Ontology Engineering Group)"@es ;
                                                                                       <http://purl.org/dc/elements/1.1/creator> "Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)"@es ;
-                                                                                      <http://purl.org/dc/elements/1.1/description> "Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con clases y propiedades para representar los datos de la contaminación acústica. También se reutiliza la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posición en el espacio a través de la longitud, latitud y altitud"@es ;
+                                                                                      <http://purl.org/dc/elements/1.1/description> "Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con clases y propiedades para representar los datos de la contaminación acústica. También se reutiliza la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posición en el espacio a través de la longitud, latitud y altitud"@es ,
+                                                                                                                                    "The vocabulary extends from W3C Semantic Sensor Network Ontology (SSN) with classes and properties to represent the data about acoustic pollution. Also it reuses the OWL-Time Ontology to represent the time and the WGS84 Geo Positioning Ontology to represent the spatial position throught longitude, latitude and altitude."@en ;
                                                                                       <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)"^^xsd:string ;
-                                                                                      <http://purl.org/dc/elements/1.1/title> "Contaminación Acústica"@es .
+                                                                                      <http://purl.org/dc/elements/1.1/title> "Acoustic Pollution"@en ,
+                                                                                                                              "Contaminación Acústica"@es .
 
 #################################################################
 #    Annotation properties
@@ -89,7 +91,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 :belongsToSensorClass rdf:type owl:ObjectProperty ;
                       rdfs:domain :NoiseSensor ;
                       rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                      rdfs:comment "El sensor de ruido puede pertenecer o no a una clase. La clase define las caracterísiticas técnicas del sensor que establecen los límites de aceptación y el rango de temperaturas de funcionamiento."@es ;
+                      rdfs:comment "El sensor de ruido puede pertenecer o no a una clase. La clase define las caracterísiticas técnicas del sensor que establecen los límites de aceptación y el rango de temperaturas de funcionamiento."@es ,
+                                   "Noise sensor may or may not belong to a class. The class defines the technical characteristics of the sensor that establish the limits of acceptance and the range of operating temperatures."@en ;
                       rdfs:label "belongs to sensor class"@en ,
                                  "pertenece a una clase de sensor"@es .
 
@@ -98,7 +101,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 :hasAcousticEmisor rdf:type owl:ObjectProperty ;
                    rdfs:domain :NoiseLevel ;
                    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                   rdfs:comment "El nivel de ruido tiene un emisor acústico que lo provoca."@es ;
+                   rdfs:comment "El nivel de ruido tiene un emisor acústico que lo provoca."@es ,
+                                "The noise level has an acoustic emisor that causes it."@en ;
                    rdfs:label "has acoustic emisor"@en ,
                               "tiene emisor acústico"@es .
 
@@ -107,7 +111,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 :hasUnitOfMeasure rdf:type owl:ObjectProperty ;
                   rdfs:domain <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> ;
                   rdfs:range <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> ;
-                  rdfs:comment "Relación entre el valor medido por el sensor y  la unidad de medida en la que este valor es expresado."@es ;
+                  rdfs:comment "Relación entre el valor medido por el sensor y  la unidad de medida en la que este valor es expresado."@es ,
+                               "Relationship between the measured value by the sensor and the unit of measure at which this value is expressed."@en ;
                   rdfs:label "has unit of measure"@en ,
                              "tiene unidad de medida"@es .
 
@@ -116,7 +121,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 :isWeightingWith rdf:type owl:ObjectProperty ;
                  rdfs:domain <http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> ;
                  rdfs:range :Weighting ;
-                 rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial. Puede ser sin poderación (Z), ponderación A o C."@es ;
+                 rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial. Puede ser sin poderación (Z), ponderación A o C."@es ,
+                              "The measurement performed by the Noise Sensor has a frequency weighting. It can be without weighting (Z), weighting A or C."@en ;
                  rdfs:label "es ponderado con"@es ,
                             "is weighting with"@en .
 
@@ -125,7 +131,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 :lastCalibrationDate rdf:type owl:ObjectProperty ;
                      rdfs:domain :NoiseSensor ;
                      rdfs:range <http://www.w3.org/2006/time#Instant> ;
-                     rdfs:comment "Última fecha de calibración del sensor.  La calibración es un proceso periódico realizado a los sensores acústicos para verificar su correcto funcionamiento en sus distintos modos de trabajo."@es ;
+                     rdfs:comment "Last calibration date of the sensor. Calibration is a periodic process performed to acoustic sensors to verify their correct operation in their different working modes."@en ,
+                                  "Última fecha de calibración del sensor.  La calibración es un proceso periódico realizado a los sensores acústicos para verificar su correcto funcionamiento en sus distintos modos de trabajo."@es ;
                      rdfs:label "last calibration date"@en ,
                                 "última fecha de calibración del sensor."@es .
 
@@ -134,7 +141,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 :referenceInterval rdf:type owl:ObjectProperty ;
                    rdfs:domain :NoiseLevel ;
                    rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
-                   rdfs:comment "Intervalo de tiempo al que se refiere la evaluación del ruido. El intervalo de tiempo de referencia se puede especificar en normas nacionales o internacionales o por las autoridades locales para englobar las actividades humanas típicas y las variaciones en el funcionamiento de las fuentes de ruido. Los intervalos de tiempo de referencia pueden ser por ejemplo: una parte del día, un día entero o una semana completa. Algunos países pueden definir incluso intervalos de referencia más largos."@es ;
+                   rdfs:comment "Interval of time to which the noise assessment refers. The reference time interval can be specified in national or international standards or by local authorities to encompass typical human activities and variations in the operation of noise sources. The reference time intervals can be for example: a part of the day, a whole day or a complete week. Some countries may even define longer reference intervals."@en ,
+                                "Intervalo de tiempo al que se refiere la evaluación del ruido. El intervalo de tiempo de referencia se puede especificar en normas nacionales o internacionales o por las autoridades locales para englobar las actividades humanas típicas y las variaciones en el funcionamiento de las fuentes de ruido. Los intervalos de tiempo de referencia pueden ser por ejemplo: una parte del día, un día entero o una semana completa. Algunos países pueden definir incluso intervalos de referencia más largos."@es ;
                    rdfs:label "intervalo de referencia"@es ,
                               "reference interval"@en ;
                    rdfs:seeAlso "ISO 1996-1: 2005"@es .
@@ -152,7 +160,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 <http://www.co-ode.org/ontologies/ont.owl#timePercentage> rdf:type owl:DatatypeProperty ;
                                                           rdfs:domain :PercentilNoiseLevel ;
                                                           rdfs:range xsd:double ;
-                                                          rdfs:comment "Porcentaje de tiempo (N%) del intervalo de tiempo de referencia en el que se excede el nivel de ruido"@es ;
+                                                          rdfs:comment "Percentage of time (N%) of the reference time interval at which the noise level is exceeded"@en ,
+                                                                       "Porcentaje de tiempo (N%) del intervalo de tiempo de referencia en el que se excede el nivel de ruido"@es ;
                                                           rdfs:label "Porcentaje de tiempo"@es ,
                                                                      "Time percentage"@en .
 
@@ -164,7 +173,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel
 :AverageNoiseLevel rdf:type owl:Class ;
                    rdfs:subClassOf :NoiseLevel ;
-                   rdfs:comment "Nivel medio de presión sonora que ha sido medido por el sensor."@es ;
+                   rdfs:comment "Average sound pressure level that has been measured by the sensor."@en ,
+                                "Nivel medio de presión sonora que ha sido medido por el sensor."@es ;
                    rdfs:label "Average Noise Level"@en ,
                               "Nivel Medio de Ruido"@es .
 
@@ -172,7 +182,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel
 :NoiseLevel rdf:type owl:Class ;
             rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#Property> ;
-            rdfs:comment "Nivel de presión sonora que ha sido medido por el sensor. Es una magnitud física para describir la contaminación acústica, que tiene relación con los efectos producidos por ésta. Se mide en Decibelios (dB)."@es ;
+            rdfs:comment "Nivel de presión sonora que ha sido medido por el sensor. Es una magnitud física para describir la contaminación acústica, que tiene relación con los efectos producidos por ésta. Se mide en decibelios (dB)."@es ,
+                         "Sound pressure level that has been measured by the sensor. It is a physical magnitude to describe acoustic pollution, which is related to the effects produced by it. It is measured in decibels (dB)."@en ;
             rdfs:label "Nivel de Ruido"@es ,
                        "Noise Level"@en .
 
@@ -180,7 +191,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor
 :NoiseSensor rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> ;
-             rdfs:comment "Dispositivo que mide el nivel de ruido. Detecta los cambios en la presión del aire, en determinado lugar y en un momento dado, y los  convierte en pulso eléctricos. Estos pulsos eléctricos tienen una frecuencia, que es la de las ondas acústicas. El rango de frecuencia que percibe el ser humano es de 20 Hz a 20 kHz."@es ;
+             rdfs:comment "Device that measures the noise level. It detects changes in air pressure, at a certain location and at a given time, and converts them into electrical pulses. These electric pulses have a frequency, which is that of the acoustic waves. The frequency range that the human being perceives is from 20 Hz to 20 kHz."@en ,
+                          "Dispositivo que mide el nivel de ruido. Detecta los cambios en la presión del aire, en determinado lugar y en un momento dado, y los  convierte en pulso eléctricos. Estos pulsos eléctricos tienen una frecuencia, que es la de las ondas acústicas. El rango de frecuencia que percibe el ser humano es de 20 Hz a 20 kHz."@es ;
              rdfs:label "Noise Sensor"@en ,
                         "Sensor de Ruido"@es .
 
@@ -188,7 +200,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel
 :PercentilNoiseLevel rdf:type owl:Class ;
                      rdfs:subClassOf :NoiseLevel ;
-                     rdfs:comment "Nivel de presión sonora ponderado en frecuencia y ponderado en el tiempo superado el N% de tiempo del intervalo considerado."@es ;
+                     rdfs:comment "Frequency and time weighted sound pressure level exceeded the N% of time of the considered interval."@en ,
+                                  "Nivel de presión sonora ponderado en frecuencia y ponderado en el tiempo superado el N% de tiempo del intervalo considerado."@es ;
                      rdfs:label "Nivel de Ruido en Percentiles"@es ,
                                 "Percentil Noise Level"@en ;
                      rdfs:seeAlso "AENOR: UNE-ISO 1996-1"@es .
@@ -197,7 +210,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting
 :Weighting rdf:type owl:Class ;
            rdfs:subClassOf <http://www.loa-cnr.it/ontologies/DUL.owl#Method> ;
-           rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial que se utiliza para una correcta interpretación y medición de  los  niveles  de  sonoridad  de  un  determinado  sonido  en  comparación  con  la naturaleza  no  lineal  del  oído  humano  para  las  distintas  frecuencias  del  espectro audible. Puede ser sin poderación (Z), ponderación A o C."@es ;
+           rdfs:comment "La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial que se utiliza para una correcta interpretación y medición de  los  niveles  de  sonoridad  de  un  determinado  sonido  en  comparación  con  la naturaleza  no  lineal  del  oído  humano  para  las  distintas  frecuencias  del  espectro audible. Puede ser sin poderación (Z), ponderación A o C."@es ,
+                        "The measurement performed by the Noise Sensor has a frequency weighting that is used for a correct interpretation and measurement of the loudness levels of a particular sound compared to the non-linear nature of the human ear for the different frequencies of the audible spectrum. It can be without weighting (Z), weighting A or C."@en ;
            rdfs:label "Ponderación"@es ,
                       "Weighting"@en .
 
@@ -232,7 +246,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure
 <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> rdf:type owl:Class ;
-                                                            rdfs:comment "Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convención y / o por ley. Se utiliza como estándar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple múltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada \"metro\". (definición tomada de la ontología om)."@es ;
+                                                            rdfs:comment "A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called \"metre\"."@en ,
+                                                                         "Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convención y / o por ley. Se utiliza como estándar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple múltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada \"metro\". (definición tomada de la ontología om)."@es ;
                                                             rdfs:isDefinedBy "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:string ;
                                                             rdfs:label "Unidad de Medida"@es ,
                                                                        "Unit of Measure"@en .
@@ -250,16 +265,20 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseI
 :ClaseI rdf:type owl:NamedIndividual ,
                  <http://www.w3.org/2004/02/skos/core#Concept> ;
-        rdfs:comment "Sensor que cumple las características de precisión más restrictivas definidas en la normativa IEC. Esta clase de sensores tiene menores márgenes de tolerancia en su rango de medida. Los instrumentos de Clase I se especifican dentro del rango de temperaturas del aire desde -10 ºC  hasta  +50 ºC."@es ;
-        rdfs:label "Clase I"@es ;
+        rdfs:comment "Sensor que cumple las características de precisión más restrictivas definidas en la normativa IEC. Esta clase de sensores tiene menores márgenes de tolerancia en su rango de medida. Los instrumentos de Clase I se especifican dentro del rango de temperaturas del aire desde -10 ºC  hasta  +50 ºC."@es ,
+                     "Sensor that fulfills the most restrictive precision characteristics defined in the IEC standard. This class of sensors has smaller tolerance margins in its measurement range. Class I instruments are specified within the air temperature range from -10 ° C to +50 ° C."@en ;
+        rdfs:label "Clase I"@es ,
+                   "Class I"@en ;
         rdfs:seeAlso "Norma IEC 61672-1:2013"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseII
 :ClaseII rdf:type owl:NamedIndividual ,
                   <http://www.w3.org/2004/02/skos/core#Concept> ;
-         rdfs:comment "Sensor que cumple las características de precisión menos restrictivas definidas en la normativa IEC. Esta clase de sensores tiene mayores márgenes de tolerancia en su rango de medida. Los instrumentos de Clase II se especifican dentro del rango de temperaturas del aire desde 0 ºC  hasta  +40 ºC."@es ;
-         rdfs:label "Clase II"@es ;
+         rdfs:comment "Sensor que cumple las características de precisión menos restrictivas definidas en la normativa IEC. Esta clase de sensores tiene mayores márgenes de tolerancia en su rango de medida. Los instrumentos de Clase II se especifican dentro del rango de temperaturas del aire desde 0 ºC  hasta  +40 ºC."@es ,
+                      "Sensor that fulfills the less restrictive precision characteristics defined in the IEC standard. This class of sensors has greater tolerance margins in its measuring range. Class II instruments are specified within the air temperature range from 0 ° C to + 40 ° C."@en ;
+         rdfs:label "Clase II"@es ,
+                    "Class II"@en ;
          rdfs:seeAlso "Norma IEC 61672-1:2013"@es .
 
 
@@ -267,8 +286,10 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 :PonderacionA rdf:type owl:NamedIndividual ,
                        :Weighting ,
                        <http://www.w3.org/2004/02/skos/core#Concept> ;
-              rdfs:comment "Ponderación más habitual en acústica ambiental. Se utiliza para ajustar los niveles de ruido a cómo los percibe el oido humano."@es ;
-              rdfs:label "Ponderación A"@es ;
+              rdfs:comment "More common weighting in enviromental acoustic. It is used to adjust noise levels as the human ear perceives them."@en ,
+                           "Ponderación más habitual en acústica ambiental. Se utiliza para ajustar los niveles de ruido a cómo los percibe el oido humano."@es ;
+              rdfs:label "Ponderación A"@es ,
+                         "Weighting A"@en ;
               rdfs:seeAlso "Norma IEC 61672:2003"@es .
 
 
@@ -276,8 +297,10 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 :PonderacionC rdf:type owl:NamedIndividual ,
                        :Weighting ,
                        <http://www.w3.org/2004/02/skos/core#Concept> ;
-              rdfs:comment "Ponderación que se utiliza para evaluar altos niveles de ruido."@es ;
-              rdfs:label "Ponderación C"@es ;
+              rdfs:comment "Ponderación que se utiliza para evaluar altos niveles de ruido."@es ,
+                           "Weighting used to evaluate high noise leves."@en ;
+              rdfs:label "Ponderación C"@es ,
+                         "Weighting C"@en ;
               rdfs:seeAlso "Norma IEC 61672:2003"@es .
 
 
@@ -285,8 +308,10 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 :PonderacionZ rdf:type owl:NamedIndividual ,
                        :Weighting ,
                        <http://www.w3.org/2004/02/skos/core#Concept> ;
-              rdfs:comment "Representa el hecho de no aplicar ningún tipo de ponderación frecuencial a las ondas sonoras captadas por el sensor de ruido. Se captan tal y como son."@es ;
-              rdfs:label "Ponderación Z"@es ;
+              rdfs:comment "It represents the fact of not applying any type of frequency weighting to the sound waves captured by the noise sensor. They are captured as they are."@en ,
+                           "Representa el hecho de no aplicar ningún tipo de ponderación frecuencial a las ondas sonoras captadas por el sensor de ruido. Se captan tal y como son."@es ;
+              rdfs:label "Ponderación Z"@es ,
+                         "Weighting Z"@en ;
               rdfs:seeAlso "Norma IEC 61672:2003"@es .
 
 

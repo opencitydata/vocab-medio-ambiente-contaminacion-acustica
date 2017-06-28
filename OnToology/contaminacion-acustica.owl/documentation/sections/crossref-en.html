@@ -43,7 +43,7 @@ This section provides details for each class and property defined by Contaminaci
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel</p>
       <div class="comment">
-         <span class="markdown">Nivel medio de presión sonora que ha sido medido por el sensor.</span>
+         <span class="markdown">Average sound pressure level that has been measured by the sensor.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -62,7 +62,7 @@ This section provides details for each class and property defined by Contaminaci
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel</p>
       <div class="comment">
-         <span class="markdown">Nivel de presión sonora que ha sido medido por el sensor. Es una magnitud física para describir la contaminación acústica, que tiene relación con los efectos producidos por ésta. Se mide en Decibelios (dB).</span>
+         <span class="markdown">Sound pressure level that has been measured by the sensor. It is a physical magnitude to describe acoustic pollution, which is related to the effects produced by it. It is measured in decibels (dB).</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -95,7 +95,7 @@ This section provides details for each class and property defined by Contaminaci
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor</p>
       <div class="comment">
-         <span class="markdown">Dispositivo que mide el nivel de ruido. Detecta los cambios en la presión del aire, en determinado lugar y en un momento dado, y los  convierte en pulso eléctricos. Estos pulsos eléctricos tienen una frecuencia, que es la de las ondas acústicas. El rango de frecuencia que percibe el ser humano es de 20 Hz a 20 kHz.</span>
+         <span class="markdown">Device that measures the noise level. It detects changes in air pressure, at a certain location and at a given time, and converts them into electrical pulses. These electric pulses have a frequency, which is that of the acoustic waves. The frequency range that the human being perceives is from 20 Hz to 20 kHz.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -120,7 +120,7 @@ This section provides details for each class and property defined by Contaminaci
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel</p>
       <div class="comment">
-         <span class="markdown">Nivel de presión sonora ponderado en frecuencia y ponderado en el tiempo superado el N% de tiempo del intervalo considerado.</span>
+         <span class="markdown">Frequency and time weighted sound pressure level exceeded the N% of time of the considered interval.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -200,7 +200,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</p>
       <div class="comment">
-         <span class="markdown">Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convención y / o por ley. Se utiliza como estándar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple múltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada "metro". (definición tomada de la ontología om).</span>
+         <span class="markdown">A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called "metre".</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -228,7 +228,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting</p>
       <div class="comment">
-         <span class="markdown">La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial que se utiliza para una correcta interpretación y medición de  los  niveles  de  sonoridad  de  un  determinado  sonido  en  comparación  con  la naturaleza  no  lineal  del  oído  humano  para  las  distintas  frecuencias  del  espectro audible. Puede ser sin poderación (Z), ponderación A o C.</span>
+         <span class="markdown">The measurement performed by the Noise Sensor has a frequency weighting that is used for a correct interpretation and measurement of the loudness levels of a particular sound compared to the non-linear nature of the human ear for the different frequencies of the audible spectrum. It can be without weighting (Z), weighting A or C.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -244,11 +244,11 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <dt>has members</dt>
          <dd>
             <a href="#PonderacionA"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA">Ponderación A</a>
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA">Weighting A</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#PonderacionC"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionC">Ponderación C</a>
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionC">Weighting C</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#PonderacionZ"
-               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ">Ponderación Z</a>
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ">Weighting Z</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -289,7 +289,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass</p>
       <div class="comment">
-         <span class="markdown">El sensor de ruido puede pertenecer o no a una clase. La clase define las caracterísiticas técnicas del sensor que establecen los límites de aceptación y el rango de temperaturas de funcionamiento.</span>
+         <span class="markdown">Noise sensor may or may not belong to a class. The class defines the technical characteristics of the sensor that establish the limits of acceptance and the range of operating temperatures.</span>
       </div>
       <div class="description">
          <dl>
@@ -315,7 +315,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor</p>
       <div class="comment">
-         <span class="markdown">El nivel de ruido tiene un emisor acústico que lo provoca.</span>
+         <span class="markdown">The noise level has an acoustic emisor that causes it.</span>
       </div>
       <div class="description">
          <dl>
@@ -341,7 +341,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure</p>
       <div class="comment">
-         <span class="markdown">Relación entre el valor medido por el sensor y  la unidad de medida en la que este valor es expresado.</span>
+         <span class="markdown">Relationship between the measured value by the sensor and the unit of measure at which this value is expressed.</span>
       </div>
       <div class="description">
          <dl>
@@ -366,7 +366,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#isWeightingWith</p>
       <div class="comment">
-         <span class="markdown">La medida que realiza el Sensor de Ruido tiene una ponderación frecuencial. Puede ser sin poderación (Z), ponderación A o C.</span>
+         <span class="markdown">The measurement performed by the Noise Sensor has a frequency weighting. It can be without weighting (Z), weighting A or C.</span>
       </div>
       <div class="description">
          <dl>
@@ -392,7 +392,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate</p>
       <div class="comment">
-         <span class="markdown">Última fecha de calibración del sensor.  La calibración es un proceso periódico realizado a los sensores acústicos para verificar su correcto funcionamiento en sus distintos modos de trabajo.</span>
+         <span class="markdown">Last calibration date of the sensor. Calibration is a periodic process performed to acoustic sensors to verify their correct operation in their different working modes.</span>
       </div>
       <div class="description">
          <dl>
@@ -417,7 +417,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval</p>
       <div class="comment">
-         <span class="markdown">Intervalo de tiempo al que se refiere la evaluación del ruido. El intervalo de tiempo de referencia se puede especificar en normas nacionales o internacionales o por las autoridades locales para englobar las actividades humanas típicas y las variaciones en el funcionamiento de las fuentes de ruido. Los intervalos de tiempo de referencia pueden ser por ejemplo: una parte del día, un día entero o una semana completa. Algunos países pueden definir incluso intervalos de referencia más largos.</span>
+         <span class="markdown">Interval of time to which the noise assessment refers. The reference time interval can be specified in national or international standards or by local authorities to encompass typical human activities and variations in the operation of noise sources. The reference time intervals can be for example: a part of the day, a whole day or a complete week. Some countries may even define longer reference intervals.</span>
       </div>
       <div class="description">
          <dl>
@@ -450,7 +450,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <p>
          <strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#timePercentage</p>
       <div class="comment">
-         <span class="markdown">Porcentaje de tiempo (N%) del intervalo de tiempo de referencia en el que se excede el nivel de ruido</span>
+         <span class="markdown">Percentage of time (N%) of the reference time interval at which the noise level is exceeded</span>
       </div>
       <div class="description">
          <dl>
@@ -472,11 +472,11 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
    <ul class="hlist">
       <li>
          <a href="#ClaseI"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseI">Clase I</a>
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseI">Class I</a>
       </li>
       <li>
          <a href="#ClaseII"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseII">Clase II</a>
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseII">Class II</a>
       </li>
       <li>
          <a href="#http://dbpedia.org/resource/Decibel" title="http://dbpedia.org/resource/Decibel">
@@ -485,26 +485,26 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       </li>
       <li>
          <a href="#PonderacionA"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA">Ponderación A</a>
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA">Weighting A</a>
       </li>
       <li>
          <a href="#PonderacionC"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionC">Ponderación C</a>
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionC">Weighting C</a>
       </li>
       <li>
          <a href="#PonderacionZ"
-            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ">Ponderación Z</a>
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ">Weighting Z</a>
       </li>
    </ul>
    <div class="entity" id="ClaseI">
-      <h3>Clase I<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Class I<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseI</p>
       <div class="comment">
-         <span class="markdown">Sensor que cumple las características de precisión más restrictivas definidas en la normativa IEC. Esta clase de sensores tiene menores márgenes de tolerancia en su rango de medida. Los instrumentos de Clase I se especifican dentro del rango de temperaturas del aire desde -10 ºC  hasta  +50 ºC.</span>
+         <span class="markdown">Sensor that fulfills the most restrictive precision characteristics defined in the IEC standard. This class of sensors has smaller tolerance margins in its measurement range. Class I instruments are specified within the air temperature range from -10 ° C to +50 ° C.</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -515,14 +515,14 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       </dl>
    </div>
    <div class="entity" id="ClaseII">
-      <h3>Clase II<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Class II<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseII</p>
       <div class="comment">
-         <span class="markdown">Sensor que cumple las características de precisión menos restrictivas definidas en la normativa IEC. Esta clase de sensores tiene mayores márgenes de tolerancia en su rango de medida. Los instrumentos de Clase II se especifican dentro del rango de temperaturas del aire desde 0 ºC  hasta  +40 ºC.</span>
+         <span class="markdown">Sensor that fulfills the less restrictive precision characteristics defined in the IEC standard. This class of sensors has greater tolerance margins in its measuring range. Class II instruments are specified within the air temperature range from 0 ° C to + 40 ° C.</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -549,14 +549,14 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       </dl>
    </div>
    <div class="entity" id="PonderacionA">
-      <h3>Ponderación A<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Weighting A<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA</p>
       <div class="comment">
-         <span class="markdown">Ponderación más habitual en acústica ambiental. Se utiliza para ajustar los niveles de ruido a cómo los percibe el oido humano.</span>
+         <span class="markdown">More common weighting in enviromental acoustic. It is used to adjust noise levels as the human ear perceives them.</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -572,14 +572,14 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       </dl>
    </div>
    <div class="entity" id="PonderacionC">
-      <h3>Ponderación C<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Weighting C<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionC</p>
       <div class="comment">
-         <span class="markdown">Ponderación que se utiliza para evaluar altos niveles de ruido.</span>
+         <span class="markdown">Weighting used to evaluate high noise leves.</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -595,14 +595,14 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       </dl>
    </div>
    <div class="entity" id="PonderacionZ">
-      <h3>Ponderación Z<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Weighting Z<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ</p>
       <div class="comment">
-         <span class="markdown">Representa el hecho de no aplicar ningún tipo de ponderación frecuencial a las ondas sonoras captadas por el sensor de ruido. Se captan tal y como son.</span>
+         <span class="markdown">It represents the fact of not applying any type of frequency weighting to the sound waves captured by the noise sensor. They are captured as they are.</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
