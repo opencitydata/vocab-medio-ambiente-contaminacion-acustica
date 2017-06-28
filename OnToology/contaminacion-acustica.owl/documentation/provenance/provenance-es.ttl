@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 <..\index-en.html> a prov:Entity;
-	 dc:title "Acoustic Pollution";
+	 dc:title "Contaminación Acústica";
 	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)".];
 	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Mariano Fernández López (Ontology Engineering Group)".];
 	 prov:wasAttributedTo [ a prov:Agent; foaf:name "María Poveda Villalón (Ontology Engineering Group)".];
