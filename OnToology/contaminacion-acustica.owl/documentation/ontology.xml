@@ -24,7 +24,7 @@
         <dc:contributor xml:lang="es">Raúl García Castro (Ontology Engineering Group)</dc:contributor>
         <dc:creator xml:lang="es">Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)</dc:creator>
         <dc:description xml:lang="es">Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con clases y propiedades para representar los datos de la contaminación acústica. También se reutiliza la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posición en el espacio a través de la longitud, latitud y altitud</dc:description>
-        <dc:description xml:lang="en">The vocabulary extends from W3C Semantic Sensor Network Ontology (SSN) with classes and properties to represent the data about acoustic pollution. Also it reuses the OWL-Time Ontology to represent the time and the WGS84 Geo Positioning Ontology to represent the spatial position throught longitude, latitude and altitude.</dc:description>
+        <dc:description xml:lang="en">The vocabulary extends from W3C Semantic Sensor Network Ontology (SSN) with classes and properties to represent the data about acoustic pollution. Also it reuses OWL-Time Ontology to represent the time and WGS84 Geo Positioning Ontology to represent the spatial position throught longitude, latitude and altitude.</dc:description>
         <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="en">Acoustic Pollution</dc:title>
         <dc:title xml:lang="es">Contaminación Acústica</dc:title>
@@ -166,15 +166,15 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter -->
 
 
-    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor">
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="es">El nivel de ruido tiene un emisor acústico que lo provoca.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The noise level has an acoustic emisor that causes it.</rdfs:comment>
-        <rdfs:label xml:lang="en">has acoustic emisor</rdfs:label>
+        <rdfs:comment xml:lang="en">Noise level has an acoustic emitter that causes it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has acoustic emitter</rdfs:label>
         <rdfs:label xml:lang="es">tiene emisor acústico</rdfs:label>
     </owl:ObjectProperty>
     
