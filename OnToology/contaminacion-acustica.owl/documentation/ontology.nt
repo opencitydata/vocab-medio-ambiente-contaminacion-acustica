@@ -9,7 +9,7 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://purl.org/dc/elements/1.1/contributor> "Ra\u00FAl Garc\u00EDa Castro (Ontology Engineering Group)"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://purl.org/dc/elements/1.1/creator> "Paola Espinoza Arias (Ontology Engineering Group y Secretar\u00EDa de Educaci\u00F3n Superior, Ciencia, Tecnolog\u00EDa e Innovaci\u00F3n)"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://purl.org/dc/elements/1.1/description> "Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con clases y propiedades para representar los datos de la contaminaci\u00F3n ac\u00FAstica. Tambi\u00E9n se reutiliza la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posici\u00F3n en el espacio a trav\u00E9s de la longitud, latitud y altitud"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://purl.org/dc/elements/1.1/description> "The vocabulary extends from W3C Semantic Sensor Network Ontology (SSN) with classes and properties to represent the data about acoustic pollution. Also it reuses the OWL-Time Ontology to represent the time and the WGS84 Geo Positioning Ontology to represent the spatial position throught longitude, latitude and altitude."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://purl.org/dc/elements/1.1/description> "The vocabulary extends from W3C Semantic Sensor Network Ontology (SSN) with classes and properties to represent the data about acoustic pollution. Also it reuses OWL-Time Ontology to represent the time and WGS84 Geo Positioning Ontology to represent the spatial position throught longitude, latitude and altitude."@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://purl.org/dc/elements/1.1/title> "Acoustic Pollution"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica> <http://purl.org/dc/elements/1.1/title> "Contaminaci\u00F3n Ac\u00FAstica"@es .
@@ -85,14 +85,14 @@
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to sensor class"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece a una clase de sensor"@es .
 # 
-# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#comment> "El nivel de ruido tiene un emisor ac\u00FAstico que lo provoca."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#comment> "The noise level has an acoustic emisor that causes it."@en .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#label> "has acoustic emisor"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor> <http://www.w3.org/2000/01/rdf-schema#label> "tiene emisor ac\u00FAstico"@es .
+# http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter> <http://www.w3.org/2000/01/rdf-schema#comment> "El nivel de ruido tiene un emisor ac\u00FAstico que lo provoca."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter> <http://www.w3.org/2000/01/rdf-schema#comment> "Noise level has an acoustic emitter that causes it."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter> <http://www.w3.org/2000/01/rdf-schema#label> "has acoustic emitter"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter> <http://www.w3.org/2000/01/rdf-schema#label> "tiene emisor ac\u00FAstico"@es .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure
 <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
