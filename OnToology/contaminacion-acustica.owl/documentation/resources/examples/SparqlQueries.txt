@@ -1,4 +1,4 @@
-EJEMPLOS DE CONSULTAS SPARQL PARA VOCABULARIO DE CONTAMINACIÓN ACÚSTICA
+﻿EJEMPLOS DE CONSULTAS SPARQL PARA VOCABULARIO DE CONTAMINACIÓN ACÚSTICA
  
  
 PC1: ¿Cuál es el nivel de ruido medido en determinado momento y localización?
@@ -155,14 +155,14 @@ PC12: ¿Cual es el nivel de ruido asociado a una fuente concreta?
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX noise: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#>
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
-SELECT  (?noiseLevelName AS ?NivelRuido ) (?emisorName AS ?Emisor)
-	WHERE { ?noiseLevel noise:hasAcousticEmisor ?emisor .
+SELECT  (?noiseLevelName AS ?NivelRuido ) (?emitterName AS ?Emisor)
+	WHERE { ?noiseLevel noise:hasAcousticEmitter ?emitter .
 	?noiseLevel rdfs:label ?noiseLevelName .
-	?emisor  skos:prefLabel ?emisorName .
-	FILTER(?emisorName="Aglomeración"@es )                            	
+	?emitter  skos:prefLabel ?emitterName .
+	FILTER(?emitterName="Aglomeración"@es )                            	
   }
- 
- 
+
+
  
 PC13: ¿Cuales son las fuentes de ruido concretas que podrían ser especificadas?
  

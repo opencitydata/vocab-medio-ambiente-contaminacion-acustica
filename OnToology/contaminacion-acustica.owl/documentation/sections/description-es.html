@@ -73,7 +73,7 @@ ex:InstantCalibration20170330 rdf:type time:Instant ;
           <div class="example-title"><span>Ejemplo de instanciación de Nivel Medio de Ruido</span></div>
           <pre class="example highlight preprint">
 ex:LdESP rdf:type noise:AverageNoiseLevel ;
-         noise:hasAcousticEmisor "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion";
+         noise:hasAcousticEmitter "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion";
          noise:referenceInterval ex:IntervalLd ;
          rdfs:comment "Nivel de ruido día que se define como el valor medio del sonido medido en el intervalo de referencia 
 	  de 7-19 horas según la normativa española"@es ;
@@ -81,7 +81,7 @@ ex:LdESP rdf:type noise:AverageNoiseLevel ;
          rdfs:seeAlso "ISO 1996-2: 1987"@en .</pre>
           <p>En este ejemplo se describe el nivel medio de ruido <code>ex:LdESP</code> que corresponde al Ld (Valor medio del sonido medido en el 
 		  periodo diurno) capturado en el intervalo de referencia de 7 a 19h en España. El emisor acústico que ha originado este nivel de ruido se representa mediante 
-		  la propiedad <a href="#hasAcousticEmisor"><code>noise:hasAcousticEmisor</code></a> enlazada a la instancia concreta del emisor 
+		  la propiedad <a href="#hasAcousticEmitter"><code>noise:hasAcousticEmitter</code></a> enlazada a la instancia concreta del emisor 
 		  <a href="http://vocab.linkeddata.es/page/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion"><code>noise:aglomeracion</code></a>.
 		  El intervalo de referencia en el que se realizó la medición se representa mediante la propiedad <a href="#referenceInterval"><code>noise:referenceInterval</code></a>
 		  enlazada a la instancia del intervalo <code>ex:IntervalLd</code>.
