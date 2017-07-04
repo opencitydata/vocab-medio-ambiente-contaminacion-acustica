@@ -17,7 +17,7 @@
                                                                                                                                     "Raúl García Castro (Ontology Engineering Group)"@es ;
                                                                                       <http://purl.org/dc/elements/1.1/creator> "Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)"@es ;
                                                                                       <http://purl.org/dc/elements/1.1/description> "Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con clases y propiedades para representar los datos de la contaminación acústica. También se reutiliza la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posición en el espacio a través de la longitud, latitud y altitud"@es ,
-                                                                                                                                    "The vocabulary extends from W3C Semantic Sensor Network Ontology (SSN) with classes and properties to represent the data about acoustic pollution. Also it reuses the OWL-Time Ontology to represent the time and the WGS84 Geo Positioning Ontology to represent the spatial position throught longitude, latitude and altitude."@en ;
+                                                                                                                                    "The vocabulary extends from W3C Semantic Sensor Network Ontology (SSN) with classes and properties to represent the data about acoustic pollution. Also it reuses OWL-Time Ontology to represent the time and WGS84 Geo Positioning Ontology to represent the spatial position throught longitude, latitude and altitude."@en ;
                                                                                       <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)"^^xsd:string ;
                                                                                       <http://purl.org/dc/elements/1.1/title> "Acoustic Pollution"@en ,
                                                                                                                               "Contaminación Acústica"@es .
@@ -97,14 +97,14 @@ above the local reference ellipsoid)."""^^xsd:string ;
                                  "pertenece a una clase de sensor"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmisor
-:hasAcousticEmisor rdf:type owl:ObjectProperty ;
-                   rdfs:domain :NoiseLevel ;
-                   rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                   rdfs:comment "El nivel de ruido tiene un emisor acústico que lo provoca."@es ,
-                                "The noise level has an acoustic emisor that causes it."@en ;
-                   rdfs:label "has acoustic emisor"@en ,
-                              "tiene emisor acústico"@es .
+###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter
+:hasAcousticEmitter rdf:type owl:ObjectProperty ;
+                    rdfs:domain :NoiseLevel ;
+                    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                    rdfs:comment "El nivel de ruido tiene un emisor acústico que lo provoca."@es ,
+                                 "Noise level has an acoustic emitter that causes it."@en ;
+                    rdfs:label "has acoustic emitter"@en ,
+                               "tiene emisor acústico"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure
