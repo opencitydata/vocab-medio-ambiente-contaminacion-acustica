@@ -9,8 +9,8 @@ subdomains related with acoustic pollution measurement. The module "Sensor" mode
 which collects environmental noise measurements. The module "Measurement" models the properties representing the sensor measurements. 
 The module "Time" allows the representation of time intervals and instants where the measurements were done. The module "Location" 
 represents geographic location.</p>
-<p style="text-align: justify;">Figure 2 shows the ontology instances representing weightings, sensors classes, unit of measurement
- for the noise levels (decibels) and the types of acoustics emitters.</p> 
+<p style="text-align: justify;">Figure 2 shows the ontology instances representing weightings, sensors classes, the unit of measurement
+ of noise levels (decibels) and the types of acoustics emitters.</p> 
 <p></p>
 <center><img
  src="resources/images/ContaminacionAcustica-Instancias.png">
@@ -18,8 +18,8 @@ represents geographic location.</p>
 </center>
 <h3>Example<span class="backlink"> back to <a
  href="#toc">ToC</a></span></h3>
-<p style="text-align: justify;">The following example shows the instances of: a sensor, an average noise level, and an observation. 
-These instances together are the stage in which a sensor collects the measurement of the average noise level (Ld) captured 
+<p style="text-align: justify;">The following example shows instances of: a sensor, an average noise level, and an observation. 
+These instances together a stage where a sensor collects the measurement of the average noise level (Ld) captured 
 during the month of April, 2017.
 </p>
 
@@ -33,9 +33,9 @@ ex:NoiseSensor01 rdf:type noise:NoiseSensor ;
                  rdfs:label "NoiseSensor01"@es ;
                  wgs84_pos:location ex:NoiseSensor01Location .</pre>
           <p>The example describes a noise sensor linked by the property <code>ssn:observes</code> with the location of Paseo de Recoletos, where the
-		  measurement is captured. The class which the sensor belongs is represented by the property <a href="#belongsToSensorClass"><code>noise:belongsToSensorClass</code></a> 
-		  linked with the instance <a href="#ClaseI"><code>noise:ClaseI</code></a>. The last calibration date of the sensor is represented by the property
-		  <a href="#lastCalibrationDate"><code>noise:lastCalibrationDate</code></a> linked with the instance of a time instant <code>ex:InstantCalibration20170330</code>. 			
+		  measurement is captured. The sensor class is represented by the property <a href="#belongsToSensorClass"><code>noise:belongsToSensorClass</code></a> 
+		  linked to the instance <a href="#ClaseI"><code>noise:ClaseI</code></a>. The last calibration date of the sensor is represented by the property
+		  <a href="#lastCalibrationDate"><code>noise:lastCalibrationDate</code></a> linked to the instance of a time instant <code>ex:InstantCalibration20170330</code>. 			
 			Finally the geographic location, where the sensor is located, is represented by the instance <code>ex:NoiseSensor01Location</code> which has specific values for
 			the geographical coordinates.
 			</p>
@@ -71,10 +71,10 @@ ex:LdESP rdf:type noise:AverageNoiseLevel ;
          rdfs:seeAlso "ISO 1996-2: 1987"@en .</pre>
           <p>The example describes the average noise level <code>ex:LdESP</code> corresponding to Ld (average noise level value in daytime) captured
 		  in the reference interval from 7 to 19h in Spain. The acoustic emitter, that produces this average noise level, is represented by the property
-		  <a href="#hasAcousticEmitter"><code>noise:hasAcousticEmitter</code></a> linked with the particular instance of the emitter
+		  <a href="#hasAcousticEmitter"><code>noise:hasAcousticEmitter</code></a> linked to the particular instance of the emitter
 		  <a href="http://vocab.linkeddata.es/page/datosabiertos/kos/medio-ambiente/contaminacion-acustica/emisor-acustico/aglomeracion"><code>noise:aglomeracion</code></a>.
 		  The reference interval, when the measurement was performed, is represented by the property <a href="#referenceInterval"><code>noise:referenceInterval</code></a>
-		  linked with the instance of the time interval <code>ex:IntervalLd</code>.
+		  linked to the instance of the time interval <code>ex:IntervalLd</code>.
 		  </p>
 		<p> 
 		The instantiation of the reference interval <code>ex:IntervalLd</code> for the average noise level <code>ex:LdESP</code> is performed as follows:</p>
@@ -95,12 +95,12 @@ ex:DateTimeDescriptionBeginLd rdf:type time:DateTimeDescription ;
                               rdfs:comment "Descripción del inicio del instante del intervalo de medicion (07:00)"@es .</pre>
 		<p>
 		The code shows that the interval <code>ex:IntervalLd</code> has a start and end instant represented by the properties 
-		<code>time:hasBeginning</code> and <code>time:hasEnd</code> respectively. This properties are linked to the particular instances of time instants 
+		<code>time:hasBeginning</code> and <code>time:hasEnd</code> respectively. These properties are linked to the particular instances of time instants 
 		<code>ex:InstantBeginLd</code> and <code>ex:InstantEndLd</code>.
 		</p><p>The instance of start instant <code>ex:InstantBeginLd</code> is linked to a description <code>ex:DateTimeDescriptionBeginLd</code>.
-		This description allows to specify with the property <code>time:inDateTime</code> that the time instant is expressed in hours. The property <code>time:inDateTime</code> represents the position of an instant of time.
-		Also the instance <code>ex:DateTimeDescriptionBeginLd</code> with the property <code>time:unitType</code> allows to represent the hour as the unit time of the interval, it is expresed by the particular instance <code>time:unitHour</code>. 
-		The property <code>time:hour</code> allows to define the particular hour, in this example the start time <code>"07"^^xsd:nonNegativeInteger</code>.
+		This description specify the time instant is expressed in hours through the property <code>time:inDateTime</code>. The property <code>time:inDateTime</code> represents the position of an instant of time.
+		Also the instance <code>ex:DateTimeDescriptionBeginLd</code> with the property <code>time:unitType</code> represents the hour as time unit of the interval expresed by the particular instance <code>time:unitHour</code>. 
+		The property <code>time:hour</code> defines the particular hour, in this example the start time <code>"07"^^xsd:nonNegativeInteger</code>.
 		</p>
 		<p>The instantiation of the end instant <code>ex:InstantEndLd</code> is similar to the explained about instantiation of <code>ex:InstantBeginLd</code>, but with the particular value for the end time (19h00).
 		</p> 
@@ -123,17 +123,17 @@ ex:NoiseSensor01Observation_LdInterval201704 rdf:type ssn:Observation ;
                                              rdfs:comment "Observación del nivel Ld realizada por el sensor NoiseSensor01 
 					     durante el mes de abril de 2017"@es .</pre>
 		<p>The example describes the instantiation of an observation. The property <code>ssn:observedProperty</code> represents 
-		the property that was observed, <code>ex:LdESP</code> in this example. The property <code>ssn:observedBy</code> 
-		represents sensor which performs the observation, <code>ex:NoiseSensor01</code> in this example. The instances <code>ex:NoiseSensor01</code> and 
-		<code>ex:LdESP</code> where explained in the previous examples.
+		the observed property, in this example <code>ex:LdESP</code>. The property <code>ssn:observedBy</code> 
+		represents the sensor <code>ex:NoiseSensor01</code> which performs the observation. The instances <code>ex:NoiseSensor01</code> and 
+		<code>ex:LdESP</code> were explained in previous examples.
 		</p><p>
 		This observation was performed for a feature of interest represented by the property
-		<code>ssn:featureOfInterest</code> linked to the particular instance <code>ex:FeatureOfInterestPaseoDeRecoletos</code>, as previously was 
-		explained, which represents the location of Paseo del Prado. The sensor output, which represents the result of the observation, 
-		is indicated by the property <code>ssn:observationResult</code> linked with the instance 
-		<code>ex:NoiseSensor01SensorOutput_ObservationLdInterval201704</code>. Finally the interval, when the observation was performed, 
+		<code>ssn:featureOfInterest</code> linked to the particular instance <code>ex:FeatureOfInterestPaseoDeRecoletos</code>. As previously explained, 
+		it represents the location of Paseo del Prado. The sensor output, representing the result of the observation, 
+		is indicated by the property <code>ssn:observationResult</code> linked to the instance 
+		<code>ex:NoiseSensor01SensorOutput_ObservationLdInterval201704</code>. Finally, the interval when the observation was performed, 
 		is represented by the property <code>ssn:observationSamplingTime</code> and is linked to the instance of time interval 
-		<code>ex:Interval201704</code>, which represents the month of april 2017.		
+		<code>ex:Interval201704</code>, representing the month of april 2017.		
 		</p><p>
 		The instance of the observation result, <code>ex:NoiseSensor01SensorOutput_ObservationLdInterval201704</code>, is represented as follows:
 		</p>
@@ -143,8 +143,8 @@ ex:NoiseSensor01SensorOutput_ObservationLdInterval201704 rdf:type ssn:SensorOutp
                                                          rdfs:comment "Salida del sensor NoiseSensor01 tras la observación del nivel Ld 
 							 realizada durante el mes de abril de 2017"@es .
 		</pre>
-		<p>The observation result uses the property <code>ssn:hasValue</code> to link it with their particular value <code>ex:NoiseSensor01ObservationValue_ObservationLdInterval201704</code>,	
-		which is represented as follows:</p>
+		<p>The observation result uses the property <code>ssn:hasValue</code> to link it with their particular value <code>ex:NoiseSensor01ObservationValue_ObservationLdInterval201704</code>.
+		This instantiation is represented as follows:</p>
 		<pre class="example highlight preprint">
 ex:NoiseSensor01ObservationValue_ObservationLdInterval201704 rdf:type ssn:ObservationValue ;
                                                              noise:hasUnitOfMeasure "http://dbpedia.org/resource/Decibel" ;
@@ -158,8 +158,8 @@ ex:NoiseSensor01ObservationValue_ObservationLdInterval201704 rdf:type ssn:Observ
 		unit of measure of the observation value. This property is linked to the decibel instance referenced to 
 		<a href="http://dbpedia.org/resource/Decibel"><code>dbpedia:Decibel</code></a>, that represents an instance of <code>om:UnitOfMeasure</code>.
 		The weighting, used by sensor to perform the observation, is represented by the property <a href="#isWeightingWith"><code>noise:isWeightingWith</code></a>
-		linked to the observation value <a href="#PonderacionA"><code>noise:PonderacionA</code></a>, an instance of <a href="#Weighting"><code>noise:Weighting</code></a>.
-		Finally the property <code>rdf:value</code> is used to represent the output of the observation value, <code>"67.3"^^xsd:decimal</code> in this example.		
+		linked to the observation value <a href="#PonderacionA"><code>noise:PonderacionA</code></a>, corresponding to the instantiation of <a href="#Weighting"><code>noise:Weighting</code></a>.
+		Finally the property <code>rdf:value</code> is used to represent the output of the observation value, <code>"67.3"^^xsd:decimal</code>.		
 		</p>	
         </div>
       </div>
@@ -169,6 +169,6 @@ ex:NoiseSensor01ObservationValue_ObservationLdInterval201704 rdf:type ssn:Observ
 4. - Example of instantiation of an observation.<br>
 <br>
 </figcaption>
-<div style="text-align: justify;"><figcaption></figcaption>Corresponding Turttle code can be download in <a
+<div style="text-align: justify;"><figcaption></figcaption>The corresponding Turttle code can be download in <a
  href="resources/examples/Ejemplo1.owl" target="_blank">example</a>.<br>
 
