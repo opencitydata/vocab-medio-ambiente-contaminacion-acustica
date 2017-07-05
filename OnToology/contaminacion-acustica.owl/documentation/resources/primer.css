@@ -39,6 +39,17 @@ div.exampleheader span.exampleheader {
   padding-top: 0px;
 }
 
+div.example { color: #A3A300 }
+div.example p { color: black }
+div.example {
+    border-left-width: .5em;
+    border-left-style: solid;
+    border-color: #E0CB52;
+    background: #FCFAEE;    
+	
+}
+
+
 /* Also copy MediaWiki style here, so it will not look different when exported */
 div.fssyntax pre, div.rdfxml pre, div.owlxml pre, div.turtle pre, div.manchester pre  {
   background-color: #F9F9F9;
