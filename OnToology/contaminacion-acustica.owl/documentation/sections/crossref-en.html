@@ -1,0 +1,628 @@
+<h2  id="crossreference" class="list">Cross reference for Contaminación Acústica classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Contaminación Acústica.
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AverageNoiseLevel"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel">Average Noise Level</a>
+      </li>
+      <li>
+         <a href="#NoiseLevel"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
+      </li>
+      <li>
+         <a href="#NoiseSensor"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor">Noise Sensor</a>
+      </li>
+      <li>
+         <a href="#PercentilNoiseLevel"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">point</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+            title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a>
+      </li>
+      <li>
+         <a href="#http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
+            title="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure">Unit of Measure</a>
+      </li>
+      <li>
+         <a href="#Weighting"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting">Weighting</a>
+      </li>
+   </ul>
+   <div class="entity" id="AverageNoiseLevel">
+      <h3>Average Noise Level<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel</p>
+      <div class="comment">
+         <span class="markdown">Average sound pressure level that has been measured by the sensor.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NoiseLevel"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NoiseLevel">
+      <h3>Noise Level<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel</p>
+      <div class="comment">
+         <span class="markdown">Sound pressure level measured by the sensor. It is a physical magnitude describing acoustic pollution and related to the produced effects. It is measured in decibels (dB).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#Property">property</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AverageNoiseLevel"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#AverageNoiseLevel">Average Noise Level</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PercentilNoiseLevel"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasAcousticEmitter"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter">has acoustic emitter</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#referenceInterval"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval">reference interval</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NoiseSensor">
+      <h3>Noise Sensor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor</p>
+      <div class="comment">
+         <span class="markdown">Device that measures the noise level. It detects changes in the air pressure, at a certain location and at a given time, and converts them into electrical pulses. These electric pulses have a frequency, representing the acoustic waves. The frequency range perceived human beings is from 20 Hz to 20 kHz.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice">sensing device</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#belongsToSensorClass"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass">belongs to sensor class</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#lastCalibrationDate"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate">last calibration date</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PercentilNoiseLevel">
+      <h3>Percentil Noise Level<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel</p>
+      <div class="comment">
+         <span class="markdown">Weighted frequency and time sound pressure level exceeding the N% of time of the considered interval.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NoiseLevel"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.co-ode.org/ontologies/ont.owl#timePercentage"
+               title="http://www.co-ode.org/ontologies/ont.owl#timePercentage">Time percentage</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+      <h3>point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#Point</p>
+      <div class="comment">
+         <span class="markdown"> 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
+  </span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+      <h3>SpatialThing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</p>
+      <div class="comment">
+         <span class="markdown">Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.
+</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#alt">altitude</span>, <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</span>, <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</span>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</span>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure">
+      <h3>Unit of Measure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</p>
+      <div class="comment">
+         <span class="markdown">A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called "metre".</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica</dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasUnitOfMeasure"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure">has unit of measure</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://dbpedia.org/resource/Decibel" title="http://dbpedia.org/resource/Decibel">decibel</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Weighting">
+      <h3>Weighting<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting</p>
+      <div class="comment">
+         <span class="markdown">The measurement performed by the Noise Sensor has a frequency weighting that is used for a correct interpretation and measurement of the loudness levels of a particular sound compared to the non-linear nature of the human ear for the different frequencies of the audible spectrum. It can be without weighting (Z), weighting A or C.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.loa-cnr.it/ontologies/DUL.owl#Method">method</span>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isWeightingWith"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#isWeightingWith">is weighting with</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#PonderacionA"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA">Weighting A</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PonderacionC"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionC">Weighting C</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PonderacionZ"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ">Weighting Z</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#belongsToSensorClass"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass">belongs to sensor class</a>
+      </li>
+      <li>
+         <a href="#hasAcousticEmitter"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter">has acoustic emitter</a>
+      </li>
+      <li>
+         <a href="#hasUnitOfMeasure"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure">has unit of measure</a>
+      </li>
+      <li>
+         <a href="#isWeightingWith"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#isWeightingWith">is weighting with</a>
+      </li>
+      <li>
+         <a href="#lastCalibrationDate"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate">last calibration date</a>
+      </li>
+      <li>
+         <a href="#referenceInterval"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval">reference interval</a>
+      </li>
+   </ul>
+   <div class="entity" id="belongsToSensorClass">
+      <h3>belongs to sensor class<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#belongsToSensorClass</p>
+      <div class="comment">
+         <span class="markdown">Noise sensor may or may not belong to a class. The class defines the technical characteristics of the sensor that establish the limits of acceptance and the range of operating temperatures.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NoiseSensor"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor">Noise Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAcousticEmitter">
+      <h3>has acoustic emitter<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasAcousticEmitter</p>
+      <div class="comment">
+         <span class="markdown">Noise level is caused by an acoustic emitter.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NoiseLevel"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasUnitOfMeasure">
+      <h3>has unit of measure<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#hasUnitOfMeasure</p>
+      <div class="comment">
+         <span class="markdown">Relationship between the measured value by the sensor and the unit of measure of this value.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput">sensor output</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
+                  title="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure">Unit of Measure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isWeightingWith">
+      <h3>is weighting with<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#isWeightingWith</p>
+      <div class="comment">
+         <span class="markdown">The measurement performed by the Noise Sensor has a frequency weighting. It can be without weighting (Z), weighting A or C.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.oclc.org/NET/ssnx/ssn#ObservationValue">observation value</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Weighting"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting">Weighting</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="lastCalibrationDate">
+      <h3>last calibration date<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#lastCalibrationDate</p>
+      <div class="comment">
+         <span class="markdown">Last calibration date of the sensor. Calibration is a periodic process performed on acoustic sensors to verify their correct operation in their different working modes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NoiseSensor"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseSensor">Noise Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2006/time#Instant">instant</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="referenceInterval">
+      <h3>reference interval<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#referenceInterval</p>
+      <div class="comment">
+         <span class="markdown">Interval of time where the noise assessment was performed. The reference time interval can be specified in national or international standards or by local authorities to encompass typical human activities and variations in the operation of noise sources. The reference time intervals can be for example: a part of the day, a whole day or a complete week. Some countries may even define longer reference intervals.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NoiseLevel"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#NoiseLevel">Noise Level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.co-ode.org/ontologies/ont.owl#timePercentage"
+            title="http://www.co-ode.org/ontologies/ont.owl#timePercentage">Time percentage</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#timePercentage">
+      <h3>Time percentage<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#timePercentage</p>
+      <div class="comment">
+         <span class="markdown">Percentage of time (N%) of the reference time interval where the noise level is exceeded.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PercentilNoiseLevel"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PercentilNoiseLevel">Percentil Noise Level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ClaseI"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseI">Class I</a>
+      </li>
+      <li>
+         <a href="#ClaseII"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseII">Class II</a>
+      </li>
+      <li>
+         <a href="#http://dbpedia.org/resource/Decibel" title="http://dbpedia.org/resource/Decibel">
+            <span>decibel</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PonderacionA"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA">Weighting A</a>
+      </li>
+      <li>
+         <a href="#PonderacionC"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionC">Weighting C</a>
+      </li>
+      <li>
+         <a href="#PonderacionZ"
+            title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ">Weighting Z</a>
+      </li>
+   </ul>
+   <div class="entity" id="ClaseI">
+      <h3>Class I<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseI</p>
+      <div class="comment">
+         <span class="markdown">Sensor that fulfills the most restrictive precision characteristics defined in the IEC standard. This class of sensors has smaller tolerance margins in its measurement range. Class I instruments are specified within the air temperature range from -10 ° C to +50 ° C.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ClaseII">
+      <h3>Class II<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#ClaseII</p>
+      <div class="comment">
+         <span class="markdown">Sensor that fulfills the less restrictive precision characteristics defined in the IEC standard. This class of sensors has greater tolerance margins in its measuring range. Class II instruments are specified within the air temperature range from 0 ° C to + 40 ° C.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://dbpedia.org/resource/Decibel">
+      <h3>decibel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dbpedia.org/resource/Decibel</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
+               title="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure">Unit of Measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PonderacionA">
+      <h3>Weighting A<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionA</p>
+      <div class="comment">
+         <span class="markdown">More common weighting in enviromental acoustic. It is used to adjust noise levels as the human ear perceives them.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Weighting"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting">Weighting</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PonderacionC">
+      <h3>Weighting C<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionC</p>
+      <div class="comment">
+         <span class="markdown">Weighting used to evaluate high noise leves.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Weighting"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting">Weighting</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PonderacionZ">
+      <h3>Weighting Z<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#PonderacionZ</p>
+      <div class="comment">
+         <span class="markdown">It represents the fact of not applying any type of frequency weighting to the sound waves captured by the noise sensor. They are captured as they are.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Weighting"
+               title="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#Weighting">Weighting</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

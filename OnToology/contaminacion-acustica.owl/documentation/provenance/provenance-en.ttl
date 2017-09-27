@@ -1,0 +1,12 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "Acoustic Pollution";
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Mariano Fernández López (Ontology Engineering Group)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "María Poveda Villalón (Ontology Engineering Group)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Oscar Corcho García (Ontology Engineering Group)".];
+	 prov:wasAttributedTo [ a prov:Agent; foaf:name "Raúl García Castro (Ontology Engineering Group)".];
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
