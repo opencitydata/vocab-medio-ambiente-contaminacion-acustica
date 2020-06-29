@@ -119,7 +119,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante> .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoEmisorPredominante> <http://www.w3.org/2000/01/rdf-schema#comment> "El tipo de emisor está basado en en el listado obtenido en el artículo 12.2 de la Ley 37/2003, de 17 de noviembre, del Ruido.\na) Vehículos automóviles.\nb) Ferrocarriles.\nc) Aeronaves.\nd) Infraestructuras viarias.\ne) Infraestructuras ferroviarias.\nf) Infraestructuras aeroportuarias.\ng) Maquinaria y equipos.\nh) Obras de construcción de edificios y de ingeniería civil.\ni) Actividades industriales.\nj) Actividades comerciales.\nk) Actividades deportivo-recreativas y de ocio.\nl) Infraestructuras portuarias."@es .
@@ -140,7 +140,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia> .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoIntervaloReferencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Basado en cuatro tipos:\n(T, total, D diurno, E tarde, N noche)\nLden - Indicador del nivel de ruido global durante el día, la tarde y la noche, utilizado para determinar la molestia vinculada a la exposición al ruido.\nLd - Nivel sonoro medio a largo plazo ponderado A, determinado a lo largo de todos los períodos día (de 7 a 19 horas) del mes. \nLe - Nivel sonoro medio a largo plazo ponderado A, determinado a lo largo de todos los períodos tarde (de 19 a 23 horas) del mes. \nLn - Nivel sonoro medio a largo plazo ponderado A, definido determinado a lo largo de todos los períodos noche (de 23 a 7 horas) del mes."@es .
@@ -161,7 +161,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-medicion> .
+_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoMedida> <http://www.w3.org/2000/01/rdf-schema#comment> "Cada medición puede tener los siguientes tipos LAeq, LAs01, LAs10, LAs50, LAs90, LAs99. Numérico, 5 dígitos. También puede ser LAw para medir posibles vibraciones."@es .
@@ -379,17 +379,17 @@ _:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelVibracion> <http://www.w3.org/2000/01/rdf-schema#label> "nivel de vibración"@es .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelVibracion> <http://www.w3.org/2000/01/rdf-schema#label> "vibration level"@en .
 # 
-# http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante
-<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 # 
-# http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia
-<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 # 
-# http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-medicion
-<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-medicion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-medicion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 # 
 # http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento
 <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
