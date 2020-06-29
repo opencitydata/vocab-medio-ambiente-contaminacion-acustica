@@ -1,3 +1,60 @@
-<h2 id="desc" class="list">Vocabulary for the representation of data about noise pollution: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
-<span class="markdown">Descripci&oacute;n completa de la ontolog&iacute;a: en caso de ser posible, a&ntilde;adir un diagrama explicando c&oacute;omo las clases est&aacute;n relacionadas, ejemplos de uso, etc.</span>
+<h2 id="desc" class="list">Vocabulario para la representación de datos de Contaminación Acústica: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">
+  La Figura 1 muestra las clases y propiedades del vocabulario de contaminación acústica. El principal objetivo de este vocabulario es permitir la representación de los datos de contaminación acústica obtenidos a través de las diferentes estaciones de medida.
+</span>
+<center><img src="resources/images/modeloConceptualContaminacionAcustica-EstacionDeMedida.png"><figcaption>Figura 1. - Vocabulario para la representación de datos sobre contaminación acústica</figcaption></center>
 
+<span class="markdown">
+
+Para representar una estación de medida se tiene el concepto [noise:EstacionDeMedida](#EstacionDeMedida) que debe tener asociada una dirección [esdir:DirecciónPostal](#DirecciónPostal)
+
+Con la finalidad de representar las coordenadas de ubicación de las estaciones de medida, expresados en términos de su longitud y latitud, se han reutilizado las clases [geosparql:Feature](http://www.opengis.net/doc/IS/geosparql/1.0#Feature), [geosparql:SpatialObject](http://www.opengis.net/doc/IS/geosparql/1.0#SpatialObject), [geosparql:Geometry](http://www.opengis.net/doc/IS/geosparql/1.0#Geometry) y [geosparql:Point](http://www.opengis.net/doc/IS/geosparql/1.0#Point) del vocabulario [geosparql](http://www.opengis.net/doc/IS/geosparql/1.0) siguiendo el "Patrón de localización" de la Figura 1.
+
+Asimismo, se están capturando todas las observaciones acerca del nivel de ruido (o vibración) detectado en las estaciones de medida, tal como se ve representado de forma resumida como "Patrón SOSA" en la Figura 1, y que a continuación se describe más claramente en la Figura 2:
+
+</span>
+
+<center><img src="resources/images/modeloConceptualContaminacionAcustica-Medicion.png"><figcaption>Figura 2. - Módulo de observación de una estación de bicicleta</figcaption></center>
+<span class="markdown">
+El concepto principal de este módulo es el de [noise:EstacionDeMedida](#EstacionDeMedida) para el cual se reutilizan las clases [sosa:Sensor](http://www.w3.org/ns/sosa/Sensor), [sosa:Observation](http://www.w3.org/ns/sosa/Observation) y [sosa:ObservableProperty](http://www.w3.org/ns/sosa/ObservableProperty) del vocabulario [sosa](http://www.w3.org/ns/sosa/). Concretamente, se va a observar una estación [noise:EstacionDeMedida](#EstacionDeMedida). La propiedad que se va a observar y para la que se va a obtener el resultado de la observación es [noise:PropiedadContaminacion](#PropiedadContaminacion). Esta propiedad de la estación permite representar el nivel de ruido en una estación de medida, [noise:nivelRuido](esbici:anclajesOcupados), o el nivel de vibración, [noise:nivelVibración](noise:nivelVibración).
+
+Esta medición puede ser directamente la recogida para la estación de medida o se le puede haber aplicado los factores de corrección correspondientes por lo que se dispone de un parámetro de validación que nos indicará si el resultado ha sido corregido o no.
+
+Adicionalmente, en este vocabulario se han utilizado varios esquemas de conceptos SKOS para representar el tipo de medición que se ha realizado, el tipo de emisor predominante y el tipo de intervalo de referencia. En la Figura 2 se pueden observar varias relaciones con la clase de conceptos SKOS, sin embargo, los valores concretos no se han especificado pues son diferentes según la taxonomía que representen. Por ejemplo, la propiedad [noise:tipoIntervaloReferencia](#tipoIntervaloReferencia) representa el periodo del día en el que se ha relizado la medición (T total, D diurno, E tarde, N noche).
+
+</span>
+
+<h3>3.1 Ejemplos de uso<span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h3>
+<span class="markdown">
+  Con la finalidad de facilitar la comprensión del uso de algunas clases y propiedades de este vocabulario se proporcionarán a continuación algunos ejemplos.
+
+  En primer lugar, para la representación de una estación de medida, se crea una instancia de la clase [noise:EstacionDeMedida](#EstacionDeMedida) con las propiedades [dct:identifier](http://purl.org/dc/terms/identifier) (identificador de la estación), [schema:name](https://schema.org/name) (nombre de la estación) y [esequip:fechaAlta](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta) (fecha de alta de la estación). Finalmente, la estación de medida se asocia a través de la propiedad [schema:address](https://schema.org/address) con una instancia de [esdir:DireccionPostal](#DireccionPostal) que contiene la dirección de la estación.
+</span>
+
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/1002&gt; a esbici:EstacionBicicleta ;
+  dct:identifier "0001"@es ;
+  schema:name "Plaza del Carmen"@es ;
+  esequip:fechaAlta "1999-11-01"^^xsd:date ;
+  schema:address "Plaza del Carmen, 23" ;
+  geo:long "-3.7031662" ;
+  geo:lat "40.4192091" ;
+  geo_core:xETRS89 "440346,361892" ;
+  geo_core:yETRS89 "4474524,35713"&gt; .
+</pre>
+
+<span class="markdown">
+Para representar una observación en una estación de medida se ha creado una instancia de la clase [noise:Observacion](#Observacion) de la cual se ha obtenido el resultado de dicha observación ([sosa:hasSimpleResult](http://www.w3.org/ns/sosa/hasSimpleResult)), la hora de dicha observación [sosa:resultTime](http://www.w3.org/ns/sosa/resultTime), el sensor que realizó dicha observación [sosa:madeBySensor](http://www.w3.org/ns/sosa/madeBySensor) y la propiedad que se ha observado [sosa:sosa:observedProperty](http://www.w3.org/ns/sosa/sosa:observedProperty), en este caso, el nivel de ruido.
+</span>
+
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/Observacion/8734&gt; a sosa:Observation, noise:Observacion ;
+  sosa:hasSimpleResult “57.9”^^xsd:decimal ;
+  sosa:resultTime "2020-05-10T13:00:00"^^xsd:dateTime ;
+  sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/1002 ;
+  sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelRuido ;
+  noise:validada "False"^^xsd:boolean ;
+  noise:tipoMedicion &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion/LAS50&gt ;
+  noise:tipoEmisorPredominante &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante/ferrocarriles&gt ;
+  noise:tipoIntervaloReferencia &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia/D&gt .
+</pre>
