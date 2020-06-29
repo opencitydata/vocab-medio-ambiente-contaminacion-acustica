@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica#"
      xml:base="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
     <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica">
         <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
         <owl:imports rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica"/>
         <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
-        <ns:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/4.0/</ns:license>
+        <ns:license>http://creativecommons.org/licenses/by/4.0/</ns:license>
         <dc:contributor xml:lang="es">Mariano Fernández López (Ontology Engineering Group)</dc:contributor>
         <dc:contributor xml:lang="es">María Poveda Villalón (Ontology Engineering Group)</dc:contributor>
         <dc:contributor xml:lang="es">Oscar Corcho García (Ontology Engineering Group)</dc:contributor>
@@ -25,7 +25,7 @@
         <dc:creator xml:lang="es">Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)</dc:creator>
         <dc:description xml:lang="es">Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con clases y propiedades para representar los datos de la contaminación acústica. También se reutiliza la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posición en el espacio a través de la longitud, latitud y altitud</dc:description>
         <dc:description xml:lang="en">The vocabulary extends W3C Semantic Sensor Network Ontology (SSN) with classes and properties to represent the data about acoustic pollution. Also it reuses OWL-Time Ontology to represent time and WGS84 Geo Positioning Ontology to represent spatial position through longitude, latitude and altitude.</dc:description>
-        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="en">Acoustic Pollution</dc:title>
         <dc:title xml:lang="es">Contaminación Acústica</dc:title>
     </owl:Ontology>
@@ -83,9 +83,9 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The WGS84 altitude of a SpatialThing (decimal meters 
+        <rdfs:comment>The WGS84 altitude of a SpatialThing (decimal meters 
 above the local reference ellipsoid).</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altitude</rdfs:label>
+        <rdfs:label>altitude</rdfs:label>
         <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     </owl:AnnotationProperty>
     
@@ -95,8 +95,8 @@ above the local reference ellipsoid).</rdfs:comment>
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">latitude</rdfs:label>
+        <rdfs:comment>The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
+        <rdfs:label>latitude</rdfs:label>
         <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     </owl:AnnotationProperty>
     
@@ -116,8 +116,8 @@ above the local reference ellipsoid).</rdfs:comment>
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The WGS84 longitude of a SpatialThing (decimal degrees).</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">longitude</rdfs:label>
+        <rdfs:comment>The WGS84 longitude of a SpatialThing (decimal degrees).</rdfs:comment>
+        <rdfs:label>longitude</rdfs:label>
         <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     </owl:AnnotationProperty>
     
@@ -353,7 +353,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 
+        <rdfs:comment> 
 Uniquely identified by lat/long/alt. i.e.
 
 spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
@@ -361,9 +361,9 @@ spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
 
 sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
   </rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A point, typically described using a coordinate system relative to Earth, such as WGS84.
+        <rdfs:comment>A point, typically described using a coordinate system relative to Earth, such as WGS84.
   </rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">point</rdfs:label>
+        <rdfs:label>point</rdfs:label>
     </owl:Class>
     
 
@@ -372,10 +372,10 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anything with spatial extent, i.e. size, shape, or position.
+        <rdfs:comment>Anything with spatial extent, i.e. size, shape, or position.
  e.g. people, places, bowling balls, as well as abstract areas like cubes.
 </rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SpatialThing</rdfs:label>
+        <rdfs:label>SpatialThing</rdfs:label>
     </owl:Class>
     
 
@@ -393,7 +393,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <owl:Class rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure">
         <rdfs:comment xml:lang="en">A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called &quot;metre&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convención y / o por ley. Se utiliza como estándar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple múltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada &quot;metro&quot;. (definición tomada de la ontología om).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wurvoc.org/vocabularies/om-1.8/</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://www.wurvoc.org/vocabularies/om-1.8/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="es">Unidad de Medida</rdfs:label>
         <rdfs:label xml:lang="en">Unit of Measure</rdfs:label>
     </owl:Class>
@@ -504,12 +504,12 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#">
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date: 2009/04/20 15:00:30 $</dc:date>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vocabulary for representing latitude, longitude and 
+        <dc:date>$Date: 2009/04/20 15:00:30 $</dc:date>
+        <dc:description>A vocabulary for representing latitude, longitude and 
  altitude information in the WGS84 geodetic reference datum. 
  Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.</dc:description>
-        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WGS84 Geo Positioning: an RDF vocabulary</dc:title>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <dc:title>WGS84 Geo Positioning: an RDF vocabulary</dc:title>
+        <rdfs:comment>
 Recent changes to this namespace:
 $Log: wgs84_pos.rdf,v $
 Revision 1.22  2009/04/20 15:00:30  timbl
@@ -593,14 +593,14 @@ date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
 basic geo vocab
 
 </rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geo</rdfs:label>
+        <rdfs:label>geo</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A comma-separated representation of a latitude, longitude coordinate.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lat/long</rdfs:label>
+        <rdfs:comment>A comma-separated representation of a latitude, longitude coordinate.</rdfs:comment>
+        <rdfs:label>lat/long</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation between something and the point, 
+        <rdfs:comment>The relation between something and the point, 
  or other geometrical thing in space, where it is.  For example, the realtionship between
  a radio tower and a Point with a given lat and long.
  Or a relationship between a park and its outline as a closed arc of points, or a road and
@@ -608,12 +608,12 @@ basic geo vocab
  Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
  an accuracy appropriate for the size of the object and uses such as mapping .
  </rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+        <rdfs:label>location</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
 
 

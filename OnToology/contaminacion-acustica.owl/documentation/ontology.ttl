@@ -10,7 +10,7 @@
                                                                                       owl:imports <http://purl.oclc.org/NET/ssnx/ssn> ,
                                                                                                   <http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica> ,
                                                                                                   <http://www.w3.org/2006/time> ;
-                                                                                      <http://creativecommons.org/ns#license> "http://creativecommons.org/licenses/by/4.0/"^^xsd:string ;
+                                                                                      <http://creativecommons.org/ns#license> "http://creativecommons.org/licenses/by/4.0/" ;
                                                                                       <http://purl.org/dc/elements/1.1/contributor> "Mariano Fernández López (Ontology Engineering Group)"@es ,
                                                                                                                                     "María Poveda Villalón (Ontology Engineering Group)"@es ,
                                                                                                                                     "Oscar Corcho García (Ontology Engineering Group)"@es ,
@@ -18,7 +18,7 @@
                                                                                       <http://purl.org/dc/elements/1.1/creator> "Paola Espinoza Arias (Ontology Engineering Group y Secretaría de Educación Superior, Ciencia, Tecnología e Innovación)"@es ;
                                                                                       <http://purl.org/dc/elements/1.1/description> "Este vocabulario extiende la W3C Semantic Sensor Network Ontology (SSN) con clases y propiedades para representar los datos de la contaminación acústica. También se reutiliza la OWL Ontology of Time (OWL-Time)  para representar el tiempo y la WGS84 Geo Positioning Ontology para representar la posición en el espacio a través de la longitud, latitud y altitud"@es ,
                                                                                                                                     "The vocabulary extends W3C Semantic Sensor Network Ontology (SSN) with classes and properties to represent the data about acoustic pollution. Also it reuses OWL-Time Ontology to represent time and WGS84 Geo Positioning Ontology to represent spatial position through longitude, latitude and altitude."@en ;
-                                                                                      <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)"^^xsd:string ;
+                                                                                      <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" ;
                                                                                       <http://purl.org/dc/elements/1.1/title> "Acoustic Pollution"@en ,
                                                                                                                               "Contaminación Acústica"@es .
 
@@ -49,15 +49,15 @@ rdf:value rdf:type owl:AnnotationProperty .
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:AnnotationProperty ;
                                               rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
-above the local reference ellipsoid)."""^^xsd:string ;
-                                              rdfs:label "altitude"^^xsd:string ;
+above the local reference ellipsoid).""" ;
+                                              rdfs:label "altitude" ;
                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:AnnotationProperty ;
-                                              rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)."^^xsd:string ;
-                                              rdfs:label "latitude"^^xsd:string ;
+                                              rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
+                                              rdfs:label "latitude" ;
                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
@@ -69,8 +69,8 @@ above the local reference ellipsoid)."""^^xsd:string ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
 <http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:AnnotationProperty ;
-                                               rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)."^^xsd:string ;
-                                               rdfs:label "longitude"^^xsd:string ;
+                                               rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
+                                               rdfs:label "longitude" ;
                                                rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
@@ -226,18 +226,18 @@ spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
   lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
 
 sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
-  """^^xsd:string ,
+  """ ,
                                                              """A point, typically described using a coordinate system relative to Earth, such as WGS84.
-  """^^xsd:string ;
-                                                rdfs:label "point"^^xsd:string .
+  """ ;
+                                                rdfs:label "point" .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
                                                        rdfs:comment """Anything with spatial extent, i.e. size, shape, or position.
  e.g. people, places, bowling balls, as well as abstract areas like cubes.
-"""^^xsd:string ;
-                                                       rdfs:label "SpatialThing"^^xsd:string .
+""" ;
+                                                       rdfs:label "SpatialThing" .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
@@ -248,7 +248,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> rdf:type owl:Class ;
                                                             rdfs:comment "A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called \"metre\"."@en ,
                                                                          "Una unidad de medida es una magnitud definida de una cantidad, definida y adoptada por convención y / o por ley. Se utiliza como estándar para medir la misma cantidad, donde cualquier otro valor de la cantidad puede expresarse como un simple múltiplo de la unidad de medida. Por ejemplo, longitud es una cantidad; El metro es una unidad de longitud que representa una longitud predeterminada definida. Cuando decimos 10 metros (o 10 m), en realidad decimos 10 veces la longitud predeterminada definida llamada \"metro\". (definición tomada de la ontología om)."@es ;
-                                                            rdfs:isDefinedBy "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:string ;
+                                                            rdfs:isDefinedBy "http://www.wurvoc.org/vocabularies/om-1.8/" ;
                                                             rdfs:label "Unidad de Medida"@es ,
                                                                        "Unit of Measure"@en .
 
@@ -319,11 +319,11 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 #    Annotations
 #################################################################
 
-<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/date> "$Date: 2009/04/20 15:00:30 $"^^xsd:string ;
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/date> "$Date: 2009/04/20 15:00:30 $" ;
                                            <http://purl.org/dc/elements/1.1/description> """A vocabulary for representing latitude, longitude and 
  altitude information in the WGS84 geodetic reference datum. 
- Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details."""^^xsd:string ;
-                                           <http://purl.org/dc/elements/1.1/title> "WGS84 Geo Positioning: an RDF vocabulary"^^xsd:string ;
+ Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.""" ;
+                                           <http://purl.org/dc/elements/1.1/title> "WGS84 Geo Positioning: an RDF vocabulary" ;
                                            rdfs:comment """
 Recent changes to this namespace:
 $Log: wgs84_pos.rdf,v $
@@ -407,12 +407,12 @@ revision 1.1
 date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
 basic geo vocab
 
-"""^^xsd:string ;
-                                           rdfs:label "geo"^^xsd:string .
+""" ;
+                                           rdfs:label "geo" .
 
 
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> rdfs:comment "A comma-separated representation of a latitude, longitude coordinate."^^xsd:string ;
-                                                   rdfs:label "lat/long"^^xsd:string .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> rdfs:comment "A comma-separated representation of a latitude, longitude coordinate." ;
+                                                   rdfs:label "lat/long" .
 
 
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> rdfs:comment """The relation between something and the point, 
@@ -422,8 +422,8 @@ basic geo vocab
  its location as a arc (a sequence of points).
  Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
  an accuracy appropriate for the size of the object and uses such as mapping .
- """^^xsd:string ;
-                                                   rdfs:label "location"^^xsd:string .
+ """ ;
+                                                   rdfs:label "location" .
 
 
-###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
