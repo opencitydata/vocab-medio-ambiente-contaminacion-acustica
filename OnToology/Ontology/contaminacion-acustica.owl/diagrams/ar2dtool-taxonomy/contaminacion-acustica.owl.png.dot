@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "sosa:ObservableProperty" ":PropiedadContaminacion" "sosa:Observation" "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida" "sosa:Sensor" "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento" "http://www.opengis.net/spec/geosparql/1.0#Feature" "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" ; /*classes style*/
+	":PropiedadContaminacion" -> "sosa:ObservableProperty" [ label = "rdfs:subClassOf" ];
+	"http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento" -> "http://www.opengis.net/spec/geosparql/1.0#Feature" [ label = "rdfs:subClassOf" ];
+	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida" -> "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento" [ label = "rdfs:subClassOf" ];
+	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida" -> "sosa:Sensor" [ label = "rdfs:subClassOf" ];
+	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" -> "sosa:Observation" [ label = "rdfs:subClassOf" ];
+
+}
