@@ -1,4 +1,4 @@
-<h2 id="desc" class="list">Vocabulario para la representación de datos de Contaminación Acústica: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<h2 id="desc" class="list">Vocabulario para la representación de datos de contaminación acústica: Descripción <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
 <span class="markdown">
   La Figura 1 muestra las clases y propiedades del vocabulario de contaminación acústica. El principal objetivo de este vocabulario es permitir la representación de los datos de contaminación acústica obtenidos a través de las diferentes estaciones de medida.
 </span>
@@ -6,7 +6,7 @@
 
 <span class="markdown">
 
-Para representar una estación de medida se tiene el concepto [noise:EstacionDeMedida](#EstacionDeMedida) que debe tener asociada una dirección [esdir:DirecciónPostal](#DirecciónPostal)
+Para representar una estación de medida se tiene el concepto [noise:EstacionDeMedida](#EstacionDeMedida) que debe tener asociada una dirección [esdir:DireccionPostal](#DireccionPostal)
 
 Con la finalidad de representar las coordenadas de ubicación de las estaciones de medida, expresados en términos de su longitud y latitud, se han reutilizado las clases [geosparql:Feature](http://www.opengis.net/doc/IS/geosparql/1.0#Feature), [geosparql:SpatialObject](http://www.opengis.net/doc/IS/geosparql/1.0#SpatialObject), [geosparql:Geometry](http://www.opengis.net/doc/IS/geosparql/1.0#Geometry) y [geosparql:Point](http://www.opengis.net/doc/IS/geosparql/1.0#Point) del vocabulario [geosparql](http://www.opengis.net/doc/IS/geosparql/1.0) siguiendo el "Patrón de localización" de la Figura 1.
 
@@ -14,9 +14,9 @@ Asimismo, se están capturando todas las observaciones acerca del nivel de ruido
 
 </span>
 
-<center><img src="resources/images/modeloConceptualContaminacionAcustica-Medicion.png"><figcaption>Figura 2. - Módulo de observación de una estación de bicicleta</figcaption></center>
+<center><img src="resources/images/modeloConceptualContaminacionAcustica-Medicion.png"><figcaption>Figura 2. - Módulo de observación de una estación de medición</figcaption></center>
 <span class="markdown">
-El concepto principal de este módulo es el de [noise:EstacionDeMedida](#EstacionDeMedida) para el cual se reutilizan las clases [sosa:Sensor](http://www.w3.org/ns/sosa/Sensor), [sosa:Observation](http://www.w3.org/ns/sosa/Observation) y [sosa:ObservableProperty](http://www.w3.org/ns/sosa/ObservableProperty) del vocabulario [sosa](http://www.w3.org/ns/sosa/). Concretamente, se va a observar una estación [noise:EstacionDeMedida](#EstacionDeMedida). La propiedad que se va a observar y para la que se va a obtener el resultado de la observación es [noise:PropiedadContaminacion](#PropiedadContaminacion). Esta propiedad de la estación permite representar el nivel de ruido en una estación de medida, [noise:nivelRuido](esbici:anclajesOcupados), o el nivel de vibración, [noise:nivelVibración](noise:nivelVibración).
+El concepto principal de este módulo es el de [noise:EstacionDeMedida](#EstacionDeMedida) para el cual se reutilizan las clases [sosa:Sensor](http://www.w3.org/ns/sosa/Sensor), [sosa:Observation](http://www.w3.org/ns/sosa/Observation) y [sosa:ObservableProperty](http://www.w3.org/ns/sosa/ObservableProperty) del vocabulario [sosa](http://www.w3.org/ns/sosa/). Concretamente, se va a observar una estación [noise:EstacionDeMedida](#EstacionDeMedida). La propiedad que se va a observar y para la que se va a obtener el resultado de la observación es [noise:PropiedadContaminacion](#PropiedadContaminacion). Esta propiedad de la estación permite representar el nivel de ruido en una estación de medida, [noise:nivelRuido](noise:nivelRuido), o el nivel de vibración, [noise:nivelVibracion](noise:nivelVibracion).
 
 Esta medición puede ser directamente la recogida para la estación de medida o se le puede haber aplicado los factores de corrección correspondientes por lo que se dispone de un parámetro de validación que nos indicará si el resultado ha sido corregido o no.
 
@@ -32,7 +32,7 @@ Adicionalmente, en este vocabulario se han utilizado varios esquemas de concepto
 </span>
 
 <pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/1002&gt; a esbici:EstacionBicicleta ;
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/1002&gt; a noise:EstacionMedida ;
   dct:identifier "0001"@es ;
   schema:name "Plaza del Carmen"@es ;
   esequip:fechaAlta "1999-11-01"^^xsd:date ;
@@ -44,7 +44,9 @@ Adicionalmente, en este vocabulario se han utilizado varios esquemas de concepto
 </pre>
 
 <span class="markdown">
-Para representar una observación en una estación de medida se ha creado una instancia de la clase [noise:Observacion](#Observacion) de la cual se ha obtenido el resultado de dicha observación ([sosa:hasSimpleResult](http://www.w3.org/ns/sosa/hasSimpleResult)), la hora de dicha observación [sosa:resultTime](http://www.w3.org/ns/sosa/resultTime), el sensor que realizó dicha observación [sosa:madeBySensor](http://www.w3.org/ns/sosa/madeBySensor) y la propiedad que se ha observado [sosa:sosa:observedProperty](http://www.w3.org/ns/sosa/sosa:observedProperty), en este caso, el nivel de ruido.
+Para representar una observación en una estación de medida se ha creado una instancia de la clase [noise:Observacion](#Observacion) de la cual se ha obtenido el resultado de dicha observación [sosa:hasSimpleResult](http://www.w3.org/ns/sosa/hasSimpleResult), la hora de dicha observación [sosa:resultTime](http://www.w3.org/ns/sosa/resultTime), el sensor que realizó dicha observación [sosa:madeBySensor](http://www.w3.org/ns/sosa/madeBySensor) y la propiedad que se ha observado [sosa:observedProperty](http://www.w3.org/ns/sosa/sosa:observedProperty), en este caso, el nivel de ruido.
+
+También se indica si la medición está [noise:validada](#validada) y el [noise:tipoMedicion](#tipoMedicion) correspondiente. Aunque no son obligatorios en el vocabulario, en este ejemplo se indica tanto en [noise:tipoEmisorPredominante](#tipoEmisorPredominante) como el [noise:tipoIntervaloReferencia](#tipoIntervaloReferencia). Estos valores no siempre son conocidos.
 </span>
 
 <pre>
