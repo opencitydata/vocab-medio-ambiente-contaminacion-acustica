@@ -211,7 +211,7 @@ En esta versión se han incluido clases y propiedades de acuerdo a los requisito
                     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                        <owl:hasValue rdf:resource="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante"/>
+                        <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -260,7 +260,7 @@ l) Port infrastructure.</rdfs:comment>
                     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                        <owl:hasValue rdf:resource="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia"/>
+                        <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -295,7 +295,7 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
                     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                        <owl:hasValue rdf:resource="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-medicion"/>
+                        <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -664,28 +664,28 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
     
 
 
-    <!-- http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante -->
 
 
-    <owl:NamedIndividual rdf:about="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante">
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia -->
 
 
-    <owl:NamedIndividual rdf:about="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia">
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-medicion -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion -->
 
 
-    <owl:NamedIndividual rdf:about="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica/tipo-medicion">
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </owl:NamedIndividual>
     
