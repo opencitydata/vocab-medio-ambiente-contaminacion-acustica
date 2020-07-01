@@ -6,6 +6,9 @@
     "example" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#example"
     },
+    "DireccionPostal" : {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"
+    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
@@ -25,6 +28,10 @@
     "fechaBaja" : {
       "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "addressRegion" : {
+      "@id" : "http://schema.org/addressRegion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "PropiedadContaminacion" : {
       "@id" : "http://vocab.ciudadesabiehttp://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#PropiedadContaminacion"
@@ -66,6 +73,10 @@
       "@id" : "https://schema.org/name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "postalCode" : {
+      "@id" : "http://schema.org/postalCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "tipoMedida" : {
       "@id" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoMedida",
       "@type" : "@id"
@@ -105,6 +116,10 @@
     "ConceptScheme" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     },
+    "streetAddress" : {
+      "@id" : "http://schema.org/streetAddress",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
@@ -119,6 +134,10 @@
     "date" : {
       "@id" : "http://purl.org/dc/elements/1.1/date"
     },
+    "addressLocality" : {
+      "@id" : "http://schema.org/addressLocality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
@@ -127,6 +146,9 @@
     },
     "contributor" : {
       "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "addressCountry" : {
+      "@id" : "http://schema.org/addressCountry"
     },
     "inScheme" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",

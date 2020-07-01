@@ -11,6 +11,10 @@ This section provides details for each class and property defined by Vocabulary 
             title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
       </li>
       <li>
+         <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"
+            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">Dirección postal</a>
+      </li>
+      <li>
          <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento"
             title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento">
             <span>equipamiento</span>
@@ -22,7 +26,7 @@ This section provides details for each class and property defined by Vocabulary 
       </li>
       <li>
          <a href="#http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida"
-            title="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida">Measurement station</a>
+            title="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida">Measuring station</a>
       </li>
       <li>
          <a href="#http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion"
@@ -111,6 +115,31 @@ This section provides details for each class and property defined by Vocabulary 
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">
+      <h3>Dirección postal<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal</p>
+      <div class="comment">
+         <span class="markdown">Una dirección postal en España. Se define como una especialización de las clases vcard:Address, schema:PostalAddress y locn:Address
+Además de las propiedades asociadas a estas clases, y definidas en su correspondiente vocabulario, también se pueden utilizar las definidas en los vocabularios de división administrativa española y en el callejero</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://schema.org/PostalAddress">postal address</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento">
       <h3>equipamiento<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -131,7 +160,7 @@ This section provides details for each class and property defined by Vocabulary 
          <dt>has sub-classes</dt>
          <dd>
             <a href="#http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida"
-               title="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida">Measurement station</a>
+               title="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida">Measuring station</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -174,7 +203,7 @@ This section provides details for each class and property defined by Vocabulary 
       </dl>
    </div>
    <div class="entity" id="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida">
-      <h3>Measurement station<sup class="type-c" title="class">c</sup>
+      <h3>Measuring station<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -336,7 +365,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida"
-                  title="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida">Measurement station</a>
+                  title="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida">Measuring station</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -521,6 +550,17 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#http://schema.org/addressCountry" title="http://schema.org/addressCountry">
+            <span>address country</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/postalCode" title="http://schema.org/postalCode">código postal</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/streetAddress" title="http://schema.org/streetAddress">dirección</a>
+      </li>
+      <li>
          <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja"
             title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja">end date</a>
       </li>
@@ -528,7 +568,13 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
          <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">Identifier</a>
       </li>
       <li>
+         <a href="#http://schema.org/addressLocality" title="http://schema.org/addressLocality">localidad</a>
+      </li>
+      <li>
          <a href="#https://schema.org/name" title="https://schema.org/name">name</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/addressRegion" title="http://schema.org/addressRegion">región</a>
       </li>
       <li>
          <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta"
@@ -541,6 +587,83 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
          </a>
       </li>
    </ul>
+   <div class="entity" id="http://schema.org/addressCountry">
+      <h3>address country<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/addressCountry</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://schema.org/PostalAddress">postal address</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/postalCode">
+      <h3>código postal<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/postalCode</p>
+      <div class="comment">
+         <span class="markdown">El código postal. Por ejemplo, 50071</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://schema.org/PostalAddress">postal address</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/streetAddress">
+      <h3>dirección<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/streetAddress</p>
+      <div class="comment">
+         <span class="markdown">La dirección de la calle. Por ejemplo, Vía Hispanidad, 20</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://schema.org/PostalAddress">postal address</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja">
       <h3>end date<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -600,6 +723,36 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://schema.org/addressLocality">
+      <h3>localidad<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/addressLocality</p>
+      <div class="comment">
+         <span class="markdown">La localidad. Por ejemplo, Zaragoza</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://schema.org/PostalAddress">postal address</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://schema.org/name">
       <h3>name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -622,6 +775,36 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
             <dd>
                <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento"
                   title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento">equipamiento</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/addressRegion">
+      <h3>región<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/addressRegion</p>
+      <div class="comment">
+         <span class="markdown">La región. Por ejemplo, Provincia de Zaragoza o Comunidad Autónoma de Aragón</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://schema.org/PostalAddress">postal address</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
