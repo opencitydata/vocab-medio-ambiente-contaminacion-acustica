@@ -209,6 +209,42 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identificador"@es .
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@en .
 # 
+# http://schema.org/addressCountry
+<http://schema.org/addressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+# 
+# http://schema.org/addressLocality
+<http://schema.org/addressLocality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#comment> "La localidad. Por ejemplo, Zaragoza"@es .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#label> "localidad"@es .
+# 
+# http://schema.org/addressRegion
+<http://schema.org/addressRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "La región. Por ejemplo, Provincia de Zaragoza o Comunidad Autónoma de Aragón"@es .
+<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#label> "región"@es .
+# 
+# http://schema.org/postalCode
+<http://schema.org/postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#comment> "El código postal. Por ejemplo, 50071"@es .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "código postal"@es .
+# 
+# http://schema.org/streetAddress
+<http://schema.org/streetAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "La dirección de la calle. Por ejemplo, Vía Hispanidad, 20"@es .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#label> "dirección"@es .
+# 
 # http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#validada
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#validada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#validada> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion> .
@@ -271,50 +307,53 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observes> .
 _:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiehttp://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#PropiedadContaminacion> .
-<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/address> .
-_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://schema.org/PostalAddress> .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida> <http://www.w3.org/2000/01/rdf-schema#comment> "Device where the measurement of noise or vibration level is collected"@en .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo donde se recoge la medida de nivel de ruido o vibración"@es .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica> .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida> <http://www.w3.org/2000/01/rdf-schema#label> "Estación de medida"@es .
-<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement station"@en .
+<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida> <http://www.w3.org/2000/01/rdf-schema#label> "Measuring station"@en .
 # 
 # http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/madeBySensor> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida> .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/madeBySensor> .
-_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida> .
-<http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
-_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiehttp://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#PropiedadContaminacion> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiehttp://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#PropiedadContaminacion> .
 <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/PostalAddress> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://purl.org/dc/terms/issued> "2014-03-28" .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/2000/01/rdf-schema#comment> "Una dirección postal en España. Se define como una especialización de las clases vcard:Address, schema:PostalAddress y locn:Address\nAdemás de las propiedades asociadas a estas clases, y definidas en su correspondiente vocabulario, también se pueden utilizar las definidas en los vocabularios de división administrativa española y en el callejero"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/2000/01/rdf-schema#label> "Dirección postal"@es .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/spec/geosparql/1.0#Feature> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#date> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja> .
 _:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#date> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja> .
-_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#date> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/name> .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/name> .
-_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/identifier> .
-_:genid20 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/identifier> .
+_:genid19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipamiento perteneciente a una administración, al que cualquier ciudadano puede acudir"@es .
 # 
 # http://www.opengis.net/spec/geosparql/1.0#Feature
@@ -345,15 +384,15 @@ _:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # http://www.w3.org/ns/sosa/Observation
 <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasSimpleResult> .
+_:genid20 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasSimpleResult> .
-_:genid21 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/resultTime> .
-_:genid22 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/resultTime> .
+_:genid21 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
 # 
 # http://www.w3.org/ns/sosa/Sensor
 <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
