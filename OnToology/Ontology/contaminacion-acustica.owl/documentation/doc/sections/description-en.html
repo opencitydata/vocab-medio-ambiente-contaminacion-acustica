@@ -34,15 +34,15 @@ In addition, several SKOS concept diagrams have been used in this vocabulary to 
 </span>
 
 <pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/1002&gt; a esbici:EstacionBicicleta ;
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/estaciondemedida/1002&gt; a esbici:EstacionBicicleta ;
   dct:identifier "0001"@es ;
   schema:name "Plaza del Carmen"@es ;
   esequip:fechaAlta "1999-11-01"^^xsd:date ;
-  schema:address &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/dp28-0001&gt; ;
-  geo:long "-3.7031662" ;
-  geo:lat "40.4192091" ;
-  geo_core:xETRS89 "440346,361892" ;
-  geo_core:yETRS89 "4474524,35713"&gt; .
+  schema:address &lt;http://vocab.ciudadesabiertas.es/recurso/urbanismo-infraestructuras/direccion-postal/dp28-0001&gt; ;
+  geo:long "-3.7031662"^^xsd:float ;
+  geo:lat "40.4192091"^^xsd:float ;
+  geo_core:xETRS89 "440346.361892"^^xsd:float ;
+  geo_core:yETRS89 "4474524.35713"^^xsd:float&gt; .
 </pre>
 
 <span class="markdown">
@@ -55,8 +55,8 @@ In addition, several SKOS concept diagrams have been used in this vocabulary to 
 </span>
 
 <pre>
-&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/dp28-0001&gt; a esdir:DireccionPostal ;
-  schema:postalCode "28013" ;
+&lt;http://vocab.ciudadesabiertas.es/recurso/urbanismo-infraestructuras/direccion-postal/dp28-0001&gt; a esdir:DireccionPostal ;
+  schema:postalCode "28013"^^xsd:string ;
   schema:streetAddress "Plaza del Carmen, 23"@es ;
   schema:addressLocality "Madrid"@es ;
   schema:addressRegion "Madrid"@es ;
@@ -72,10 +72,10 @@ In addition, several SKOS concept diagrams have been used in this vocabulary to 
 </span>
 
 <pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/Observacion/8734&gt; a sosa:Observation, noise:Observacion ;
-  sosa:hasSimpleResult “57.9”^^xsd:decimal ;
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/observacion/8734&gt; a sosa:Observation, noise:Observacion ;
+  sosa:hasSimpleResult “57.9”^^xsd:float ;
   sosa:resultTime "2020-05-10T13:00:00"^^xsd:dateTime ;
-  sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/1002 ;
+  sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/estaciondemedida/1002 ;
   sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelRuido ;
   noise:validada "True"^^xsd:boolean ;
   noise:tipoMedicion &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion/LAS50&gt ;
@@ -91,10 +91,10 @@ In addition, several SKOS concept diagrams have been used in this vocabulary to 
 </span>
 
 <pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/Observacion/8734&gt; a sosa:Observation, noise:Observacion ;
-  sosa:hasSimpleResult “37.4”^^xsd:decimal ;
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/observacion/8734&gt; a sosa:Observation, noise:Observacion ;
+  sosa:hasSimpleResult “37.4”^^xsd:float ;
   sosa:resultTime "2020-02-12T13:00:00"^^xsd:dateTime ;
-  sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/0878 ;
+  sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/estaciondemedida/0878 ;
   sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelVibracion ;
   noise:validada "False"^^xsd:boolean ;
   noise:tipoMedicion &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion/LAW&gt .
