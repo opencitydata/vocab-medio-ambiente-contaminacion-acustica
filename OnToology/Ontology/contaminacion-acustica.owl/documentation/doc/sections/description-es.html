@@ -28,6 +28,8 @@ Adicionalmente, en este vocabulario se han utilizado varios esquemas de concepto
 <span class="markdown">
   Con la finalidad de facilitar la comprensión del uso de algunas clases y propiedades de este vocabulario se proporcionarán a continuación algunos ejemplos.
 
+**3.1.1 Estación de medida**
+
   En primer lugar, para la representación de una estación de medida, se crea una instancia de la clase [noise:EstacionDeMedida](#EstacionDeMedida) con las propiedades [dct:identifier](http://purl.org/dc/terms/identifier) (identificador de la estación), [schema:name](https://schema.org/name) (nombre de la estación) y [esequip:fechaAlta](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta) (fecha de alta de la estación). Finalmente, la estación de medida se asocia a través de la propiedad [schema:address](https://schema.org/address) con una instancia de [esdir:DireccionPostal](#DireccionPostal) que contiene la dirección de la estación.
 </span>
 
@@ -36,7 +38,7 @@ Adicionalmente, en este vocabulario se han utilizado varios esquemas de concepto
   dct:identifier "0001"@es ;
   schema:name "Plaza del Carmen"@es ;
   esequip:fechaAlta "1999-11-01"^^xsd:date ;
-  schema:address "Plaza del Carmen, 23" ;
+  schema:address &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/dp28-0001&gt; ;
   geo:long "-3.7031662" ;
   geo:lat "40.4192091" ;
   geo_core:xETRS89 "440346,361892" ;
@@ -44,6 +46,26 @@ Adicionalmente, en este vocabulario se han utilizado varios esquemas de concepto
 </pre>
 
 <span class="markdown">
+
+
+**3.1.2 Dirección de una estación de medida**
+
+  Para la representación de la dirección de una estación de medida se ha utilizado la instancia creada en el ejemplo anterior correspondiente a [esdir:DireccionPostal](#DireccionPostal).
+
+</span>
+
+<pre>
+&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/dp28-0001&gt; a esdir:DireccionPostal ;
+  schema:postalCode "28013" ;
+  schema:streetAddress "Plaza del Carmen, 23"@es ;
+  schema:addressLocality "Madrid"@es ;
+  schema:addressRegion "Madrid"@es ;
+  schema:addressCountry "España"@es .
+</pre>
+
+<span class="markdown">
+**3.1.3 Observación del nivel de ruido**
+
 Para representar una observación en una estación de medida se ha creado una instancia de la clase [noise:Observacion](#Observacion) de la cual se ha obtenido el resultado de dicha observación [sosa:hasSimpleResult](http://www.w3.org/ns/sosa/hasSimpleResult), la hora de dicha observación [sosa:resultTime](http://www.w3.org/ns/sosa/resultTime), el sensor que realizó dicha observación [sosa:madeBySensor](http://www.w3.org/ns/sosa/madeBySensor) y la propiedad que se ha observado [sosa:observedProperty](http://www.w3.org/ns/sosa/sosa:observedProperty), en este caso, el nivel de ruido.
 
 También se indica si la medición está [noise:validada](#validada) y el [noise:tipoMedicion](#tipoMedicion) correspondiente. Aunque no son obligatorios en el vocabulario, en este ejemplo se indica tanto en [noise:tipoEmisorPredominante](#tipoEmisorPredominante) como el [noise:tipoIntervaloReferencia](#tipoIntervaloReferencia). Estos valores no siempre son conocidos.
@@ -55,8 +77,25 @@ También se indica si la medición está [noise:validada](#validada) y el [noise
   sosa:resultTime "2020-05-10T13:00:00"^^xsd:dateTime ;
   sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/1002 ;
   sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelRuido ;
-  noise:validada "False"^^xsd:boolean ;
+  noise:validada "True"^^xsd:boolean ;
   noise:tipoMedicion &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion/LAS50&gt ;
   noise:tipoEmisorPredominante &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante/ferrocarriles&gt ;
   noise:tipoIntervaloReferencia &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia/D&gt .
+</pre>
+
+<span class="markdown">
+
+**3.1.4 Observación del nivel de vibración**
+
+Ejemplo similar al anterior pero que muestra el nivel de vibración.
+</span>
+
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/Observacion/8734&gt; a sosa:Observation, noise:Observacion ;
+  sosa:hasSimpleResult “37.4”^^xsd:decimal ;
+  sosa:resultTime "2020-02-12T13:00:00"^^xsd:dateTime ;
+  sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/0878 ;
+  sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelVibracion ;
+  noise:validada "False"^^xsd:boolean ;
+  noise:tipoMedicion &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion/LAW&gt .
 </pre>

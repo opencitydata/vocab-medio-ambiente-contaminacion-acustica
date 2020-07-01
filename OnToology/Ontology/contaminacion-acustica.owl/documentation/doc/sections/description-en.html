@@ -28,6 +28,8 @@ In addition, several SKOS concept diagrams have been used in this vocabulary to 
 <span class="markdown">
   In order to facilitate the understanding of the use of some classes and properties of this vocabulary, some examples will be provided below.
 
+**3.1.1 Measurement station**
+
   First of all, for the representation of a measurement station, an instance of the class [noise:EstacionDeMedida](#EstacionDeMedida) with the properties [dct:identifier](http://purl.org/dc/terms/identifier) (station identifier), [schema:name](https://schema.org/name) (station name) and [esequip:fechaAlta](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta) (station registration date). Finally, the measurement station is associated through the [schema:address](https://schema.org/address) property with an instance of [esdir:DireccionPostal](#DireccionPostal) that contains the address of the station.
 </span>
 
@@ -36,7 +38,7 @@ In addition, several SKOS concept diagrams have been used in this vocabulary to 
   dct:identifier "0001"@es ;
   schema:name "Plaza del Carmen"@es ;
   esequip:fechaAlta "1999-11-01"^^xsd:date ;
-  schema:address "Plaza del Carmen, 23" ;
+  schema:address &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/dp28-0001&gt; ;
   geo:long "-3.7031662" ;
   geo:lat "40.4192091" ;
   geo_core:xETRS89 "440346,361892" ;
@@ -44,6 +46,26 @@ In addition, several SKOS concept diagrams have been used in this vocabulary to 
 </pre>
 
 <span class="markdown">
+
+
+**3.1.2 Address of a measuring station**
+
+  For the representation of the address of a measuring station, the instance created in the previous example corresponding to [esdir:DireccionPostal](#DireccionPostal) has been used.
+
+</span>
+
+<pre>
+&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/dp28-0001&gt; a esdir:DireccionPostal ;
+  schema:postalCode "28013" ;
+  schema:streetAddress "Plaza del Carmen, 23"@es ;
+  schema:addressLocality "Madrid"@es ;
+  schema:addressRegion "Madrid"@es ;
+  schema:addressCountry "España"@es .
+</pre>
+
+<span class="markdown">
+  **3.1.3 Observation of noise level**
+
   To represent an observation in a measurement station, an instance of the class [noise:Observacion](#Observacion) has been created from which the result of this observation has been obtained [sosa:hasSimpleResult](http://www.w3.org/ns/sosa/hasSimpleResult), the time of that observation [sosa:resultTime](http://www.w3.org/ns/sosa/resultTime), the sensor that made the observation [sosa:madeBySensor](http://www.w3.org/ns/sosa/madeBySensor) and the property that has been observed [sosa:observedProperty](http://www.w3.org/ns/sosa/sosa:observedProperty), in this case, the noise level.
 
   It also indicates whether the measurement is [noise:validada](#validada) (validated) and the corresponding [noise:tipoMedicion](#tipoMedicion) (measurement type). Although they are not mandatory in the vocabulary, this example is indicated both in [noise:tipoEmisorPredominante](#tipoEmisorPredominante) and [noise:tipoIntervaloReferencia](#tipoIntervaloReferencia). These values are not always known.
@@ -55,8 +77,25 @@ In addition, several SKOS concept diagrams have been used in this vocabulary to 
   sosa:resultTime "2020-05-10T13:00:00"^^xsd:dateTime ;
   sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/1002 ;
   sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelRuido ;
-  noise:validada "False"^^xsd:boolean ;
+  noise:validada "True"^^xsd:boolean ;
   noise:tipoMedicion &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion/LAS50&gt ;
   noise:tipoEmisorPredominante &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante/ferrocarriles&gt ;
   noise:tipoIntervaloReferencia &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia/D&gt .
+</pre>
+
+<span class="markdown">
+
+  **3.1.4 Observation of vibration level**
+
+  Similar example to the previous one but showing the vibration level.
+</span>
+
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/Observacion/8734&gt; a sosa:Observation, noise:Observacion ;
+  sosa:hasSimpleResult “37.4”^^xsd:decimal ;
+  sosa:resultTime "2020-02-12T13:00:00"^^xsd:dateTime ;
+  sosa:madeBySensor &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/EstacionDeMedida/0878 ;
+  sosa:observedProperty &lt;http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelVibracion ;
+  noise:validada "False"^^xsd:boolean ;
+  noise:tipoMedicion &lt;http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion/LAW&gt .
 </pre>

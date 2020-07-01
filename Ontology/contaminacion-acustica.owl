@@ -353,6 +353,62 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
     
 
 
+    <!-- http://schema.org/addressCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/addressCountry">
+        <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/addressLocality -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/addressLocality">
+        <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">La localidad. Por ejemplo, Zaragoza</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <rdfs:label xml:lang="es">localidad</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/addressRegion -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/addressRegion">
+        <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">La región. Por ejemplo, Provincia de Zaragoza o Comunidad Autónoma de Aragón</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <rdfs:label xml:lang="es">región</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/postalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/postalCode">
+        <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">El código postal. Por ejemplo, 50071</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <rdfs:label xml:lang="es">código postal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/streetAddress">
+        <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">La dirección de la calle. Por ejemplo, Vía Hispanidad, 20</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <rdfs:label xml:lang="es">dirección</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#validada -->
 
     <owl:DatatypeProperty rdf:about="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#validada">
@@ -449,18 +505,11 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
                 <owl:allValuesFrom rdf:resource="http://vocab.ciudadesabiehttp://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#PropiedadContaminacion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://schema.org/address"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://schema.org/PostalAddress"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Device where the measurement of noise or vibration level is collected</rdfs:comment>
         <rdfs:comment xml:lang="es">Dispositivo donde se recoge la medida de nivel de ruido o vibración</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica"/>
         <rdfs:label xml:lang="es">Estación de medida</rdfs:label>
-        <rdfs:label xml:lang="en">Measurement station</rdfs:label>
+        <rdfs:label xml:lang="en">Measuring station</rdfs:label>
     </owl:Class>
     
 
@@ -482,6 +531,19 @@ Ln - A-weighted long-term average sound level, defined determined throughout all
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">
+        <rdfs:subClassOf rdf:resource="http://schema.org/PostalAddress"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-28</dct:issued>
+        <rdfs:comment xml:lang="es">Una dirección postal en España. Se define como una especialización de las clases vcard:Address, schema:PostalAddress y locn:Address
+Además de las propiedades asociadas a estas clases, y definidas en su correspondiente vocabulario, también se pueden utilizar las definidas en los vocabularios de división administrativa española y en el callejero</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
+        <rdfs:label xml:lang="es">Dirección postal</rdfs:label>
     </owl:Class>
     
 
