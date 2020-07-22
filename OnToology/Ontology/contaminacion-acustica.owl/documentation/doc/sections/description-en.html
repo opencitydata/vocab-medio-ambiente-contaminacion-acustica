@@ -30,19 +30,20 @@ In addition, several SKOS concept diagrams have been used in this vocabulary to 
 
 **3.1.1 Measurement station**
 
-  First of all, for the representation of a measurement station, an instance of the class [noise:EstacionDeMedida](#EstacionDeMedida) with the properties [dct:identifier](http://purl.org/dc/terms/identifier) (station identifier), [schema:name](https://schema.org/name) (station name) and [esequip:fechaAlta](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta) (station registration date). Finally, the measurement station is associated through the [schema:address](https://schema.org/address) property with an instance of [esdir:DireccionPostal](#DireccionPostal) that contains the address of the station.
+  First of all, for the representation of a measurement station, an instance of the class [noise:EstacionDeMedida](#EstacionDeMedida) with the properties [dct:identifier](http://purl.org/dc/terms/identifier) (station identifier), [schema:name](https://schema.org/name) (station name) and [esequip:fechaAlta](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta) (station registration date). In addition, the measurement station is associated through the [schema:address](https://schema.org/address) property with an instance of [esdir:DireccionPostal](#DireccionPostal) that contains the address of the station. Finally, to obtain the coordinates, an instance in the class [sf:hasGeometry] has been created.
 </span>
 
 <pre>
-&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/estaciondemedida/1002&gt; a esbici:EstacionBicicleta ;
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/estaciondemedida/1002&gt; a noise:EstacionMedida ;
   dct:identifier "0001"@es ;
   schema:name "Plaza del Carmen"@es ;
   esequip:fechaAlta "1999-11-01"^^xsd:date ;
   schema:address &lt;http://vocab.ciudadesabiertas.es/recurso/urbanismo-infraestructuras/direccion-postal/dp28-0001&gt; ;
-  geo:long "-3.7031662"^^xsd:float ;
+  sf:hasGeometry &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/punto/1&gt; .
+&lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/punto/1&gt; geo:long "-3.7031662"^^xsd:float ;
   geo:lat "40.4192091"^^xsd:float ;
   geo_core:xETRS89 "440346.361892"^^xsd:float ;
-  geo_core:yETRS89 "4474524.35713"^^xsd:float&gt; .
+  geo_core:yETRS89 "4474524.35713"^^xsd:float .
 </pre>
 
 <span class="markdown">

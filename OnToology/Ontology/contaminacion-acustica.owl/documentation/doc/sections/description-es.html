@@ -30,7 +30,7 @@ Adicionalmente, en este vocabulario se han utilizado varios esquemas de concepto
 
 **3.1.1 Estación de medida**
 
-  En primer lugar, para la representación de una estación de medida, se crea una instancia de la clase [noise:EstacionDeMedida](#EstacionDeMedida) con las propiedades [dct:identifier](http://purl.org/dc/terms/identifier) (identificador de la estación), [schema:name](https://schema.org/name) (nombre de la estación) y [esequip:fechaAlta](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta) (fecha de alta de la estación). Finalmente, la estación de medida se asocia a través de la propiedad [schema:address](https://schema.org/address) con una instancia de [esdir:DireccionPostal](#DireccionPostal) que contiene la dirección de la estación.
+  En primer lugar, para la representación de una estación de medida, se crea una instancia de la clase [noise:EstacionDeMedida](#EstacionDeMedida) con las propiedades [dct:identifier](http://purl.org/dc/terms/identifier) (identificador de la estación), [schema:name](https://schema.org/name) (nombre de la estación) y [esequip:fechaAlta](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta) (fecha de alta de la estación). Además, la estación de medida se asocia a través de la propiedad [schema:address](https://schema.org/address) con una instancia de [esdir:DireccionPostal](#DireccionPostal) que contiene la dirección de la estación. Finalmente, para obtener las coordenadas, se ha creado una instancia en la clase [sf:hasGeometry].
 </span>
 
 <pre>
@@ -43,7 +43,7 @@ Adicionalmente, en este vocabulario se han utilizado varios esquemas de concepto
 &lt;http://vocab.ciudadesabiertas.es/recurso/medio-ambiente/contaminacion-acustica/punto/1&gt; geo:long "-3.7031662"^^xsd:float ;
   geo:lat "40.4192091"^^xsd:float ;
   geo_core:xETRS89 "440346.361892"^^xsd:float ;
-  geo_core:yETRS89 "4474524.35713"^^xsd:float&gt; .
+  geo_core:yETRS89 "4474524.35713"^^xsd:float .
 </pre>
 
 <span class="markdown">
