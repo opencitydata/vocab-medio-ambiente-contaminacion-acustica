@@ -424,7 +424,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Basado en cuatro tipos:\n(T, total, D diurno, E tarde, N noche)\nLden - Indicador del nivel de ruido global durante el día, la tarde y la noche, utilizado para determinar la molestia vinculada a la exposición al ruido.\nLd - Nivel sonoro medio a largo plazo ponderado A, determinado a lo largo de todos los períodos día (de 7 a 19 horas) del mes. \nLe - Nivel sonoro medio a largo plazo ponderado A, determinado a lo largo de todos los períodos tarde (de 19 a 23 horas) del mes. \nLn - Nivel sonoro medio a largo plazo ponderado A, definido determinado a lo largo de todos los períodos noche (de 23 a 7 horas) del mes."
+    "@value" : "Basado en cuatro tipos:\n(T, total, D diurno, E tarde, N noche)\nLden - Indicador del nivel de ruido global durante el día, la tarde y la noche, utilizado para determinar la molestia vinculada a la exposición al ruido.\nLd - Nivel sonoro medio a largo plazo ponderado A, determinado a lo largo de todos los períodos día (de 7 a 19 horas) del mes.\nLe - Nivel sonoro medio a largo plazo ponderado A, determinado a lo largo de todos los períodos tarde (de 19 a 23 horas) del mes.\nLn - Nivel sonoro medio a largo plazo ponderado A, definido determinado a lo largo de todos los períodos noche (de 23 a 7 horas) del mes."
   }, {
     "@language" : "en",
     "@value" : "Based on four types:\n(T, total, D daytime, E afternoon, N night)\nLden - Indicator of overall noise level during the day, afternoon, and night, used to determine nuisance related to noise exposure.\nLd - A-weighted long-term average sound level, determined throughout all day periods (from 7 to 19 hours) of the month.\nLe - A-weighted long-term average sound level, determined throughout all the late periods (from 19 to 23 hours) of the month.\nLn - A-weighted long-term average sound level, defined determined throughout all night periods (23 to 7 hours) of the month."
@@ -762,7 +762,7 @@
     "@value" : "The simple value of an Observation or Actuation or act of Sampling."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion"
+    "@id" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion"
   }, {
     "@id" : "http://www.w3.org/ns/sosa/Observation"
   } ],
@@ -808,7 +808,7 @@
     "@value" : "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion"
+    "@id" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion"
   }, {
     "@id" : "http://www.w3.org/ns/sosa/Observation"
   } ],

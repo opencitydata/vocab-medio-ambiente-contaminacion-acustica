@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "sosa:ObservableProperty" ":PropiedadContaminacion" "schema:PostalAddress" "sosa:Observation" "skos:ConceptScheme" "586dfd72:17309915243:-7ffc" "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida" "586dfd72:17309915243:-7ff4" "sosa:Sensor" "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento" "skos:Concept" "586dfd72:17309915243:-7ff8" "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" "sosa:FeatureOfInterest" "sosa:Actuation" "sosa:Platform" "sosa:ActuatableProperty" "sosa:Actuator" "sosa:Sample" "time:TemporalEntity" "sosa:Sampling" "sosa:Procedure" "sosa:Result" "sosa:Sampler" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "sosa:ObservableProperty" ":PropiedadContaminacion" "schema:PostalAddress" "sosa:Observation" "skos:ConceptScheme" "24de5007:1737100baed:-7ff8" "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida" "sosa:Sensor" "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento" "skos:Concept" "24de5007:1737100baed:-7ff4" "24de5007:1737100baed:-7ffc" "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" "sosa:FeatureOfInterest" "sosa:Actuation" "sosa:Platform" "sosa:ActuatableProperty" "sosa:Actuator" "sosa:Sample" "time:TemporalEntity" "sosa:Sampling" "sosa:Procedure" "sosa:Result" "sosa:Sampler" ; /*classes style*/
 	"sosa:observedProperty" -> "sosa:ObservableProperty" [ label = "schema:rangeIncludes" ];
 	"sosa:observedProperty" -> "sosa:Observation" [ label = "schema:domainIncludes" ];
 	"sosa:madeBySensor" -> "sosa:Sensor" [ label = "schema:rangeIncludes" ];
@@ -57,31 +57,31 @@ node [shape = rectangle, color="orange"]; "sosa:ObservableProperty" ":PropiedadC
 	"sosa:isHostedBy" -> "sosa:Sensor" [ label = "schema:domainIncludes" ];
 	"sosa:isHostedBy" -> "sosa:Actuator" [ label = "schema:domainIncludes" ];
 	"NULL" -> "xsd:date" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "24de5007:1737100baed:-7ff9" [ label = "rdf:rest" ];
 	"NULL" -> "sosa:hasSimpleResult" [ label = "owl:onProperty" ];
 	"NULL" -> ":PropiedadContaminacion" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:onDataRange" ];
-	"NULL" -> "586dfd72:17309915243:-7ff5" [ label = "rdf:rest" ];
 	"NULL" -> "https://schema.org/name" [ label = "owl:onProperty" ];
+	"NULL" -> "24de5007:1737100baed:-7ff5" [ label = "rdf:rest" ];
 	"NULL" -> "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion" [ label = "owl:hasValue" ];
+	"NULL" -> "24de5007:1737100baed:-7ff3" [ label = "owl:intersectionOf" ];
 	"NULL" -> "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "skos:Concept" [ label = "rdf:first" ];
-	"NULL" -> "586dfd72:17309915243:-7ff1" [ label = "rdf:rest" ];
 	"NULL" -> "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia" [ label = "owl:hasValue" ];
+	"NULL" -> "24de5007:1737100baed:-7ff1" [ label = "rdf:rest" ];
 	"NULL" -> "sosa:resultTime" [ label = "owl:onProperty" ];
-	"NULL" -> "586dfd72:17309915243:-7ffb" [ label = "owl:intersectionOf" ];
 	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
-	"NULL" -> "586dfd72:17309915243:-7ff3" [ label = "owl:intersectionOf" ];
 	"NULL" -> "xsd:string" [ label = "owl:onDataRange" ];
 	"NULL" -> "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta" [ label = "owl:onProperty" ];
-	"NULL" -> "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja" [ label = "owl:onProperty" ];
 	"NULL" -> "sosa:observedProperty" [ label = "owl:onProperty" ];
+	"NULL" -> "24de5007:1737100baed:-7ffb" [ label = "owl:intersectionOf" ];
 	"NULL" -> "sosa:madeBySensor" [ label = "owl:onProperty" ];
 	"NULL" -> "dcterms:identifier" [ label = "owl:onProperty" ];
+	"NULL" -> "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja" [ label = "owl:onProperty" ];
 	"NULL" -> "sosa:observes" [ label = "owl:onProperty" ];
+	"NULL" -> "24de5007:1737100baed:-7ff7" [ label = "owl:intersectionOf" ];
 	"NULL" -> "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante" [ label = "owl:hasValue" ];
 	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "586dfd72:17309915243:-7ff9" [ label = "rdf:rest" ];
-	"NULL" -> "586dfd72:17309915243:-7ff7" [ label = "owl:intersectionOf" ];
 	"NULL" -> "skos:inScheme" [ label = "owl:onProperty" ];
 	"sosa:hasSample" -> "sosa:Sample" [ label = "schema:rangeIncludes" ];
 	"sosa:hasSample" -> "sosa:FeatureOfInterest" [ label = "schema:domainIncludes" ];
@@ -99,7 +99,7 @@ node [shape = rectangle, color="orange"]; "sosa:ObservableProperty" ":PropiedadC
 	"sosa:" -> "sosa:" [ label = "owl:imports" ];
 	"sosa:" -> "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica" [ label = "dc:identifier" ];
 	"sosa:" -> "http://www.opengeospatial.org/ogc/Software" [ label = "dcterms:license" ];
-	"sosa:" -> "9d5ab2c7b2088cf7f333145ef949689c" [ label = "dcterms:creator" ];
+	"sosa:" -> "2344cb15ab5b5f343d8316c27d3d7d43" [ label = "dcterms:creator" ];
 	"sosa:" -> "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" [ label = "dcterms:license" ];
 	"sosa:isFeatureOfInterestOf" -> "sosa:FeatureOfInterest" [ label = "schema:domainIncludes" ];
 	"sosa:isFeatureOfInterestOf" -> "sosa:Actuation" [ label = "schema:rangeIncludes" ];
@@ -115,17 +115,17 @@ node [shape = rectangle, color="orange"]; "sosa:ObservableProperty" ":PropiedadC
 	"sosa:Observation" -> "rdfs:Literal" [ label = "sosa:hasSimpleResult" ];
 	"http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento" -> "xsd:string" [ label = "dcterms:identifier" ];
 	"schema:PostalAddress" -> "xsd:string" [ label = "schema:addressRegion" ];
-	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" -> "586dfd72:17309915243:-7ff8" [ label = "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoIntervaloReferencia" ];
-	"sosa:Observation" -> "xsd:dateTime" [ label = "sosa:resultTime" ];
+	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" -> "24de5007:1737100baed:-7ff8" [ label = "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoIntervaloReferencia" ];
+	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" -> "xsd:dateTime" [ label = "sosa:resultTime" ];
 	"schema:PostalAddress" -> "xsd:string" [ label = "schema:postalCode" ];
 	"owl:Thing" -> "skos:ConceptScheme" [ label = "skos:inScheme" ];
-	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" -> "586dfd72:17309915243:-7ff4" [ label = "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoMedida" ];
+	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" -> "24de5007:1737100baed:-7ff4" [ label = "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoMedida" ];
 	"http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento" -> "xsd:string" [ label = "https://schema.org/name" ];
 	"schema:PostalAddress" -> "xsd:string" [ label = "schema:addressLocality" ];
 	"http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento" -> "xsd:date" [ label = "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja" ];
 	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida" -> "schema:PostalAddress" [ label = "schema:address" ];
 	"schema:PostalAddress" -> "owl:Thing" [ label = "schema:addressCountry" ];
-	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" -> "586dfd72:17309915243:-7ffc" [ label = "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoEmisorPredominante" ];
+	"http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion" -> "24de5007:1737100baed:-7ffc" [ label = "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoEmisorPredominante" ];
 	"http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento" -> "xsd:date" [ label = "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta" ];
 	"schema:PostalAddress" -> "xsd:string" [ label = "schema:streetAddress" ];
 
