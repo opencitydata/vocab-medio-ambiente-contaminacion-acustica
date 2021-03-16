@@ -1,0 +1,2902 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "es", "undefined" ],
+    "baseIris" : [ "http://www.opengis.net/spec/geosparql/1.0", "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/vocommons/voaf", "http://schema.org", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal", "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://purl.org/dc/terms", "http://xmlns.com/foaf/0.1", "http://www.w3.org/2006/time", "http://vocab.ciudadesabiehttp://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "Vocabulary for the representation of data about noise pollution",
+      "es" : "Vocabulario para la representación de datos sobre el sistema de contaminación acústica"
+    },
+    "iri" : "http://www.w3.org/ns/sosa/",
+    "version" : "Esta es la versión inicial de la ontología de Contaminación Acústica que ha sido implementada en el contexto del proyecto \"Plataforma de gobierno abierto, colaborativa e interoperable\" en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y La Coruña.",
+    "author" : [ "Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid)", "Francisco Yedro (Ontology Engineering Group - Universidad Politécnica de Madrid)", "Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid)", "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)" ],
+    "comments" : {
+      "es" : "Esta versión ha sido generada dentro del contexto del proyecto \"Plataforma de gobierno abierto, colaborativa e interoperable\" en el que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.\nEn esta versión se han incluido clases y propiedades de acuerdo a los requisitos y glosario de conceptos propuestos en la reunión del 07/11/2019"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0",
+        "type" : "iri"
+      } ],
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Francisco Yedro (Ontology Engineering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "es",
+        "value" : "Honorio Enrique Crespo Díaz-Alejo - Ayuntamiento de Madrid",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "es",
+        "value" : "María Jesús Fernández Ruiz - Ayuntamiento de Zaragoza",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "es",
+        "value" : "Servicio de Informática - Ayuntamiento de Santiago de Compostela",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "es",
+        "value" : "Servicio de Innovación y Desarrollo Tecnológico - Ayuntamiento de A Coruña",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "es",
+        "value" : "María del Mar Arribas de Andrés - Ayuntamiento de Madrid",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "es",
+        "value" : "Víctor Morlán Plo - Ayuntamiento de Zaragoza",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "es",
+        "value" : "Red.es",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "es",
+        "value" : "María Jesús Gallego San Miguel - Ayuntamiento de Madrid",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "es",
+        "value" : "María Carmen Ruiz Moreno - Ayuntamiento de Madrid",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "noise",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "Esta es la versión inicial de la ontología de Contaminación Acústica que ha sido implementada en el contexto del proyecto \"Plataforma de gobierno abierto, colaborativa e interoperable\" en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y La Coruña.",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#",
+        "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "es",
+        "value" : "Vocabulario para la representación de datos sobre el sistema de contaminación acústica",
+        "type" : "label"
+      }, {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Vocabulary for the representation of data about noise pollution",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "es",
+        "value" : "2019-11-07",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "19",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "25",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "29",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "An abstract idea or notion; a unit of thought.",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2004-02-xx",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Actuator",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A window actuator for automatic window control, i.e., opening or closing the window.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Actuator",
+      "en" : "Actuator"
+    },
+    "comment" : {
+      "en" : "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Observation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Observation",
+      "en" : "Observation"
+    },
+    "subClasses" : [ "15" ],
+    "comment" : {
+      "en" : "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."
+    },
+    "id" : "14"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "19",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "25",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal",
+        "type" : "iri"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-03-28",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DireccionPostal",
+      "es" : "Dirección postal"
+    },
+    "comment" : {
+      "es" : "Una dirección postal en España. Se define como una especialización de las clases vcard:Address, schema:PostalAddress y locn:Address\nAdemás de las propiedades asociadas a estas clases, y definidas en su correspondiente vocabulario, también se pueden utilizar las definidas en los vocabularios de división administrativa española y en el callejero"
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "29",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sampling",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An act of Sampling carries out a sampling Procedure to create or transform one or more samples.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Selecting a subset of a population.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Digging a pit through a soil sequence.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Crushing a rock sample in a ball mill.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Taking a diamond-drill core from a rock outcrop.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Dividing a field site into quadrants.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Drilling an observation well.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Registering an image of the landscape.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Drawing blood from a patient.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Establishing a station for environmental monitoring.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Splitting a piece of drill-core to create two new samples.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Sieving a powder to separate the subset finer than 100-mesh.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sampling",
+      "en" : "Sampling"
+    },
+    "comment" : {
+      "en" : "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."
+    },
+    "id" : "33"
+  }, {
+    "iri" : "http://schema.org/PostalAddress",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PostalAddress"
+    },
+    "subClasses" : [ "23" ],
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
+    "baseIri" : "http://purl.org/vocommons/voaf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vocabulary"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.w3.org/ns/sosa/",
+      "baseIri" : "http://www.w3.org/ns",
+      "labels" : { }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Result",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The value 20 as the height of a certain tree together with the unit, e.g., Meter.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Result",
+      "en" : "Result"
+    },
+    "comment" : {
+      "en" : "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."
+    },
+    "id" : "48"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Procedure",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization).",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Procedure",
+      "en" : "Procedure"
+    },
+    "comment" : {
+      "en" : "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."
+    },
+    "id" : "52"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/ActuatableProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An actuatable quality (property, characteristic) of a FeatureOfInterest.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A window actuator acts by changing the state between a frame and a window. The ability of the window to be opened and closed is its ActuatableProperty.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ActuatableProperty",
+      "en" : "Actuatable Property"
+    },
+    "comment" : {
+      "en" : "An actuatable quality (property, characteristic) of a FeatureOfInterest."
+    },
+    "id" : "53"
+  }, {
+    "iri" : "http://www.opengis.net/spec/geosparql/1.0#Feature",
+    "baseIri" : "http://www.opengis.net/spec/geosparql/1.0",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Feature",
+      "en" : "Feature"
+    },
+    "subClasses" : [ "13" ],
+    "comment" : {
+      "en" : "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156, and it is superclass of all feature types."
+    },
+    "attributes" : [ "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sample",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sample",
+      "en" : "Sample"
+    },
+    "comment" : {
+      "en" : "Physical samples are sometimes known as 'specimens'."
+    },
+    "id" : "55"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Equipamiento"
+    },
+    "subClasses" : [ "12" ],
+    "comment" : {
+      "es" : "Equipamiento perteneciente a una administración, al que cualquier ciudadano puede acudir"
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://vocab.ciudadesabiehttp://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#PropiedadContaminacion",
+    "baseIri" : "http://vocab.ciudadesabiehttp://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PropiedadContaminacion"
+    },
+    "individuals" : [ {
+      "iri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelRuido",
+      "baseIri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+      "labels" : {
+        "IRI-based" : "nivelRuido",
+        "en" : "noise level",
+        "es" : "nivel de ruido"
+      }
+    }, {
+      "iri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#nivelVibracion",
+      "baseIri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+      "labels" : {
+        "IRI-based" : "nivelVibracion",
+        "en" : "vibration level",
+        "es" : "nivel de vibración"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2004-02-xx",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "en" : "Concept Scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento",
+      "labels" : {
+        "IRI-based" : "tipo-equipamiento"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-intervalo-referencia",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica",
+      "labels" : {
+        "IRI-based" : "tipo-intervalo-referencia"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-emisor-predominante",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica",
+      "labels" : {
+        "IRI-based" : "tipo-emisor-predominante"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica/tipo-medicion",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/kos/medio-ambiente/contaminacion-acustica",
+      "labels" : {
+        "IRI-based" : "tipo-medicion"
+      }
+    } ],
+    "comment" : {
+      "en" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes.  Concept schemes are also embedded in glossaries and terminologies."
+    },
+    "attributes" : [ "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Actuation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The activity of automatically closing a window if the temperature in a room drops below 20 degree Celsius. The activity is the Actuation and the device that closes the window is the Actuator. The Procedure is the rule, plan, or specification that defines the conditions that triggers the Actuation, here a drop in temperature. ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Actuation",
+      "en" : "Actuation"
+    },
+    "comment" : {
+      "en" : "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."
+    },
+    "id" : "70"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/ObservableProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An observable quality (property, characteristic) of a FeatureOfInterest.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ObservableProperty",
+      "en" : "Observable Property"
+    },
+    "subClasses" : [ "3" ],
+    "comment" : {
+      "en" : "An observable quality (property, characteristic) of a FeatureOfInterest."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#Observacion",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Observacion"
+    },
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sampler",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor or a soil auger can all act as sampling devices (i.e., be Samplers). However, sometimes the distinction between the Sampler and the Sensor is not evident, as they are packaged as a unit. A Sampler need not be a physical device.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sampler",
+      "en" : "Sampler"
+    },
+    "comment" : {
+      "en" : "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples."
+    },
+    "id" : "81"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "80",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#EstacionMedida",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EstacionMedida",
+      "en" : "Measuring station",
+      "es" : "Estación de medida"
+    },
+    "comment" : {
+      "en" : "Device where the measurement of noise or vibration level is collected",
+      "es" : "Dispositivo donde se recoge la medida de nivel de ruido o vibración"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "59", "13" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Platform",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as platforms for (technical or biological) sensors or actuators.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Platform",
+      "en" : "Platform"
+    },
+    "comment" : {
+      "en" : "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."
+    },
+    "id" : "84"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sensor",
+      "en" : "Sensor"
+    },
+    "subClasses" : [ "12" ],
+    "comment" : {
+      "en" : "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."
+    },
+    "id" : "59"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FeatureOfInterest",
+      "en" : "Feature Of Interest"
+    },
+    "comment" : {
+      "en" : "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."
+    },
+    "id" : "88"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#TemporalEntity",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TemporalEntity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "91"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "75",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "77",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "79",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "82",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "87",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/sosa/isActedOnBy",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isActedOnBy",
+      "en" : "is acted on by"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://schema.org/addressRegion",
+    "baseIri" : "http://schema.org",
+    "range" : "10",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "addressRegion",
+      "es" : "región"
+    },
+    "domain" : "9",
+    "comment" : {
+      "es" : "La región. Por ejemplo, Provincia de Zaragoza o Comunidad Autónoma de Aragón"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "8"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "11"
+  }, {
+    "range" : "17",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
+    "inverse" : "21",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an ObservableProperty and the Sensor able to observe it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isObservedBy",
+      "en" : "is observed by"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "range" : "9",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "14",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
+    "inverse" : "27",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeBySampler",
+      "en" : "made by sampler"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
+    "inverse" : "0",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "actsOnProperty",
+      "en" : "acts on property"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."
+    },
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasSample",
+    "inverse" : "32",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSample",
+      "en" : "has sample"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isFeatureOfInterestOf",
+      "en" : "is feature of interest of"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isHostedBy",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Platform",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Platform",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isHostedBy",
+      "en" : "is hosted by"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."
+    },
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "46",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#inScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "50",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a resource (for example a concept) to a concept scheme in which it is included.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "inScheme",
+      "en" : "is in scheme"
+    },
+    "domain" : "25",
+    "attributes" : [ "external", "object" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://schema.org/streetAddress",
+    "baseIri" : "http://schema.org",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "streetAddress",
+      "es" : "dirección"
+    },
+    "domain" : "9",
+    "comment" : {
+      "es" : "La dirección de la calle. Por ejemplo, Vía Hispanidad, 20"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://schema.org/addressCountry",
+    "baseIri" : "http://schema.org",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "addressCountry"
+    },
+    "domain" : "9",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeSampling",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeSampling",
+      "en" : "made sampling"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed."
+    },
+    "attributes" : [ "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://schema.org/addressLocality",
+    "baseIri" : "http://schema.org",
+    "range" : "47",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "addressLocality",
+      "es" : "localidad"
+    },
+    "domain" : "9",
+    "comment" : {
+      "es" : "La localidad. Por ejemplo, Zaragoza"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isResultOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isResultOf",
+      "en" : "is result of"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSampleOf",
+      "en" : "is sample of"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
+    },
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://schema.org/address",
+    "baseIri" : "http://schema.org",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "address",
+      "en" : "address",
+      "es" : "dirección"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "59",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#validada",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "validada"
+    },
+    "domain" : "15",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoIntervaloReferencia",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+    "range" : "29",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "tipoIntervaloReferencia",
+      "en" : "reference interval type",
+      "es" : "tipo de intervalo de referencia"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Based on four types:\n(T, total, D daytime, E afternoon, N night)\nLden - Indicator of overall noise level during the day, afternoon, and night, used to determine nuisance related to noise exposure.\nLd - A-weighted long-term average sound level, determined throughout all day periods (from 7 to 19 hours) of the month.\nLe - A-weighted long-term average sound level, determined throughout all the late periods (from 19 to 23 hours) of the month.\nLn - A-weighted long-term average sound level, defined determined throughout all night periods (23 to 7 hours) of the month.",
+      "es" : "Basado en cuatro tipos:\n(T, total, D diurno, E tarde, N noche)\nLden - Indicador del nivel de ruido global durante el día, la tarde y la noche, utilizado para determinar la molestia vinculada a la exposición al ruido.\nLd - Nivel sonoro medio a largo plazo ponderado A, determinado a lo largo de todos los períodos día (de 7 a 19 horas) del mes.\nLe - Nivel sonoro medio a largo plazo ponderado A, determinado a lo largo de todos los períodos tarde (de 19 a 23 horas) del mes.\nLn - Nivel sonoro medio a largo plazo ponderado A, definido determinado a lo largo de todos los períodos noche (de 23 a 7 horas) del mes."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://schema.org/name",
+    "baseIri" : "https://schema.org",
+    "range" : "37",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name",
+      "es" : "nombre"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The name of the item",
+      "es" : "Nombre del ítem"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeActuation",
+    "inverse" : "64",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Actuator and the Actuation it has made.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeActuation",
+      "en" : "made actuation"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between an Actuator and the Actuation it has made."
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoMedida",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+    "range" : "29",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "tipoMedida",
+      "en" : "measurement type",
+      "es" : "tipo de medición"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Each measurement can have the following types LAeq, LAs01, LAs10, LAs50, LAs90, LAs99. Numeric, 5 digits. It can also be LAw to measure possible vibrations.",
+      "es" : "Cada medición puede tener los siguientes tipos LAeq, LAs01, LAs10, LAs50, LAs90, LAs99. Numérico, 5 dígitos. También puede ser LAw para medir posibles vibraciones."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hosts",
+    "inverse" : "38",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Platform",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Platform",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hosts",
+      "en" : "hosts"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fechaAlta",
+      "en" : "start date",
+      "es" : "fecha de alta"
+    },
+    "domain" : "13",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "34",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Actuation to the Actuator that made that Actuation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeByActuator",
+      "en" : "made by actuator"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation linking an Actuation to the Actuator that made that Actuation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier",
+      "es" : "Identificador"
+    },
+    "cardinality" : "1",
+    "domain" : "13",
+    "comment" : {
+      "en" : "An unambiguous reference to the resource within a given context.",
+      "es" : "Referencia inequívoca al recurso dentro de un contexto dado."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#tipoEquipamiento",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "tipoEquipamiento"
+    },
+    "domain" : "13",
+    "attributes" : [ "external", "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+    "range" : "36",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fechaBaja",
+      "en" : "end date",
+      "es" : "fecha de baja"
+    },
+    "domain" : "13",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "inverse" : "74",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "12",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Observation and the Sensor which made the Observation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeBySensor",
+      "en" : "made by sensor"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Relation between an Observation and the Sensor which made the Observation."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://schema.org/name",
+    "baseIri" : "https://schema.org",
+    "range" : "76",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name",
+      "es" : "nombre"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The name of the item",
+      "es" : "Nombre del ítem"
+    },
+    "attributes" : [ "external", "allValues", "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaBaja",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+    "range" : "78",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fechaBaja",
+      "en" : "end date",
+      "es" : "fecha de baja"
+    },
+    "domain" : "13",
+    "attributes" : [ "external", "allValues", "datatype" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#fechaAlta",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+    "range" : "80",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fechaAlta",
+      "en" : "start date",
+      "es" : "fecha de alta"
+    },
+    "domain" : "13",
+    "attributes" : [ "external", "allValues", "datatype" ],
+    "id" : "79"
+  }, {
+    "range" : "50",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://schema.org/postalCode",
+    "baseIri" : "http://schema.org",
+    "range" : "40",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "postalCode",
+      "es" : "código postal"
+    },
+    "domain" : "9",
+    "comment" : {
+      "es" : "El código postal. Por ejemplo, 50071"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/phenomenonTime",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/time#TemporalEntity",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "phenomenonTime",
+      "en" : "phenomenon time"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observes",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Sensor and an ObservableProperty that it is capable of sensing.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "observes",
+      "en" : "observes"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Relation between a Sensor and an ObservableProperty that it is capable of sensing."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "observedProperty",
+      "en" : "observed property"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/resultTime",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.",
+        "type" : "label"
+      }, {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "resultTime",
+      "en" : "result time"
+    },
+    "cardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "en" : "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "inverse" : "74",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Observation and the Sensor which made the Observation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeBySensor",
+      "en" : "made by sensor"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between an Observation and the Sensor which made the Observation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeObservation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Sensor and an Observation made by the Sensor.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeObservation",
+      "en" : "made observation"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between a Sensor and an Observation made by the Sensor."
+    },
+    "attributes" : [ "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Procedure",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usedProcedure",
+      "en" : "used procedure"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
+    },
+    "attributes" : [ "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica#tipoEmisorPredominante",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+    "range" : "29",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "tipoEmisorPredominante",
+      "en" : "predominant type of emitter",
+      "es" : "tipo de emisor predominante"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The type of emitter is based on the list obtained in article 12.2 of Law 37/2003, of November 17, on Noise.\na) Motor vehicles.\nb) Railways.\nc) Aircraft.\nd) Road infrastructure.\ne) Railway infrastructure.\nf) Airport infrastructure.\ng) Machinery and equipment.\nh) Building construction and civil engineering works.\ni) Industrial activities.\nj) Commercial activities.\nk) Sports-recreational and leisure activities.\nl) Port infrastructure.",
+      "es" : "El tipo de emisor está basado en en el listado obtenido en el artículo 12.2 de la Ley 37/2003, de 17 de noviembre, del Ruido.\na) Vehículos automóviles.\nb) Ferrocarriles.\nc) Aeronaves.\nd) Infraestructuras viarias.\ne) Infraestructuras ferroviarias.\nf) Infraestructuras aeroportuarias.\ng) Maquinaria y equipos.\nh) Obras de construcción de edificios y de ingeniería civil.\ni) Actividades industriales.\nj) Actividades comerciales.\nk) Actividades deportivo-recreativas y de ocio.\nl) Infraestructuras portuarias."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasSimpleResult",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "18",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The simple value of an Observation or Actuation or act of Sampling.",
+        "type" : "label"
+      }, {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The simple value of an Observation or Actuation or act of Sampling.",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For instance, the values 23 or true.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For instance, the values 23 or true.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSimpleResult",
+      "en" : "has simple result"
+    },
+    "cardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "en" : "The simple value of an Observation or Actuation or act of Sampling."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "94"
+  } ]
+}
