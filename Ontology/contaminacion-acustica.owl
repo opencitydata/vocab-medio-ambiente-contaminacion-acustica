@@ -23,7 +23,7 @@
         <dc:contributor xml:lang="es">Servicio de Informática - Ayuntamiento de Santiago de Compostela</dc:contributor>
         <vann:preferredNamespacePrefix>noise</vann:preferredNamespacePrefix>
         <dc:identifier rdf:resource="http://vocab.ciudadesabiertas.es/def/medio-ambiente/contaminacion-acustica"/>
-        <owl:priorVersion rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica/index-en.html"/>
+        <owl:priorVersion rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/contaminacion-acustica"/>
         <dc:contributor xml:lang="es">María Carmen Ruiz Moreno - Ayuntamiento de Madrid</dc:contributor>
         <dc:contributor xml:lang="es">María Jesús Fernández Ruiz - Ayuntamiento de Zaragoza</dc:contributor>
         <owl:versionInfo>Esta es la versión inicial de la ontología de Contaminación Acústica que ha sido implementada en el contexto del proyecto &quot;Plataforma de gobierno abierto, colaborativa e interoperable&quot; en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y La Coruña.</owl:versionInfo>
